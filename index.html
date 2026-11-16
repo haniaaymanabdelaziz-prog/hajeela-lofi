@@ -1,4 +1,9 @@
-<title>Hajeela Lo-fi Website</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hajeela</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
@@ -2632,7 +2637,24 @@ section.sec#results{padding-top:var(--sp2)!important;gap:var(--sp1)!important}
 #view>section.sec.tl-head{padding-bottom:0!important}
 #view>section.sec#results{padding-top:var(--sp2)!important}
 .frame main>.tl-head+#results{border-top:0!important}
+
+/* ===== Phones: nothing smaller than 12px, comfortable base size ===== */
+@media (max-width:640px){
+ html{-webkit-text-size-adjust:100%}
+ body{font-size:16px}
+ small,.small,.mono,.eyebrow,.ls-tag,.ls-av,.tcard-tag,.tc-cta,.jc-meta,.np-app,.stampc,.bdg,dt,.pill,.mbadge,.hero-lab,.tl-rb span,.ls-meta small{font-size:max(.78rem,12px)!important}
+ .jc-meta,.jc-meta span{font-size:12px!important}
+ .ph span,.figc b,.scrollcue span{font-size:12px!important}
+ .btn,.chip,button.chip,.dfil button{min-height:44px}
+ .dfil button{padding-inline:16px}
+ p,li,dd{line-height:1.5}
+}
+
+/* ===== Customer view: internal notes and prototype controls only show with ?dev ===== */
+html:not(.dev) .proto,html:not(.dev) .hero-lab,html:not(.dev) .tx-ph,html:not(.dev) .bk-proto{display:none!important}
 </style>
+</head>
+<body>
 
 <div class="proto">
   <div class="proto-top">
@@ -2677,11 +2699,11 @@ section.sec#results{padding-top:var(--sp2)!important;gap:var(--sp1)!important}
       <div class="foot-contact">
         <a class="big" href="tel:+200000000000">+20 000 000 0000</a>
         <a class="big" href="mailto:hello@hajeela.com">hello@hajeela.com</a>
-        <div class="social" aria-label="Social links"><a href="https://wa.me/200000000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor"/></svg></a><a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c.4 2.4 2 4 4.5 4.2"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7h2.5l.5-3H14V9.2c0-.9.4-1.7 1.8-1.7H17V4.8C16.6 4.7 15.7 4.6 14.8 4.6 12.6 4.6 11 6 11 8.5V11H8.5v3H11v7z"/></svg></a></div>
+        <div class="social" aria-label="Social links"><a href="https://wa.me/200000000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg></a><a href="#" data-soon="1" title="Link coming soon" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor"/></svg></a><a href="#" data-soon="1" title="Link coming soon" aria-label="TikTok"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c.4 2.4 2 4 4.5 4.2"/></svg></a><a href="#" data-soon="1" title="Link coming soon" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-7h2.5l.5-3H14V9.2c0-.9.4-1.7 1.8-1.7H17V4.8C16.6 4.7 15.7 4.6 14.8 4.6 12.6 4.6 11 6 11 8.5V11H8.5v3H11v7z"/></svg></a></div>
         <div class="legal"><button data-go="help">Terms &amp; Conditions</button><button data-go="help">Privacy Policy</button><span class="mono muted">© 2026 Hajeela</span></div>
       </div>
       <nav class="foot-col" aria-label="Quick links"><span class="fh">Quick links</span><button data-go="home">Home</button><button data-go="world">About Hajeela</button><button data-go="trips">Upcoming trips</button><button data-go="weekends">Calendar</button><button data-go="explore">Explore</button><button data-go="create">Create</button><button data-go="help">Contact</button></nav>
-      <nav class="foot-col" aria-label="Trips and services"><span class="fh">Trips &amp; services</span><button data-go="destinations">Destinations</button><button data-go="experiences">Experiences</button><button data-go="create-form">Celebrations</button><button data-go="groups">Corporate &amp; teams</button><button data-go="groups">Universities &amp; schools</button><button data-go="manage">Manage your booking</button><button data-go="help">FAQs</button></nav>
+      <nav class="foot-col" aria-label="Trips and services"><span class="fh">Trips &amp; services</span><button data-go="destinations">Destinations</button><button data-go="experiences">Experiences</button><button data-go="create-form">Friends &amp; family</button><button data-go="groups">Company, university or school</button><button data-go="manage">Manage your booking</button><button data-go="help">FAQs</button></nav>
     </div>
   </footer>
 </div>
@@ -3099,7 +3121,7 @@ function heroCopy(){
   const w=state.world;
   if(!w)return `<h1>The joy of exploring, together.</h1>
     <p class="lead">We take groups into Egypt's deserts, seas, oases and night skies. Join a trip that is leaving soon, or let us build one around your people. Come with friends or come on your own.</p>
-    <div class="row"><button class="btn solid" data-go="trips">Explore trips</button><button class="btn" data-go="create">Customize your experience</button></div>
+    <div class="row"><button class="btn solid" data-go="trips">Explore trips</button><button class="btn" data-go="create">Customise your experience</button></div>
     <button class="hero-film" data-scroll="memories"><span class="hplay" aria-hidden="true"><i></i></span><span>See what a trip feels like</span></button>`;
   const i=ORDER.indexOf(w)+1;
   return `<h1>${HEAD[w][1]}</h1>
@@ -3194,7 +3216,7 @@ ${worldPanel()}
     <svg class="cp-svg" viewBox="0 0 1000 200" preserveAspectRatio="none" aria-hidden="true"><path class="cp-base" d="M80 136 C185 136,185 62,290 62 C395 62,395 136,500 136 C605 136,605 62,710 62 C815 62,815 136,920 136"/><path class="cp-line" pathLength="1" d="M80 136 C185 136,185 62,290 62 C395 62,395 136,500 136 C605 136,605 62,710 62 C815 62,815 136,920 136"/></svg>
     ${[['What you love','Sand, sea, snow, food, culture, quiet or loud.'],['Who is coming','Friends, family, a partner or a whole team.'],['The occasion','A birthday, a honeymoon, an away day, just because.'],['Where','Egypt or abroad. Or tell us to surprise you.'],['Budget','A range is fine. We build around it.']].map((x,i)=>`<div class="cp-stop" role="listitem" style="--i:${i}" data-go="create-form" tabindex="0"><i class="cp-dot">${i+1}</i><b>${x[0]}</b><span class="cp-hint">${x[1]}</span></div>`).join('')}
   </div>
-  <div class="cp-act"><button class="btn lg" data-go="create-form">Customize your experience</button><button class="cp-sec" data-go="create">See trips we've created</button></div>
+  <div class="cp-act"><button class="btn lg" data-go="create-form">Customise your experience</button><button class="cp-sec" data-go="create">See trips we've created</button></div>
 </section>
 
 `};
@@ -3719,13 +3741,14 @@ V.book=(id)=>{
 /* Manage booking */
 V.manage=()=>{
   const m=state.mg;const b=state.bk.ref?state.bk:null;const t=b?byId(b.id):TRIPS[0];
-  const ref=b?b.ref:'HJL-26-0481';const dep=b?t.dates[b.dep].d:t.dates[0].d;const n=b?b.n:2;
+  const ref=b?b.ref:(m.rv||'HJL-26-0481');const dep=b?t.dates[b.dep].d:t.dates[0].d;const n=b?b.n:2;
   const stMap={confirmed:['ok','Confirmed'],deposit:['ok','Confirmed · balance due'],pending:['warn','Awaiting payment'],request:['neutral',"Pending · awaiting Hajeela's approval"],cancelreq:['warn','Cancellation requested'],cancelled:['bad','Cancelled'],refunded:['neutral','Refunded']};
   const st=m.cancel?'cancelreq':(b?b.status:'deposit');
   if(!m.open)return `<section class="sec"><div class="stack">${N('M','Manage your booking: no account needed')}<h1 class="pg">Your trip status</h1></div>
     <div class="after-app"><div class="qrw scanbox">${qr(23)}<span class="mono" style="font-size:.72rem">Scan to get the app</span></div><button class="btn mobget" data-go="app">Get the app</button><div class="stack" style="gap:10px"><span class="eyebrow" style="color:inherit;opacity:.75">The quickest way</span><h3>Your trip status is in the app.</h3><span class="small" style="opacity:.85">Log in with the phone number you booked with. You will see whether you are confirmed, what is left to pay, your reminders, your group and your bus stop.</span></div></div>
     <div class="stack"><h3>No app yet?</h3><p class="muted">Check here with the reference from your confirmation email.</p></div>
-    <div class="grid g2" style="max-width:720px"><div class="field"><label for="mref">Booking reference</label><input id="mref" value="${ref}"></div><div class="field"><label for="mem">Email you booked with</label><input id="mem" value="you@email.com"></div></div>
+    <div class="grid g2" style="max-width:720px"><div class="field"><label for="mref">Booking reference</label><input id="mref" placeholder="For example HJL-26-0481" autocomplete="off" value="${esc(m.rv||'')}"></div><div class="field"><label for="mem">Email you booked with</label><input id="mem" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" value="${esc(m.ev||'')}"></div></div>
+    ${m.err?`<p class="ferr" role="alert">${m.err}</p>`:''}
     <div><button class="btn solid" data-mopen="1">Find my booking</button></div></section>`;
   return `<section class="sec"><div class="row"><button class="chip" data-mclose="1">Find another booking</button></div>
     <div class="stack"><span class="status ${stMap[st][0]}">${stMap[st][1]}</span><h1 class="pg">${esc(t.t)}</h1><span class="mono muted">${ref} · ${dep} · ${n} traveller${n>1?'s':''}</span></div>
@@ -3733,7 +3756,7 @@ V.manage=()=>{
       <div class="box"><span class="eyebrow">Payment</span>${st==='deposit'?`<div class="kv"><span>Paid</span><span>${money(Math.round(t.price*n*.3))}</span></div><div class="kv"><span>Balance due 14 days before</span><b>${money(t.price*n-Math.round(t.price*n*.3))}</b></div><button class="btn sm solid">Pay the balance</button>`:st==='pending'?'<p class="muted small">Waiting for your bank to confirm.</p><button class="btn sm">Try paying again</button>':st==='request'?'<p class="muted small">We\'ll send a payment link once your places are confirmed.</p>':`<div class="kv"><span>Paid</span><b>${money(t.price*n)}</b></div>`}</div>
       <div class="box"><span class="eyebrow">Travellers</span>${Array.from({length:n},(_,i)=>`<div class="kv"><span>${i?'Traveller '+(i+1):'Lead traveller'}</span><span class="muted">Name on file</span></div>`).join('')}${m.edit?'<div class="notice ok reveal"><b>Change request sent.</b><span>We\'ll confirm the new details by email within a day.</span></div>':'<button class="btn sm" data-medit="1">Change traveller details</button>'}</div>
     </div>
-    <div class="grid g3"><button class="box card"><h4>Add to calendar</h4></button><button class="box card" data-go="app"><h4>Get the app</h4><p class="muted small">Release 3</p></button><button class="box card" data-go="help"><h4>Contact us</h4><p class="muted small">WhatsApp or email</p></button></div>
+    <div class="grid g3"><button class="box card"><h4>Add to calendar</h4></button><button class="box card" data-go="app"><h4>Get the app</h4><p class="muted small">Everything for the day, in one place.</p></button><button class="box card" data-go="help"><h4>Contact us</h4><p class="muted small">WhatsApp or email</p></button></div>
     <div class="box">${m.cancel?`<div class="notice warn reveal"><b>Cancellation requested.</b><span>We'll reply within one working day with what's refundable under the policy.</span></div>`:m.confirmCancel?`<p><b>Request to cancel this booking?</b></p><p class="muted small">Under the policy, a cancellation now would be refunded in full, less the deposit. (Placeholder.)</p><div class="row"><button class="btn" data-mcancel="0">Keep my booking</button><button class="btn" data-mcancel="1">Request cancellation</button></div>`:'<div class="row between"><span class="muted small">Can\'t make it? You can pass your place to a friend or ask to cancel.</span><button class="btn sm" data-mcancel="ask">Request cancellation</button></div>'}</div>
     ${NP('Booking states the page can show: Pending, Awaiting payment, Confirmed, Payment failed, Cancelled, Refunded. Exact hold, deposit and refund rules come from Hajeela\'s policies.')}
   </section>`;
@@ -3741,7 +3764,7 @@ V.manage=()=>{
 
 /* ---------- Path 02: Create ---------- */
 V.create=()=>`
-<section class="sec"><div class="stack" style="gap:6px">${N(5,'Create: two equal doors, friends and corporate')}<h1 class="pg">Customize your experience.</h1><p class="muted" style="max-width:46ch">Tell us what you have in mind and we will figure out the adventure together. Who is it for?</p></div>
+<section class="sec"><div class="stack" style="gap:6px">${N(5,'Create: two equal doors, friends and corporate')}<h1 class="pg">Customise your experience.</h1><p class="muted" style="max-width:46ch">Tell us what you have in mind and we will figure out the adventure together. Who is it for?</p></div>
 <div class="twodoors">
   <div class="door2">${ph('Photo · friends on a boat',200)}<h2>A trip for your people.</h2><p class="muted">Getaways, birthdays, bachelorettes, honeymoons and family weekends, planned around you.</p><div class="mini">${PLANS.slice(0,4).map(p=>`<button class="chip" data-plan="${p[0]}">${p[1]}</button>`).join('')}</div><button class="btn solid" data-go="create-form">Plan with friends & family</button></div>
   <div class="door2">${ph('Photo · a team on a dune',200)}<h2>A day your team will talk about.</h2><p class="muted">Away days, team building, graduation trips and school groups, with one contact and a clear quote.</p><div class="mini">${['Corporate experiences','Team building','University trips','Student groups'].map(x=>`<button class="chip" data-go="groups">${x}</button>`).join('')}</div><button class="btn solid" data-go="groups">Plan for your team</button></div>
@@ -4435,6 +4458,10 @@ const state={nr:{sent:false,call:false,notify:false},world:null,cur:'EGP',rules:
  bk:{},mg:{open:false},cr:{step:1,plan:null,occ:null,w:null,acts:[],flex:false,lw:null,n:6,budget:6000,per:true,via:'WhatsApp',sent:false},
  prop:{opts:[false,false],status:null},gr:{sent:false,step:1},fv:{},match:{i:0,likes:[]},play:{},readTag:'All',favK:'All'};
 const NAVMAP={explore:'explore',destinations:'explore',experiences:'explore',kinds:'explore',dest:'explore',exp:'explore',trips:'trips',trip:'trips',book:'trips',weekends:'explore',match:'explore',play:'explore',create:'create',proposal:'create',made:'create',groups:'create',world:'world',favs:'world',reads:'world',read:'world'};
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[data-soon]');if(a)e.preventDefault()});
+const DEV=/[?&]dev\b/.test(location.search);document.documentElement.classList.toggle('dev',DEV);
+const CLEAN=[[/\s*\(proposed\)/g,''],[/\s*\((?:Placeholder[^)]*)\)\.?/g,''],[/\s*Placeholder\.(?=\s|$)/g,''],[/\s*·\s*placeholder quote/gi,''],[/^Placeholder link to the full terms\.$/,'The full terms are coming soon.'],[/^Placeholder link\.\s*/,''],[/^Placeholder: the story goes here[^.]*\.$/,'The full story is coming soon.'],[/^Placeholder tip:[^.]*\.$/,'A small tip is on its way.'],[/^Placeholder bio:.*$/,'More about our people is coming soon.'],[/^Placeholder$/,'Coming soon']];
+function cleanDev(root){if(DEV)return;const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const ns=[];while(w.nextNode())ns.push(w.currentNode);ns.forEach(n=>{if(!/laceholder|proposed/.test(n.nodeValue))return;let v=n.nodeValue;CLEAN.forEach(r=>{v=v.replace(r[0],r[1])});n.nodeValue=v});root.querySelectorAll('[aria-label*="placeholder"]').forEach(e=>e.setAttribute('aria-label',e.getAttribute('aria-label').replace(/\s*\(placeholder\)/i,'')))}
 function route(){
   const h=(location.hash||'#home').slice(1);clearInterval(heroTimer);
   const [base,...rest]=h.split('-');const arg=rest.join('-');
@@ -4451,7 +4478,7 @@ function route(){
   else if(base==='made')html=V.made(arg);
   else if(V[h])html=V[h]();
   else html=V.home();
-  view.innerHTML=html;
+  view.innerHTML=html;cleanDev(view);
   $('#nextbar').innerHTML='';
   const cur=NAVMAP[h==='create-form'?'create':base];
   document.querySelectorAll('.mo-links button').forEach(b=>b.classList.toggle('cur',b.dataset.go===cur));
@@ -4587,7 +4614,7 @@ document.addEventListener('click',e=>{
       rerender()},700);return}
   if(d.sendreq){if(!b.terms){b.err={terms:'Please agree to the booking terms to continue.'};rerender();const f=document.getElementById('terms');if(f)f.focus();return}b.ref=newRef();b.status='request';b.step=5;rerender();return}
   const m=state.mg;
-  if(d.mopen){m.open=true;rerender();return}
+  if(d.mopen){const rv=($('#mref')?.value||'').trim(),ev=($('#mem')?.value||'').trim();m.rv=rv;m.ev=ev;if(!rv){m.err='Enter the booking reference from your confirmation email.'}else if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(ev)){m.err='Enter the email you booked with, like you@email.com.'}else{m.err=null;m.open=true}rerender();return}
   if(d.mclose){state.mg={open:false};rerender();return}
   if(d.medit){m.edit=true;rerender();return}
   if(d.mcancel){if(d.mcancel==='ask')m.confirmCancel=true;else if(d.mcancel==='1'){m.cancel=true;m.confirmCancel=false}else m.confirmCancel=false;rerender();return}
@@ -4770,3 +4797,6 @@ collect();})();
 (function(){let t=false;function spy(){t=false;const nav=document.querySelector('.tx-nav');if(!nav)return;const secs=[...document.querySelectorAll('.tx-s')];if(!secs.length)return;const y=(document.querySelector('.nav')?.offsetHeight||72)+90;let cur=secs[0];secs.forEach(e=>{if(e.getBoundingClientRect().top<=y)cur=e});nav.querySelectorAll('.tx-nav-in button').forEach(b=>{const on=b.dataset.scroll===cur.id;b.classList.toggle('on',on);if(on&&nav.scrollWidth>0){const r=b.parentElement;if(r.scrollWidth>r.clientWidth){const l=b.offsetLeft-r.clientWidth/2+b.offsetWidth/2;r.scrollTo?.({left:l})}}})}
 addEventListener('scroll',()=>{if(!t){t=true;requestAnimationFrame(spy)}},{passive:true});})();
 </script>
+
+</body>
+</html>
