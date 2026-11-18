@@ -2804,6 +2804,14 @@ const TPH={
  g2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
  g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
  g5:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%']},
+/* Black & White Desert: Hania's White Desert sunset photo (19 Nov) */
+'black-white-desert':{
+ card:['img/trips/black-white-desert/sunset-walk.jpg','Two friends walking across the White Desert at sunset','45% 55%'],
+ hero:['img/trips/black-white-desert/sunset-walk.jpg','Two friends walking across the White Desert at sunset','45% 55%']},
+/* Eid in Marsa Alam: Hania's dolphin photo (19 Nov) */
+'marsa-alam-eid':{
+ card:['img/trips/marsa-alam-eid/dolphins.jpg','A pod of dolphins swimming over sand in clear blue water','45% 55%'],
+ hero:['img/trips/marsa-alam-eid/dolphins.jpg','A pod of dolphins swimming over sand in clear blue water','45% 55%']},
 'fayoum-weekend':{
  card:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
  hero:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
@@ -3303,7 +3311,15 @@ ${worldPanel()}
   <div class="memed-head">${N('F','Memories: real photos and films from real trips, shot by travellers')}<h2>This Is Hajeela<br><em>Through Your Eyes.</em></h2>
     <p>Real moments, little films and memories made along the way by our travellers.</p>
     <button class="btn lg" data-go="trips">See the trips</button></div>
-  ${[['Siwa','Oct 2026','siwa','Film · 12 sec','a'],['Mount Sinai','5:40 am','sinai-sunrise','Photo','b'],['Ras Mohammed','Sept 2026','ras-mohamed','Film · 8 sec','c'],['Fayoum','Last Friday','fayoum-day','Photo · the whole group','d'],['Dakhla & Kharga','By 4x4','dakhla-kharga','Photo','e'],['White Desert','New Year’s Eve','white-desert','Photo','f'],['Dahab','Aug 2026','dahab','Photo · portrait','g'],['Hurghada','July 2026','hurghada','Film · 6 sec','h']].map(x=>`<button class="mem m-${x[4]}" data-go="trip-${x[2]}" aria-label="${x[0]}, ${x[1]}. ${MOMENT[x[2]]||''}. See the trip">${ph(x[3],100)}<span class="figc"><b>${x[0]}</b><span>${x[1]}</span></span><span class="mdesc" aria-hidden="true"><b>${x[1]}</b><i></i>${MOMENT[x[2]]||x[0]}</span></button>`).join('')}
+  ${/* Real photos (Hania, 19 Nov): [place, moment, trip, placeholder label, tile, image, hover line, alt, focus]. Labels written from what each photo shows. */
+  [['Red Sea','First dive','marsa-alam-eid','Photo','a','first-dive','The first breath underwater','A diver giving the OK sign underwater','50% 40%'],
+   ['Red Sea','Back on deck','marsa-alam-eid','Photo','b','back-on-deck','Everyone filming the swimmers','Friends sitting on the deck, filming the swimmers below','50% 55%'],
+   ['Red Sea','Floating break','marsa-alam-eid','Photo','c','floating-break','Nowhere to be but the water','A traveller smiling in a watermelon float','45% 70%'],
+   ['Red Sea','The whole boat','marsa-alam-eid','Photo','d','whole-boat','Gear on, one by one','The group on the back of the boat while divers get ready in the water','50% 55%'],
+   ['Red Sea','Back from the swim','marsa-alam-eid','Photo','e','sea-breeze','Back from the swim','A traveller in white laughing on the back of the boat','50% 60%'],
+   ['Red Sea','Last light','marsa-alam-eid','Photo','f','last-light','The boat goes quiet at sunset','Sunset over the sea from the boat','55% 45%'],
+   ['Red Sea','Our captain','marsa-alam-eid','Photo','g','our-captain','The captain, mid-story','The boat captain laughing on deck','55% 40%'],
+   ['Red Sea','Going up','marsa-alam-eid','Photo','h','going-up','Bubbles all the way up','A diver rising towards the surface','50% 40%']].map(x=>`<button class="mem m-${x[4]}" data-go="trip-${x[2]}" aria-label="${x[0]}, ${x[1]}. ${x[6]}. See the trip">${x[5]?`<div class="ph ph-photo" style="min-height:100px"><img src="img/memories/${x[5]}.jpg" alt="${x[7]}" loading="lazy" decoding="async" style="object-position:${x[8]}"></div>`:ph(x[3],100)}<span class="figc"><b>${x[0]}</b><span>${x[1]}</span></span><span class="mdesc" aria-hidden="true"><b>${x[1]}</b><i></i>${x[6]}</span></button>`).join('')}
   <div class="mbadge mb1" aria-hidden="true">${sym('sea',44)}<span>Sea</span></div>
   <div class="mbadge mb2" aria-hidden="true">${sym('summit',44)}<span>Summit</span></div>
   ${[['sand',35.5,18.5],['snow',60,22],['sand',62.8,63.8],['snow',82,56],['sea',38.7,78.5],['summit',64.3,72.5]].map(x=>`<span class="mpin" style="left:${x[1]}%;top:${x[2]}%" aria-hidden="true">${sym(x[0],22)}</span>`).join('')}
