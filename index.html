@@ -2907,7 +2907,7 @@ const D=(d,left)=>({d,left});
    Level, effort meters and badge are carried over from the earlier sample trip to the same place: to confirm. */
 const TRIPS=[
  {id:'new-year-fayoum',w:'sand',dest:'fayoum',b:'Classic',t:"New Year's in Fayoum",kind:'weekend',dur:2,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Thu 31 Dec',null)],mo:['Dec']},
- {id:'fayoum-weekend',w:'sand',dest:'fayoum',b:'Classic',t:'Fayoum getaway',kind:'weekend',dur:2,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Fri 8 Jan',null)],mo:['Jan']},
+ {id:'fayoum-weekend',w:'sand',dest:'fayoum',b:'Classic',t:'Fayoum getaway',kind:'day',dur:1,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Fri 8 Jan',null)],mo:['Jan']},
  {id:'black-white-desert',w:'sand',dest:'white-desert',b:'Uncharted',t:'Black & White Desert',kind:'weekend',dur:3,lvl:3,m:[2,3,0,4],price:NaN,av:'request',dep:true,exps:['camping','stargazing'],dates:[D('Thu 28 Jan',null)],mo:['Jan']},
  {id:'marsa-alam-eid',w:'sea',dest:'marsa-alam',b:'Adventurer',t:'Eid in Marsa Alam',kind:'long',dur:6,lvl:3,m:[3,4,5,2],price:NaN,av:'request',dep:true,exps:['diving','boat'],dates:[D('Tue 9 Mar',null)],mo:['Mar']}
 ];
@@ -2915,8 +2915,8 @@ const OLD_TRIPS={'ras-mohamed':'sea','dahab':'sea','marsa-alam':'sea','hurghada'
 /* Per-trip page content. Anything not decided yet is a clear [placeholder]. Overrides the environment defaults in DEST. */
 const TC_=x=>[x,'[Plan to confirm]'],TBC=['[To confirm]'],TBC_POCKET=[['Pocket money',NaN]];
 const TCONTENT={
- 'fayoum-weekend':{one:'Two days in Fayoum, 8 to 9 January. [Plan to confirm]',
-   exp:['Fri 8 Jan','Sat 9 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
+ 'fayoum-weekend':{one:'A day in Fayoum, Friday 8 January. Home by night. [Plan to confirm]',
+   exp:['Morning','Midday','Evening'].map(TC_),add:[],pocket:TBC_POCKET},
  'new-year-fayoum':{one:"New Year's Eve in Fayoum, with your people. [Plan to confirm]",
    exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
  'black-white-desert':{one:'Three days in the Black and White Desert, 28 to 30 January. [Plan to confirm]',
