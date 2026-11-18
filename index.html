@@ -2788,6 +2788,19 @@ const DIMG={fayoum:['img/destinations/fayoum.jpg','50% 62%'],siwa:['img/destinat
 const dph=(d,h)=>DIMG[d.id]?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${DIMG[d.id][0]}" alt="" loading="lazy" decoding="async" style="object-position:${DIMG[d.id][1]}"></div>`:ph(d.n,h);
 const ph=(t,h)=>`<div class="ph" style="min-height:${h||140}px"><span>${t}</span></div>`;
 
+/* Real trip photos (Hania, 19 Nov). Slots: card, hero, p1, p2, d0.. (itinerary stops), g0-g6 (gallery). Missing slots keep the placeholder. */
+const TP_='img/trips/fayoum-getaway/';
+const TPH={'fayoum-weekend':{
+ card:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
+ hero:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
+ p1:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
+ p2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
+ d4:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
+ g1:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
+ g2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
+ g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%']}};
+const tph=(t,slot,label,h)=>{const x=(TPH[t.id]||{})[slot];return x?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${x[0]}" alt="${x[1]}" loading="lazy" decoding="async" style="object-position:${x[2]||'50% 50%'}"></div>`:ph(label,h)};
+
 /* ---------- Booking rules (the four open decisions) ---------- */
 const RULES={
  avail:{label:'01 Availability',opts:[['live','Live availability'],['request','Request to book'],['hybrid','Hybrid']]},
@@ -3123,7 +3136,7 @@ function depRow(d){const t=d.t,st=depState(d);return `<button class="dep ${d.x.l
 function nextBar(){const d=departures().find(x=>x.x.left);if(!d)return '';return `<button class="nextbar" ${depState(d)[2]}><span class="mono">Next trip out</span><b>${esc(d.t.t)}</b><span>${d.wd} ${d.day} ${d.mon} · ${d.x.left} places left</span><span class="nb-go">Book now</span></button>`}
 const ENVS={};ORDER.forEach(w=>{ENVS[w]={n:WORLDS[w].name,line:WORLDS[w].line,feel:HEAD_ENV[w],get dests(){return DESTS.filter(d=>d.w===w).map(d=>d.id)},get trips(){return TRIPS.filter(t=>t.w===w).map(t=>t.id)}}});
 function lsCard(d){const t=d.t,st=depState(d);return `<article class="ls ${d.x.left===0?'full':''}">
-  <button class="ls-img" data-go="trip-${t.id}" aria-label="View ${esc(t.t)}">${ph('The moment · '+MOMENT[t.id],170)}<span class="ls-date"><small>${d.wd}</small><b>${d.day}</b><small>${d.mon}</small></span><span class="ls-tag">${destOf(t.dest).n.replace(' & Mount Sinai','')}</span></button>
+  <button class="ls-img" data-go="trip-${t.id}" aria-label="View ${esc(t.t)}">${tph(t,'card','The moment · '+MOMENT[t.id],170)}<span class="ls-date"><small>${d.wd}</small><b>${d.day}</b><small>${d.mon}</small></span><span class="ls-tag">${destOf(t.dest).n.replace(' & Mount Sinai','')}</span></button>
   <span class="tcard-moment">“${MOMENT[t.id]}”</span>
   <h3>${esc(t.t)}</h3>
   <div class="ls-meta"><span><small>Duration</small><b>${t.dur===1?'1 day':t.dur+' days'}</b></span><span><small>Level</small><b>${t.lvl} of 5 · ${LEVELS[t.lvl]}</b></span><span><small>From, per person</small><b>${money(t.price)}</b></span></div>
@@ -3678,7 +3691,7 @@ V.trip=(id)=>{
     </div>
     <dl class="tx-facts"><div><dt>Duration</dt><dd>${dur}</dd></div><div><dt>Level</dt><dd>${t.lvl} of 5 · ${LEVELS[t.lvl]}</dd></div><div><dt>Group</dt><dd>12 to 20 people</dd></div><div><dt>From</dt><dd>${money(t.price)}</dd></div></dl>
   </div>
-  <div class="tx-photos">${ph('Hero · film or photo of '+esc(t.t)+', real people mid-moment',100)}${ph('Photo · '+MOMENT[t.id],100)}${ph('Photo · '+d.pop[0],100)}<button class="btn sm tx-all" data-scroll="t-gallery">View all 24 photos</button></div>
+  <div class="tx-photos">${tph(t,'hero','Hero · film or photo of '+esc(t.t)+', real people mid-moment',100)}${tph(t,'p1','Photo · '+MOMENT[t.id],100)}${tph(t,'p2','Photo · '+d.pop[0],100)}<button class="btn sm tx-all" data-scroll="t-gallery">View all 24 photos</button></div>
 </section>
 <nav class="tx-nav" aria-label="On this page"><div class="tx-nav-in">${SEC.map((x,i)=>`<button class="${i?'':'on'}" data-scroll="t-${x[0]}">${x[1]}</button>`).join('')}</div><div class="tx-nav-cta"><span class="small muted">From</span><b>${money(t.price)}</b><button class="btn solid sm" data-book="${t.id}">${av==='live'?'Book':'Request'}</button></div></nav>
 <div class="tx-wrap">
@@ -3691,7 +3704,7 @@ V.trip=(id)=>{
 </section>
 <section class="tx-s" id="t-itinerary">${sh_(null,'Itinerary',dur+' · '+d.exp.length+' stops · from Cairo and back')}
   <ol class="tx-rail" aria-label="Itinerary at a glance">${d.exp.map((x,i)=>`<li><button data-scroll="t-step${i}"><span class="mono">${String(i+1).padStart(2,'0')}</span>${x[0]}</button></li>`).join('')}</ol>
-  <ol class="tx-days">${d.exp.map((x,i)=>`<li class="tx-day" id="t-step${i}"><div class="tx-when"><span class="mono">${String(i+1).padStart(2,'0')}</span><b>${x[0]}</b></div><div class="tx-what"><p>${x[1]}</p>${ph('Photo · '+x[0].toLowerCase()+' on this trip',100)}</div></li>`).join('')}</ol>
+  <ol class="tx-days">${d.exp.map((x,i)=>`<li class="tx-day" id="t-step${i}"><div class="tx-when"><span class="mono">${String(i+1).padStart(2,'0')}</span><b>${x[0]}</b></div><div class="tx-what"><p>${x[1]}</p>${tph(t,'d'+i,'Photo · '+x[0].toLowerCase()+' on this trip',100)}</div></li>`).join('')}</ol>
   <dl class="tx-logi"><div><dt>Transport</dt><dd>${d.transport||'From Cairo and back'}</dd></div><div><dt>Stay</dt><dd>${t.dur>1?d.stay:'Day trip, home by night'}</dd></div><div><dt>Meals</dt><dd>As listed on the plan</dd></div><div><dt>Host</dt><dd>With you the whole trip</dd></div></dl>
   <p class="tx-ph small muted">Placeholder: exact times, meal by meal and room details per day come from operations and are not in this prototype yet.</p>
 </section>
@@ -3711,7 +3724,7 @@ V.trip=(id)=>{
   <div>${[['Do I need experience?','No. Every activity is taught on the day, and you can sit anything out.'],["I'm coming on my own. Is that okay?","Yes. One in three people do. We introduce everyone before the trip."],['What should I pack?','We send a packing list 7 days before. Short version: comfortable shoes, a warm layer and your ID.'],['What if I need to cancel?','Free date change up to 7 days before. Placeholder.'],['Is it safe?','Every trip has a trained host, a safety plan and a 24-hour contact number.']].map(x=>`<details class="faq"><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}</div></div>
 </section>
 <section class="tx-s" id="t-gallery">${sh_(null,'Gallery')}
-  <div class="tx-gal">${['Film · the moment, 8 sec loop','Photo · the group on arrival','Photo · '+d.pop[1],'Photo · '+d.pop[2],'Photo · the local host','Photo · '+MOMENT[t.id]].map((x,i)=>`<figure class="g${i}">${ph(x,100)}</figure>`).join('')}</div>
+  <div class="tx-gal">${['Film · the moment, 8 sec loop','Photo · the group on arrival','Photo · '+d.pop[1],'Photo · '+d.pop[2],'Photo · the local host','Photo · '+MOMENT[t.id]].map((x,i)=>`<figure class="g${i}">${tph(t,'g'+i,x,100)}</figure>`).join('')}</div>
 </section>
 </main>
 <aside class="tx-book" aria-label="Booking">
