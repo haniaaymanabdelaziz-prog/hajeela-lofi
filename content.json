@@ -1,0 +1,5342 @@
+{
+ "c": {
+  "WORLDS": {
+   "sand": {
+    "name": "Sand",
+    "line": "Open landscapes, endless skies and nights under the stars.",
+    "short": "Dunes, oases and nights that go quiet."
+   },
+   "sea": {
+    "name": "Sea",
+    "line": "Clear waters, warm sunshine and long days by the sea.",
+    "short": "Boats, reefs and islands you can swim to."
+   },
+   "summit": {
+    "name": "Summit",
+    "line": "Open trails, fresh air and views that stretch for miles.",
+    "short": "Early starts, steady climbs, wide views."
+   },
+   "snow": {
+    "name": "Snow",
+    "line": "White landscapes, crisp mornings and cosy evenings.",
+    "short": "Slopes, cedars and warm cabins."
+   }
+  },
+  "HEAD": {
+   "sand": [
+    "Dunes & oases",
+    "Go where it goes quiet."
+   ],
+   "sea": [
+    "Boats & reefs",
+    "Find your way to the blue."
+   ],
+   "summit": [
+    "Peaks & sunrises",
+    "Somewhere closer to the sky."
+   ],
+   "snow": [
+    "Slopes & cedars",
+    "Make room for a little wonder."
+   ]
+  },
+  "HEAD_ENV": {
+   "sand": "Go where it goes quiet.",
+   "sea": "Find your way to the blue.",
+   "summit": "Somewhere closer to the sky.",
+   "snow": "Make room for a little wonder."
+  },
+  "DEST": {
+   "sea": {
+    "one": "Two days on a boat in one of the Red Sea's oldest protected reefs. Swim, snorkel, try a dive, or just watch the water from the deck.",
+    "pop": [
+     "Snorkelling over the Shark and Yolanda reefs",
+     "A quiet beach stop that's only reachable by boat",
+     "Sunset from the top deck"
+    ],
+    "exp": [
+     [
+      "Thursday night",
+      "We leave Cairo after work and sleep on the bus. You wake up by the sea."
+     ],
+     [
+      "Friday",
+      "Breakfast, then the boat. First swim before ten. An intro dive for anyone who'd like one, and lunch on board."
+     ],
+     [
+      "Saturday",
+      "A slower morning, one last island, lunch on deck. Back in Cairo by 10 pm."
+     ]
+    ],
+    "learn": [
+     "How to clear your mask and equalise your ears",
+     "How to enjoy a reef without touching it",
+     "The names of the fish you'll keep seeing"
+    ],
+    "add": [
+     [
+      "Intro dive with an instructor",
+      1200
+     ],
+     [
+      "Underwater photos",
+      450
+     ],
+     [
+      "Private room",
+      900
+     ]
+    ],
+    "buy": [
+     "Reef-safe sunscreen, if you didn't pack it",
+     "Spices and dried hibiscus from the old market"
+    ],
+    "stay": "Two nights in a sea-view guesthouse, shared twin rooms. Private rooms on request.",
+    "pocket": [
+     [
+      "Snacks and coffee",
+      300
+     ],
+     [
+      "Souvenirs",
+      400
+     ],
+     [
+      "Tips for the boat crew",
+      150
+     ]
+    ]
+   },
+   "sand": {
+    "one": "A morning on the dunes, an afternoon at the pottery wheels in Tunis village, and sunset over the lake.",
+    "pop": [
+     "Sandboarding at Wadi El Rayan",
+     "The pottery studios of Tunis village",
+     "Lunch at a desert camp"
+    ],
+    "exp": [
+     [
+      "Morning",
+      "An early start, so we're out before the heat. [Placeholder: times per trip]"
+     ],
+     [
+      "Midday",
+      "Time on the dunes or by the water, then lunch."
+     ],
+     [
+      "Evening",
+      "Sunset, dinner and, on overnight trips, a sky full of stars."
+     ]
+    ],
+    "learn": [
+     "How to stand up on a sandboard",
+     "How to shape a pot on a wheel",
+     "How to find north without a phone"
+    ],
+    "add": [
+     [
+      "An hour on a quad bike",
+      600
+     ],
+     [
+      "Your pot fired and delivered",
+      250
+     ],
+     [
+      "Stay the night at camp",
+      1500
+     ]
+    ],
+    "buy": [
+     "Handmade pottery from Tunis village",
+     "Dates and local honey",
+     "Palm-weave baskets"
+    ],
+    "stay": "Day trip, or a Bedouin-style camp with shared tents for overnight trips.",
+    "pocket": [
+     [
+      "Snacks",
+      150
+     ],
+     [
+      "Pottery and souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      100
+     ]
+    ]
+   },
+   "summit": {
+    "one": "A night climb up Mount Sinai with a Bedouin guide, timed so you reach the top as the sun comes up.",
+    "pop": [
+     "The summit at sunrise",
+     "Tea with our Bedouin guides",
+     "A sky full of stars on the way up"
+    ],
+    "exp": [
+     [
+      "Night",
+      "We start the climb by torchlight with a local guide."
+     ],
+     [
+      "Sunrise",
+      "The top, sweet tea, and a long quiet look around."
+     ],
+     [
+      "Afternoon",
+      "Rest at camp, a Bedouin dinner and an early night."
+     ]
+    ],
+    "learn": [
+     "How to pace yourself on a long climb",
+     "How Bedouin tea is made",
+     "How to find three constellations"
+    ],
+    "add": [
+     [
+      "A camel for the first stretch",
+      500
+     ],
+     [
+      "Warm layer rental",
+      200
+     ],
+     [
+      "An extra night in St Catherine",
+      1100
+     ]
+    ],
+    "buy": [
+     "Herbs and tea from the Bedouin market",
+     "Hand-stitched Sinai embroidery",
+     "Thick socks for the climb"
+    ],
+    "stay": "An eco-lodge in St Catherine village, shared rooms.",
+    "pocket": [
+     [
+      "Snacks and tea",
+      200
+     ],
+     [
+      "Souvenirs",
+      350
+     ],
+     [
+      "Tips for the guides",
+      200
+     ]
+    ]
+   },
+   "snow": {
+    "one": "A snowy weekend in Lebanon, or a bigger trip to the Alps: slopes, cedars and warm cabins, with people who have done it before.",
+    "pop": [
+     "Fresh snow on the cedars",
+     "A cabin fire after the last run",
+     "Fondue at the end of the day"
+    ],
+    "exp": [
+     [
+      "Day 1",
+      "Fly in, drive up to the mountains and settle into the cabin."
+     ],
+     [
+      "Day 2",
+      "Snowshoe through the cedars with a local guide, soup at the top."
+     ],
+     [
+      "Day 3",
+      "A slow morning, one last walk in the snow, then home."
+     ]
+    ],
+    "learn": [
+     "How to walk on snow in snowshoes",
+     "Why the cedar is on the flag",
+     "How to layer for a full day in the cold"
+    ],
+    "add": [
+     [
+      "Ski or snowboard lesson",
+      900
+     ],
+     [
+      "Private cabin for your group",
+      2400
+     ],
+     [
+      "Photographer for a day",
+      600
+     ]
+    ],
+    "buy": [
+     "Local honey and thyme from the village",
+     "Wool socks you will not want to take off",
+     "A Hajeela Snow pin"
+    ],
+    "stay": "Warm mountain cabins and small chalets, shared rooms or private.",
+    "pocket": [
+     [
+      "Hot drinks and snacks",
+      250
+     ],
+     [
+      "Souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      150
+     ]
+    ]
+   }
+  },
+  "PACK": {
+   "sea": [
+    "Swimsuit and a towel",
+    "Reef-safe sunscreen",
+    "A hat and sunglasses",
+    "A light layer for the boat",
+    "Your ID",
+    "Motion sickness tablets, just in case"
+   ],
+   "sand": [
+    "Closed shoes you do not mind filling with sand",
+    "A warm layer for the night",
+    "A scarf for wind and sun",
+    "A torch or headlamp",
+    "Your ID",
+    "A power bank"
+   ],
+   "summit": [
+    "Proper walking shoes",
+    "Warm layers, gloves and a hat",
+    "A headlamp",
+    "A small backpack and water",
+    "Your ID",
+    "Snacks for the climb"
+   ],
+   "snow": [
+    "Warm layers, not one thick one",
+    "Waterproof boots",
+    "Gloves and a hat",
+    "Sunglasses, snow is bright",
+    "Your passport for trips abroad",
+    "A flask for hot drinks"
+   ]
+  },
+  "CLIM": {
+   "sea": [
+    "Warm and sunny",
+    "Sea 22 to 28°C"
+   ],
+   "sand": [
+    "Hot days, cold nights",
+    "Dry desert air"
+   ],
+   "summit": [
+    "Cold before sunrise",
+    "Thin mountain air"
+   ],
+   "snow": [
+    "Cold and bright",
+    "Snow from December to March"
+   ]
+  },
+  "BRING": {
+   "sea": "Masks, fins, life jackets, towels on board",
+   "sand": "Tents, mattresses, blankets, boards",
+   "summit": "Guides, camels for bags, hot drinks at the top",
+   "snow": "Snow gear, cabins, hot drinks"
+  },
+  "CARDN": {
+   "sand": [
+    "Slow nomad",
+    "Dune chaser"
+   ],
+   "sea": [
+    "Reef drifter",
+    "Deep diver"
+   ],
+   "summit": [
+    "Steady climber",
+    "Sunrise chaser"
+   ],
+   "snow": [
+    "Snow wanderer",
+    "Cabin dreamer"
+   ]
+  },
+  "FOUND": {
+   "sea": [
+    "Sunlight and snorkellers",
+    "Parrotfish country",
+    "Soft coral gardens",
+    "The Yolanda wreck",
+    "Where the light fades",
+    "The seabed. Almost silent."
+   ],
+   "sand": [
+    "Where the road ends",
+    "Air out, ready for sand",
+    "Over the top",
+    "Dusk, no signal",
+    "Almost there",
+    "Camp. Fire lit, stars out."
+   ],
+   "summit": [
+    "Torch on. It's 2 am.",
+    "The monastery walls",
+    "Tea at Elijah's Basin",
+    "3,750 stone steps",
+    "The last ridge, first light",
+    "Sunrise. You made it."
+   ],
+   "snow": [
+    "The valley, first snow",
+    "The lift hums",
+    "Pines heavy with snow",
+    "The ridge, clear and bright",
+    "Nearly there",
+    "The cabin. Fire lit."
+   ]
+  },
+  "INTRO": {
+   "sea": [
+    "How deep can you go?",
+    "Start the dive"
+   ],
+   "sand": [
+    "Can you reach the camp?",
+    "Start the engine"
+   ],
+   "summit": [
+    "How high can you climb?",
+    "Start the climb"
+   ],
+   "snow": [
+    "Can you reach the cabin?",
+    "Head up the slope"
+   ]
+  },
+  "TRAVEL": {
+   "sea": "Diving",
+   "sand": "Driving on",
+   "summit": "Climbing",
+   "snow": "Heading up"
+  },
+  "STORY": {
+   "sea": {
+    "title": "Two days on the Red Sea",
+    "open": "You are on the boat. Five scenes, one question in each. Get it right and the story takes you deeper.",
+    "beats": [
+     "It is 7 am. The boat pulls out of the marina in Hurghada, the tea is already going round, and the captain turns to you with the first question of the day.",
+     "Mask on, you roll off the back of the boat. A few metres down, a flash of orange darts back into its home and watches you from inside.",
+     "You follow your guide down the reef wall. The water turns a deeper blue, and your ears start to complain.",
+     "Day two. The boat turns north toward the tip of Sinai, and your guide points at the headland ahead.",
+     "The last dive. A shape rises out of the blue below you: a ship, lying on the reef where it went down."
+    ],
+    "win": "You surface to the whole boat cheering. Tea is waiting on deck."
+   },
+   "sand": {
+    "title": "Dune safari to camp",
+    "open": "The camp is somewhere past those dunes. Five questions stand between you and the fire.",
+    "beats": [
+     "The tarmac ends beside a lake. Your driver steps out, kneels by the front wheel and smiles at you.",
+     "Tyres soft, engine on. The first dunes rise ahead and someone in the back asks where exactly we are.",
+     "The car drops into a wide, quiet valley. Shapes in the rock look like bones.",
+     "From the ridge the light goes fast. Phones show nothing. Your driver points up instead.",
+     "A small orange dot in the dark. Your host is already walking out to meet the car."
+    ],
+    "win": "You made it to camp. The fire is lit, the tea is poured, and there is a mat with your name on it."
+   },
+   "summit": {
+    "title": "The night climb",
+    "open": "It is the middle of the night at the foot of the mountain. Five scenes, one question in each. Get it right and you climb.",
+    "beats": [
+     "It is 2 am and properly cold. You switch on your torch next to old stone walls at the foot of the mountain.",
+     "Your Bedouin guide points past your summit to a darker shape against the stars, even higher than where you are going.",
+     "At a tea hut halfway up, someone warming their hands asks why on earth you all set off so early.",
+     "The air is thinner now. A friend behind you asks how much higher this mountain actually goes.",
+     "The path ends. In the torchlight a staircase of stone begins, cut by hand a long time ago."
+    ],
+    "win": "The sky turns pink, then gold. You are at the top, and so is everyone you climbed with."
+   },
+   "snow": {
+    "title": "Up to the mountain cabin",
+    "open": "You are standing at the foot of a snowy mountain. Five scenes, one question in each. Get it right and you go higher, until the cabin lights come into view.",
+    "beats": [
+     "The valley is quiet and cold, and the snow squeaks under your boots. First, something warm in the café.",
+     "A lift takes you above the village, swinging gently past the first pines.",
+     "You reach the tree line, where the trees thin out and the cedars and pines are heavy with snow.",
+     "The ridge is bright and windy, and a guide points to a peak far across the valley.",
+     "The last slope is steep and slow. Somewhere above, a window glows."
+    ],
+    "win": "Fire lit, soup on, snow falling outside. The first hot chocolate is on us."
+   }
+  },
+  "TRIPS": [
+   {
+    "id": "ras-mohamed",
+    "w": "sea",
+    "dest": "ras-mohammed",
+    "b": "Classic",
+    "t": "Ras Mohammed island hopping",
+    "kind": "weekend",
+    "dur": 3,
+    "lvl": 3,
+    "m": [
+     2,
+     3,
+     5,
+     2
+    ],
+    "price": 7900,
+    "av": "live",
+    "dep": true,
+    "exps": [
+     "snorkelling",
+     "diving",
+     "boat"
+    ],
+    "dates": [
+     {
+      "date": "2026-12-03",
+      "time": "22:00",
+      "left": 6
+     },
+     {
+      "date": "2026-12-17",
+      "time": "22:00",
+      "left": 0
+     },
+     {
+      "date": "2027-01-07",
+      "time": "22:00",
+      "left": 11
+     }
+    ]
+   },
+   {
+    "id": "dahab",
+    "w": "sea",
+    "dest": "dahab",
+    "b": "Classic",
+    "t": "Dahab reef & desert weekend",
+    "kind": "weekend",
+    "dur": 3,
+    "lvl": 2,
+    "m": [
+     2,
+     2,
+     4,
+     2
+    ],
+    "price": 6900,
+    "av": "live",
+    "dep": true,
+    "exps": [
+     "snorkelling",
+     "diving",
+     "camping"
+    ],
+    "dates": [
+     {
+      "date": "2026-12-10",
+      "time": "22:00",
+      "left": 9
+     },
+     {
+      "date": "2027-01-14",
+      "time": "22:00",
+      "left": 14
+     }
+    ]
+   },
+   {
+    "id": "marsa-alam",
+    "w": "sea",
+    "dest": "marsa-alam",
+    "b": "Adventurer",
+    "t": "Marsa Alam first-dive weekend",
+    "kind": "weekend",
+    "dur": 4,
+    "lvl": 4,
+    "m": [
+     3,
+     4,
+     5,
+     2
+    ],
+    "price": 9500,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "diving",
+     "boat"
+    ],
+    "dates": [
+     {
+      "date": "2026-12-09",
+      "time": "22:00",
+      "left": null
+     },
+     {
+      "date": "2027-01-13",
+      "time": "22:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "hurghada",
+    "w": "sea",
+    "dest": "hurghada",
+    "b": "Classic",
+    "t": "Hurghada boat weekend",
+    "kind": "weekend",
+    "dur": 3,
+    "lvl": 2,
+    "m": [
+     1,
+     2,
+     4,
+     1
+    ],
+    "price": 6400,
+    "av": "live",
+    "dep": false,
+    "exps": [
+     "boat",
+     "snorkelling"
+    ],
+    "dates": [
+     {
+      "date": "2026-12-10",
+      "time": "22:00",
+      "left": 4
+     },
+     {
+      "date": "2027-01-28",
+      "time": "22:00",
+      "left": 16
+     }
+    ]
+   },
+   {
+    "id": "fayoum-day",
+    "w": "sand",
+    "dest": "fayoum",
+    "b": "Classic",
+    "t": "Fayoum sandboarding & pottery",
+    "kind": "day",
+    "dur": 1,
+    "lvl": 2,
+    "m": [
+     3,
+     3,
+     0,
+     1
+    ],
+    "price": 1800,
+    "av": "live",
+    "dep": false,
+    "exps": [
+     "sandboarding",
+     "culture"
+    ],
+    "dates": [
+     {
+      "date": "2026-11-27",
+      "time": "06:00",
+      "left": 12
+     },
+     {
+      "date": "2026-12-04",
+      "time": "06:00",
+      "left": 0
+     },
+     {
+      "date": "2026-12-12",
+      "time": "06:00",
+      "left": 20
+     }
+    ]
+   },
+   {
+    "id": "white-desert",
+    "w": "sand",
+    "dest": "white-desert",
+    "b": "Uncharted",
+    "t": "White Desert camp night",
+    "kind": "weekend",
+    "dur": 2,
+    "lvl": 3,
+    "m": [
+     2,
+     3,
+     0,
+     4
+    ],
+    "price": 4200,
+    "av": "request",
+    "dep": false,
+    "exps": [
+     "camping",
+     "stargazing"
+    ],
+    "dates": [
+     {
+      "date": "2026-12-03",
+      "time": "22:00",
+      "left": null
+     },
+     {
+      "date": "2027-01-07",
+      "time": "22:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "siwa",
+    "w": "sand",
+    "dest": "siwa",
+    "b": "Uncharted",
+    "t": "Siwa, four slow days",
+    "kind": "long",
+    "dur": 4,
+    "lvl": 2,
+    "m": [
+     2,
+     2,
+     2,
+     2
+    ],
+    "price": 8200,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "culture",
+     "camping"
+    ],
+    "dates": [
+     {
+      "date": "2027-01-28",
+      "time": "07:00",
+      "left": null
+     },
+     {
+      "date": "2027-03-09",
+      "time": "07:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "sinai-sunrise",
+    "w": "summit",
+    "dest": "st-catherine",
+    "b": "Adventurer",
+    "t": "Mount Sinai sunrise climb",
+    "kind": "weekend",
+    "dur": 3,
+    "lvl": 4,
+    "m": [
+     4,
+     5,
+     0,
+     3
+    ],
+    "price": 5600,
+    "av": "live",
+    "dep": true,
+    "exps": [
+     "hiking",
+     "stargazing"
+    ],
+    "dates": [
+     {
+      "date": "2026-12-10",
+      "time": "22:00",
+      "left": 7
+     },
+     {
+      "date": "2027-04-22",
+      "time": "22:00",
+      "left": 18
+     }
+    ]
+   },
+   {
+    "id": "st-catherine",
+    "w": "summit",
+    "dest": "st-catherine",
+    "b": "Adventurer",
+    "t": "St Catherine three-peak trek",
+    "kind": "long",
+    "dur": 4,
+    "lvl": 5,
+    "m": [
+     5,
+     5,
+     0,
+     4
+    ],
+    "price": 8800,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "hiking",
+     "camping"
+    ],
+    "dates": [
+     {
+      "date": "2027-01-07",
+      "time": "07:00",
+      "left": null
+     },
+     {
+      "date": "2027-05-14",
+      "time": "07:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "dakhla-kharga",
+    "w": "sand",
+    "dest": "dakhla-kharga",
+    "b": "Uncharted",
+    "t": "Dakhla & Kharga old towns",
+    "kind": "long",
+    "dur": 5,
+    "lvl": 3,
+    "m": [
+     3,
+     3,
+     1,
+     3
+    ],
+    "price": 9900,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "culture",
+     "camping"
+    ],
+    "dates": [
+     {
+      "date": "2027-04-22",
+      "time": "07:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "lebanon-cedars",
+    "w": "snow",
+    "dest": "lebanon",
+    "b": "Snow chaser",
+    "t": "Lebanon snow weekend",
+    "kind": "long",
+    "dur": 3,
+    "lvl": 2,
+    "m": [
+     2,
+     3,
+     2,
+     1
+    ],
+    "price": 14500,
+    "av": "live",
+    "dep": true,
+    "exps": [
+     "snow",
+     "hiking"
+    ],
+    "dates": [
+     {
+      "date": "2027-01-15",
+      "time": "07:00",
+      "left": 12
+     },
+     {
+      "date": "2027-02-05",
+      "time": "07:00",
+      "left": 20
+     }
+    ]
+   },
+   {
+    "id": "switzerland-alps",
+    "w": "snow",
+    "dest": "switzerland",
+    "b": "Snow chaser",
+    "t": "The Swiss Alps",
+    "kind": "long",
+    "dur": 7,
+    "lvl": 3,
+    "m": [
+     3,
+     4,
+     3,
+     3
+    ],
+    "price": 68000,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "snow",
+     "hiking"
+    ],
+    "dates": [
+     {
+      "date": "2027-02-06",
+      "time": "07:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "austria-tyrol",
+    "w": "snow",
+    "dest": "austria",
+    "b": "Snow chaser",
+    "t": "Tyrol, Austria",
+    "kind": "long",
+    "dur": 6,
+    "lvl": 3,
+    "m": [
+     3,
+     4,
+     3,
+     3
+    ],
+    "price": 59000,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "snow"
+    ],
+    "dates": [
+     {
+      "date": "2027-02-20",
+      "time": "07:00",
+      "left": null
+     }
+    ]
+   },
+   {
+    "id": "greece-islands",
+    "w": "sea",
+    "dest": "greece",
+    "b": "Classic",
+    "t": "Greek islands by boat",
+    "kind": "long",
+    "dur": 6,
+    "lvl": 1,
+    "m": [
+     1,
+     2,
+     4,
+     1
+    ],
+    "price": 46000,
+    "av": "request",
+    "dep": true,
+    "exps": [
+     "boat",
+     "snorkelling"
+    ],
+    "dates": [
+     {
+      "date": "2027-05-16",
+      "time": "07:00",
+      "left": null
+     }
+    ]
+   }
+  ],
+  "TRATE": {
+   "lebanon-cedars": [
+    2,
+    3,
+    3,
+    1
+   ],
+   "switzerland-alps": [
+    3,
+    4,
+    4,
+    2
+   ],
+   "austria-tyrol": [
+    3,
+    4,
+    4,
+    2
+   ],
+   "greece-islands": [
+    1,
+    2,
+    4,
+    1
+   ],
+   "ras-mohamed": [
+    2,
+    3,
+    3,
+    1
+   ],
+   "dahab": [
+    2,
+    3,
+    3,
+    1
+   ],
+   "marsa-alam": [
+    3,
+    4,
+    3,
+    2
+   ],
+   "hurghada": [
+    1,
+    2,
+    4,
+    1
+   ],
+   "fayoum-day": [
+    3,
+    3,
+    3,
+    1
+   ],
+   "white-desert": [
+    2,
+    4,
+    2,
+    2
+   ],
+   "siwa": [
+    2,
+    4,
+    3,
+    1
+   ],
+   "sinai-sunrise": [
+    4,
+    4,
+    2,
+    3
+   ],
+   "st-catherine": [
+    5,
+    5,
+    2,
+    4
+   ],
+   "old-cairo": [
+    1,
+    2,
+    4,
+    1
+   ],
+   "dakhla-kharga": [
+    3,
+    3,
+    3,
+    2
+   ]
+  },
+  "MOMENT": {
+   "lebanon-cedars": "The first snowfall of the trip",
+   "switzerland-alps": "Fondue after the last run",
+   "austria-tyrol": "Hot chocolate at the top of the lift",
+   "greece-islands": "Swimming off the boat, anchor down",
+   "ras-mohamed": "Jumping off the top deck, all at once",
+   "dahab": "Tea on the shore after the last swim",
+   "marsa-alam": "The first breath underwater",
+   "hurghada": "Pizza on the boat between two islands",
+   "fayoum-day": "Everyone falling off the sandboard, laughing",
+   "white-desert": "The whole camp lying back to watch the stars",
+   "siwa": "Floating in the salt lake, not trying",
+   "sinai-sunrise": "The first light at the top, with new friends",
+   "st-catherine": "Bedouin tea halfway up",
+   "old-cairo": "Feteer at 11 pm on Al-Muizz",
+   "dakhla-kharga": "A hot spring at the end of a long road"
+  },
+  "DESTS": [
+   {
+    "id": "fayoum",
+    "n": "Fayoum",
+    "w": "sand",
+    "l": "Dunes, a lake and a pottery village, two hours from Cairo.",
+    "img": {
+     "src": "img/destinations/fayoum.jpg",
+     "pos": "50% 62%"
+    }
+   },
+   {
+    "id": "siwa",
+    "n": "Siwa",
+    "w": "sand",
+    "l": "Springs, salt lakes and an old mud-brick town on the edge of the Great Sand Sea.",
+    "img": {
+     "src": "img/destinations/siwa.jpg",
+     "pos": "60% 55%"
+    }
+   },
+   {
+    "id": "white-desert",
+    "n": "White Desert",
+    "w": "sand",
+    "l": "Chalk rocks that turn silver at night, and a camp under the stars.",
+    "img": {
+     "src": "img/destinations/white-desert.jpg",
+     "pos": "50% 50%"
+    }
+   },
+   {
+    "id": "ras-mohammed",
+    "n": "Ras Mohammed",
+    "w": "sea",
+    "l": "One of the Red Sea's oldest protected reefs, seen from a boat.",
+    "img": {
+     "src": "img/destinations/ras-mohammed.jpg",
+     "pos": "50% 55%"
+    }
+   },
+   {
+    "id": "dahab",
+    "n": "Dahab",
+    "w": "sea",
+    "l": "A slow bay town where the reef starts a few steps from the shore.",
+    "img": {
+     "src": "img/destinations/dahab.jpg",
+     "pos": "55% 50%"
+    }
+   },
+   {
+    "id": "hurghada",
+    "n": "Hurghada",
+    "w": "sea",
+    "l": "Island hopping and long days on the water.",
+    "img": {
+     "src": "img/destinations/hurghada.jpg",
+     "pos": "50% 66%"
+    }
+   },
+   {
+    "id": "marsa-alam",
+    "n": "Marsa Alam",
+    "w": "sea",
+    "l": "Quieter reefs further south, for your first proper dive.",
+    "img": {
+     "src": "img/destinations/marsa-alam.jpg",
+     "pos": "50% 50%"
+    }
+   },
+   {
+    "id": "st-catherine",
+    "n": "St Catherine & Mount Sinai",
+    "w": "summit",
+    "l": "Egypt's highest peaks, climbed with Bedouin guides.",
+    "img": {
+     "src": "img/destinations/st-catherine.jpg",
+     "pos": "50% 60%"
+    }
+   },
+   {
+    "id": "dakhla-kharga",
+    "n": "Dakhla & Kharga",
+    "w": "sand",
+    "l": "Old towns, hot springs and a long desert road.",
+    "img": {
+     "src": "img/destinations/dakhla-kharga.jpg",
+     "pos": "60% 50%"
+    }
+   },
+   {
+    "id": "lebanon",
+    "n": "Lebanon · Cedars & Faraya",
+    "w": "snow",
+    "l": "Snow under the cedars, an hour from the sea. Our nearest snow.",
+    "img": {
+     "src": "img/destinations/lebanon.jpg",
+     "pos": "50% 88%"
+    }
+   },
+   {
+    "id": "switzerland",
+    "n": "Switzerland · The Alps",
+    "w": "snow",
+    "l": "Big peaks, villages and fondue. A trip we have run before.",
+    "img": {
+     "src": "img/destinations/switzerland.jpg",
+     "pos": "50% 56%"
+    }
+   },
+   {
+    "id": "austria",
+    "n": "Austria · Tyrol",
+    "w": "snow",
+    "l": "Slopes, wooden chalets and warm evenings. A trip we have run before.",
+    "img": {
+     "src": "img/destinations/austria.jpg",
+     "pos": "50% 58%"
+    }
+   },
+   {
+    "id": "greece",
+    "n": "Greece · The islands",
+    "w": "sea",
+    "l": "Island hopping across clear water. A trip we have run before.",
+    "img": {
+     "src": "img/destinations/greece.jpg",
+     "pos": "50% 32%"
+    }
+   }
+  ],
+  "DINFO": {
+   "fayoum": {
+    "best": [
+     9,
+     10,
+     11,
+     0,
+     1,
+     2,
+     3
+    ],
+    "bestWhy": "Cool mornings for the dunes. Summer is too hot by 10 am.",
+    "local": [
+     "Am Sayed",
+     "Potter, Tunis village",
+     "Come hungry. My wife decides when you have eaten enough, not you."
+    ],
+    "g": 4,
+    "so": 5,
+    "gs": "An easy first trip on your own: one day, a friendly bus, home by night.",
+    "pros": [
+     "Two hours from Cairo, back the same night",
+     "Sandboarding, a lake and a pottery village in one day",
+     "Gentle enough for a first trip"
+    ],
+    "cons": [
+     "An early start, around 6 am",
+     "Busy on Fridays in winter",
+     "Very little shade on the dunes"
+    ],
+    "learn": [
+     "How to stand up on a sandboard, and fall well",
+     "How a pot is thrown, with your own hands on the clay",
+     "Why there are whale fossils in a desert"
+    ],
+    "loved": [
+     [
+      "Sandboarding at Wadi El Rayan",
+      88
+     ],
+     [
+      "Lunch by the lake",
+      81
+     ],
+     [
+      "The pottery studios",
+      74
+     ]
+    ],
+    "n": [
+     2140,
+     96,
+     95,
+     2018
+    ]
+   },
+   "siwa": {
+    "best": [
+     9,
+     10,
+     11,
+     1,
+     2,
+     3
+    ],
+    "bestWhy": "Warm days, cool nights. The date harvest is in October.",
+    "local": [
+     "Youssef",
+     "Siwan guide, born in Shali",
+     "Do not rush here. Siwa only shows itself to people who sit down."
+    ],
+    "g": 5,
+    "so": 4,
+    "gs": "Best shared: the drive is long and the evenings are made for a group around a fire.",
+    "pros": [
+     "Salt lakes you float in without trying",
+     "A culture and language of its own",
+     "Proper quiet, and very dark skies"
+    ],
+    "cons": [
+     "A long road: about nine hours each way",
+     "Simple rooms, patchy signal",
+     "Not a trip to squeeze into two days"
+    ],
+    "learn": [
+     "A few words of Siwi",
+     "How dates and olives shaped an oasis",
+     "How to read the stars with a Bedouin guide"
+    ],
+    "loved": [
+     [
+      "Floating in the salt lake",
+      93
+     ],
+     [
+      "Sunset at Fatnas island",
+      86
+     ],
+     [
+      "Dinner in the dunes",
+      82
+     ]
+    ],
+    "n": [
+     860,
+     41,
+     97,
+     2019
+    ]
+   },
+   "white-desert": {
+    "best": [
+     9,
+     10,
+     11,
+     0,
+     1,
+     2
+    ],
+    "bestWhy": "Nights are cold but clear. Moonless weekends are the best for stars.",
+    "local": [
+     "Hamada",
+     "Bedouin camp host",
+     "The desert is not empty. You just have to switch your torch off."
+    ],
+    "g": 5,
+    "so": 4,
+    "gs": "Come with friends or come alone: by the second tea around the fire it is one group.",
+    "pros": [
+     "A landscape like nowhere else in Egypt",
+     "The clearest night sky you will see",
+     "One night is enough to feel far away"
+    ],
+    "cons": [
+     "Camping: no showers, a shared tent or the open sky",
+     "Cold after dark in winter",
+     "A lot of time in the car"
+    ],
+    "learn": [
+     "How chalk and wind made the rock shapes",
+     "How to set up a Bedouin camp",
+     "How to find north without a phone"
+    ],
+    "loved": [
+     [
+      "Sleeping under the stars",
+      95
+     ],
+     [
+      "Dinner cooked on the fire",
+      89
+     ],
+     [
+      "Sunrise over the chalk rocks",
+      84
+     ]
+    ],
+    "n": [
+     1320,
+     58,
+     98,
+     2018
+    ]
+   },
+   "ras-mohammed": {
+    "best": [
+     2,
+     3,
+     4,
+     8,
+     9,
+     10
+    ],
+    "bestWhy": "Calm water and warm sea. Winter is windier on the boat.",
+    "local": [
+     "Captain Hany",
+     "Boat captain, 20 years on this reef",
+     "If you see a turtle, do not chase it. Wait. It will come and look at you."
+    ],
+    "g": 5,
+    "so": 5,
+    "gs": "Works either way. On a boat everyone ends up sharing the same deck and the same lunch.",
+    "pros": [
+     "One of the best reefs in the Red Sea",
+     "You only need to be able to swim",
+     "Everything happens from the boat"
+    ],
+    "cons": [
+     "A very early drive from Cairo",
+     "Can be choppy on windy days",
+     "Other boats at the popular spots"
+    ],
+    "learn": [
+     "How to snorkel properly, and equalise",
+     "Which fish are which",
+     "Why this reef has been protected since 1983"
+    ],
+    "loved": [
+     [
+      "Jumping off the top deck",
+      91
+     ],
+     [
+      "The second snorkel stop",
+      87
+     ],
+     [
+      "Lunch on the boat",
+      79
+     ]
+    ],
+    "n": [
+     3050,
+     124,
+     96,
+     2017
+    ]
+   },
+   "dahab": {
+    "best": [
+     2,
+     3,
+     4,
+     9,
+     10
+    ],
+    "bestWhy": "Warm enough to swim, cool enough to sleep. Easter and October are perfect.",
+    "local": [
+     "Salma",
+     "Dive instructor and Dahab local",
+     "People come for a weekend and call me a year later to ask about rent."
+    ],
+    "g": 4,
+    "so": 5,
+    "gs": "The easiest place in Egypt to arrive alone. The whole town is set up for it.",
+    "pros": [
+     "The reef starts a few steps from the shore",
+     "A slow, friendly town",
+     "Sea and mountains in one weekend"
+    ],
+    "cons": [
+     "A long overnight drive",
+     "Windy some weeks",
+     "It is hard to leave"
+    ],
+    "learn": [
+     "A first try at freediving or diving",
+     "How Bedouin tea is really made",
+     "How to do nothing, properly"
+    ],
+    "loved": [
+     [
+      "The Blue Hole snorkel",
+      90
+     ],
+     [
+      "Dinner on cushions by the water",
+      88
+     ],
+     [
+      "The canyon walk",
+      72
+     ]
+    ],
+    "n": [
+     2480,
+     102,
+     97,
+     2017
+    ]
+   },
+   "hurghada": {
+    "best": [
+     3,
+     4,
+     5,
+     8,
+     9,
+     10
+    ],
+    "bestWhy": "Long sunny days on the water. July and August are hot but the sea fixes that.",
+    "local": [
+     "Captain Mido",
+     "Island-hopping captain",
+     "I know where the dolphins have breakfast. I am not telling you until we are there."
+    ],
+    "g": 5,
+    "so": 3,
+    "gs": "Better with your people: it is a boat, music and island days kind of trip.",
+    "pros": [
+     "Easy to reach, even by air",
+     "Islands with soft sand and clear water",
+     "Great for celebrations"
+    ],
+    "cons": [
+     "A busy resort town on land",
+     "Popular islands get crowded",
+     "Less wild than the south"
+    ],
+    "learn": [
+     "How to snorkel from a boat",
+     "A little about reading the wind",
+     "How to cook fish the way the crew does"
+    ],
+    "loved": [
+     [
+      "Swimming off Giftun island",
+      89
+     ],
+     [
+      "Sunset on the top deck",
+      85
+     ],
+     [
+      "Dolphins on the way out",
+      68
+     ]
+    ],
+    "n": [
+     1960,
+     77,
+     94,
+     2018
+    ]
+   },
+   "marsa-alam": {
+    "best": [
+     3,
+     4,
+     5,
+     9,
+     10
+    ],
+    "bestWhy": "Calm, warm water for a first dive. Winter mornings are chilly.",
+    "local": [
+     "Mostafa",
+     "Dive guide, grew up on this coast",
+     "Everybody is nervous for the first breath. Then nobody wants to come up."
+    ],
+    "g": 4,
+    "so": 5,
+    "gs": "Lovely on your own: a first dive is something you share with whoever is next to you.",
+    "pros": [
+     "Quiet reefs with turtles and sometimes dugongs",
+     "Patient instructors for first-timers",
+     "Far fewer boats"
+    ],
+    "cons": [
+     "The longest drive on our list",
+     "Very little to do after dark",
+     "Diving costs more than snorkelling"
+    ],
+    "learn": [
+     "Your first real dive, step by step",
+     "How to stay calm and breathe slowly",
+     "How to spot a turtle before anyone else"
+    ],
+    "loved": [
+     [
+      "The first breath underwater",
+      94
+     ],
+     [
+      "Turtles at Abu Dabbab",
+      90
+     ],
+     [
+      "Stars from the camp",
+      77
+     ]
+    ],
+    "n": [
+     740,
+     36,
+     98,
+     2020
+    ]
+   },
+   "st-catherine": {
+    "best": [
+     2,
+     3,
+     4,
+     8,
+     9,
+     10
+    ],
+    "bestWhy": "Clear and cool. In winter the summit can be below zero, sometimes with snow.",
+    "local": [
+     "Mousa",
+     "Jebeliya Bedouin mountain guide",
+     "Walk slowly. The mountain has been here a long time, it will wait for you."
+    ],
+    "g": 5,
+    "so": 4,
+    "gs": "Better as a group: you set off at 2 am, and it helps to have people to climb with.",
+    "pros": [
+     "Sunrise from the top of Sinai",
+     "Guided by the Bedouin who live here",
+     "A real sense of having earned it"
+    ],
+    "cons": [
+     "You start at 2 am",
+     "Cold and steep near the top",
+     "Sore legs the next day"
+    ],
+    "learn": [
+     "How to pace a climb",
+     "The story of the monastery and its library",
+     "Which mountain herbs go in the tea"
+    ],
+    "loved": [
+     [
+      "Sunrise at the summit",
+      97
+     ],
+     [
+      "Tea at the hut halfway up",
+      83
+     ],
+     [
+      "Breakfast in the Bedouin garden",
+      80
+     ]
+    ],
+    "n": [
+     1680,
+     71,
+     96,
+     2018
+    ]
+   },
+   "old-cairo": {
+    "best": [
+     9,
+     10,
+     11,
+     0,
+     1,
+     2,
+     3
+    ],
+    "bestWhy": "Cool evenings for walking. During Ramadan the nights are something else.",
+    "local": [
+     "Mariam",
+     "Guide and historian, raised in El-Gamaleya",
+     "I am not showing you monuments. I am introducing you to my neighbours."
+    ],
+    "g": 4,
+    "so": 5,
+    "gs": "Perfect solo: three hours, a small group, and you leave knowing people.",
+    "pros": [
+     "No travel: it is an evening in the city",
+     "Food at every stop",
+     "A side of Cairo most people who live here have not seen"
+    ],
+    "cons": [
+     "Crowded and loud, in a good way",
+     "A lot of walking on uneven streets",
+     "Not a quiet night"
+    ],
+    "learn": [
+     "A thousand years of Cairo in one street",
+     "How brass and tents are still made by hand",
+     "Where to eat feteer at midnight"
+    ],
+    "loved": [
+     [
+      "Feteer at 11 pm on Al-Muizz",
+      92
+     ],
+     [
+      "The coppersmiths’ lane",
+      81
+     ],
+     [
+      "The rooftop view of the minarets",
+      78
+     ]
+    ],
+    "n": [
+     1210,
+     88,
+     95,
+     2019
+    ]
+   },
+   "dakhla-kharga": {
+    "best": [
+     9,
+     10,
+     11,
+     0,
+     1,
+     2
+    ],
+    "bestWhy": "The only comfortable months this far south. Summer is extreme.",
+    "local": [
+     "Hajja Zeinab",
+     "Keeps a mud-brick house in Al-Qasr",
+     "Sit. Eat. Then I will tell you who built this house and why the door is so low."
+    ],
+    "g": 5,
+    "so": 4,
+    "gs": "Best as a group: long roads and long dinners, and the stories are better shared.",
+    "pros": [
+     "Old mud-brick towns almost nobody visits",
+     "Hot springs under the stars",
+     "Hosts who treat you as guests, not customers"
+    ],
+    "cons": [
+     "Very long distances",
+     "Basic places to stay",
+     "A slow trip, not an action one"
+    ],
+    "learn": [
+     "How an oasis town was built to stay cool",
+     "Stories you will not find in a guidebook",
+     "How to bake bread in a clay oven"
+    ],
+    "loved": [
+     [
+      "The hot spring at night",
+      90
+     ],
+     [
+      "Walking through Al-Qasr",
+      86
+     ],
+     [
+      "Bread from the clay oven",
+      83
+     ]
+    ],
+    "n": [
+     420,
+     19,
+     97,
+     2021
+    ]
+   },
+   "lebanon": {
+    "best": [
+     11,
+     0,
+     1,
+     2
+    ],
+    "bestWhy": "Snow is most reliable from late December to early March.",
+    "local": [
+     "Rima",
+     "Mountain guide from Faraya",
+     "Come for the snow, stay for the soup. Someone in the village always has a pot on."
+    ],
+    "g": 5,
+    "so": 4,
+    "gs": "Great with friends: cabins, snowball fights and long dinners.",
+    "pros": [
+     "Snow within a short flight",
+     "Cedar forests under snow",
+     "Warm villages and very good food"
+    ],
+    "cons": [
+     "Snow depends on the winter",
+     "Cold mornings",
+     "Check travel advice before booking"
+    ],
+    "learn": [
+     "How to walk on snow in snowshoes",
+     "Why the cedar is on the flag",
+     "How to build a fire that lasts"
+    ],
+    "loved": [
+     [
+      "Snowshoeing through the cedars",
+      91
+     ],
+     [
+      "Soup in a mountain cabin",
+      87
+     ],
+     [
+      "The first snowfall of the trip",
+      80
+     ]
+    ],
+    "n": [
+     180,
+     24,
+     96,
+     2025
+    ]
+   },
+   "switzerland": {
+    "best": [
+     11,
+     0,
+     1,
+     2
+    ],
+    "bestWhy": "Deep snow and clear days from January to March.",
+    "local": [
+     "Anna",
+     "Alpine guide",
+     "Slow down. The mountain is not going anywhere, and neither is the fondue."
+    ],
+    "g": 5,
+    "so": 3,
+    "gs": "A trip for a group: shared chalets and shared meals.",
+    "pros": [
+     "Real Alpine peaks",
+     "Trains that go almost anywhere",
+     "Fondue in the snow"
+    ],
+    "cons": [
+     "The most expensive trip we run",
+     "Needs a passport and visa checks",
+     "Long travel day"
+    ],
+    "learn": [
+     "How to read a trail map in the Alps",
+     "How fondue is really eaten",
+     "How to layer for a day in the cold"
+    ],
+    "loved": [
+     [
+      "The train ride up",
+      93
+     ],
+     [
+      "A chalet with a view",
+      89
+     ],
+     [
+      "Fondue after the last run",
+      85
+     ]
+    ],
+    "n": [
+     96,
+     32,
+     94,
+     2023
+    ]
+   },
+   "austria": {
+    "best": [
+     11,
+     0,
+     1,
+     2
+    ],
+    "bestWhy": "Powder season runs from January to March.",
+    "local": [
+     "Lukas",
+     "Ski host in Tyrol",
+     "Take the long way down. The views are better, and so is the cocoa."
+    ],
+    "g": 5,
+    "so": 3,
+    "gs": "Easy to enjoy in a group, whatever your level.",
+    "pros": [
+     "Friendly villages and wooden chalets",
+     "Slopes for every level",
+     "Warm evenings after cold days"
+    ],
+    "cons": [
+     "Needs a passport and visa checks",
+     "Early starts for the best snow",
+     "Cold hands, warm hearts"
+    ],
+    "learn": [
+     "How to ride a chairlift without panic",
+     "A few words of Austrian German",
+     "How to stay warm all day"
+    ],
+    "loved": [
+     [
+      "The first run of the day",
+      90
+     ],
+     [
+      "Chalet dinners",
+      88
+     ],
+     [
+      "The village at night",
+      84
+     ]
+    ],
+    "n": [
+     84,
+     30,
+     95,
+     2024
+    ]
+   },
+   "greece": {
+    "best": [
+     4,
+     5,
+     8,
+     9
+    ],
+    "bestWhy": "Warm sea and fewer crowds in May, June, September and October.",
+    "local": [
+     "Eleni",
+     "Skipper, born on the island",
+     "Drop anchor wherever it looks good. It almost always is."
+    ],
+    "g": 5,
+    "so": 4,
+    "gs": "Perfect for a group on one boat.",
+    "pros": [
+     "Warm, clear water",
+     "A new island every day",
+     "Long lunches by the sea"
+    ],
+    "cons": [
+     "A flight and a ferry",
+     "Needs a passport and visa checks",
+     "Busy in August"
+    ],
+    "learn": [
+     "How to read the wind from a boat",
+     "How to order lunch in Greek",
+     "How to swim off a boat safely"
+    ],
+    "loved": [
+     [
+      "Swimming off the boat",
+      94
+     ],
+     [
+      "A tavern lunch by the harbour",
+      88
+     ],
+     [
+      "Sunset from the deck",
+      86
+     ]
+    ],
+    "n": [
+     110,
+     28,
+     96,
+     2024
+    ]
+   }
+  },
+  "HOURS": {
+   "lebanon": "About 1 hour by plane",
+   "switzerland": "About 5 hours by plane",
+   "austria": "About 4 and a half hours by plane",
+   "greece": "About 1 and a half hours by plane",
+   "fayoum": "2 hours",
+   "siwa": "9 hours",
+   "white-desert": "5 hours",
+   "ras-mohammed": "6 hours",
+   "dahab": "7 hours",
+   "hurghada": "5 and a half hours",
+   "marsa-alam": "9 hours",
+   "st-catherine": "6 hours",
+   "old-cairo": "You are already here",
+   "dakhla-kharga": "10 hours"
+  },
+  "EXPS": [
+   [
+    "diving",
+    "Diving"
+   ],
+   [
+    "snorkelling",
+    "Snorkelling"
+   ],
+   [
+    "boat",
+    "Boat days"
+   ],
+   [
+    "sandboarding",
+    "Sandboarding"
+   ],
+   [
+    "camping",
+    "Camping"
+   ],
+   [
+    "hiking",
+    "Hiking"
+   ],
+   [
+    "stargazing",
+    "Stargazing"
+   ],
+   [
+    "culture",
+    "Culture & food"
+   ],
+   [
+    "snow",
+    "Snow & skiing"
+   ]
+  ],
+  "EXPINFO": {
+   "diving": [
+    "Slow breathing, bright fish, total quiet.",
+    3,
+    [
+     "The first breath underwater",
+     "A turtle drifting past",
+     "Tea on deck after"
+    ],
+    "Never tried? An instructor stays right beside you."
+   ],
+   "snorkelling": [
+    "Face in the water, fish everywhere.",
+    1,
+    [
+     "Floating over the reef",
+     "Spotting a clownfish",
+     "Jumping in off the boat"
+    ],
+    "If you can swim, you can do this."
+   ],
+   "boat": [
+    "Sun, music, and jumping off the top deck.",
+    1,
+    [
+     "The top deck jump",
+     "Lunch between two islands",
+     "Sunset on the way back"
+    ],
+    "Nothing to learn. Just show up."
+   ],
+   "sandboarding": [
+    "Like snowboarding, but warm, and you laugh more.",
+    2,
+    [
+     "Your first wobbly run",
+     "Everyone falling over",
+     "The climb back up"
+    ],
+    "Everybody falls. That is the point."
+   ],
+   "camping": [
+    "A fire, a sky full of stars, no signal.",
+    2,
+    [
+     "Dinner on the fire",
+     "Sleeping under the stars",
+     "Tea at sunrise"
+    ],
+    "We bring the tents and the beds."
+   ],
+   "hiking": [
+    "Steady steps, big views, legs you are proud of.",
+    4,
+    [
+     "Torchlight at 2 am",
+     "Tea at the halfway hut",
+     "Sunrise at the top"
+    ],
+    "Go at your own pace. A guide stays at the back."
+   ],
+   "stargazing": [
+    "Lie back. Look up. Go quiet.",
+    1,
+    [
+     "Torches off",
+     "The Milky Way, properly",
+     "A guide naming the stars"
+    ],
+    "Bring a warm layer."
+   ],
+   "culture": [
+    "Old streets, warm bread, people with stories.",
+    1,
+    [
+     "Feteer at 11 pm",
+     "A workshop older than your grandparents",
+     "Tea with a host"
+    ],
+    "Come hungry."
+   ],
+   "snow": [
+    "Fresh snow, warm layers, hot chocolate after.",
+    3,
+    [
+     "The first run of the day",
+     "Chalet dinners",
+     "Snow under the cedars"
+    ],
+    "Lessons and gear are sorted for you."
+   ]
+  },
+  "FAVS": [
+   {
+    "w": "sand",
+    "k": "Fav moment",
+    "t": "First light over Wadi El Rayan",
+    "c": "Early, before the heat, the dunes go quiet and gold. Some people sandboard. Some just sit and watch. Either way, breakfast is waiting at the bottom.",
+    "trip": "fayoum-day"
+   },
+   {
+    "w": "sea",
+    "k": "Fav moment",
+    "t": "The second dive at Ras Mohammed",
+    "c": "The first time under, you're thinking about your breathing. The second time, you look around. That's when the reef opens up, and most people come up asking when they can go again.",
+    "trip": "ras-mohamed"
+   },
+   {
+    "w": "sand",
+    "k": "Fav people",
+    "t": "Tea with our Bedouin hosts",
+    "c": "A fire, sweet tea and stories told in a dialect older than the road in. No show and no stage. It's where our name comes from, so it's part of every desert trip we run.",
+    "trip": "white-desert"
+   },
+   {
+    "w": "summit",
+    "k": "Fav moment",
+    "t": "Sunrise from the top of Mount Sinai",
+    "c": "You start in the dark, torch in hand, walking next to people you met that evening. By the time the light comes up, you're not strangers anymore.",
+    "trip": "sinai-sunrise"
+   },
+   {
+    "w": "sand",
+    "k": "Fav corner",
+    "t": "Floating in Siwa's salt lakes",
+    "c": "Turquoise water so salty you can't sink. Lie back, look up and let the quiet do the rest.",
+    "trip": "siwa"
+   },
+   {
+    "w": "sea",
+    "k": "Fav taste",
+    "t": "Pizza on the boat, between two islands",
+    "c": "Somewhere between swims, someone asks who's hungry. We make it on board, one tray at a time, with the sea still drying on your shoulders.",
+    "trip": "hurghada"
+   },
+   {
+    "w": "sand",
+    "k": "Fav taste",
+    "t": "Warm feteer in Tunis village",
+    "c": "Baked in a clay oven and eaten straight away with honey, right next to the pottery wheels. Order a second one. You'll want it.",
+    "trip": "fayoum-day"
+   },
+   {
+    "w": "sand",
+    "k": "Fav corner",
+    "t": "The White Desert after dark",
+    "c": "The chalk rocks turn silver under the moon, and the stars go all the way down to the ground. Bring a warm layer. You'll want to stay up.",
+    "trip": "white-desert"
+   }
+  ],
+  "FAVX": [
+   [
+    "2018",
+    "Our very first trip was here. Eleven friends, one borrowed bus, and nobody had ever stood on a sandboard. We stayed until the light went.",
+    "Am Sayed",
+    "He has opened the gate for us at dawn since that first morning, and still refuses to let anyone leave without tea."
+   ],
+   [
+    "2017",
+    "The first time we took a group under, half the boat was scared. On the second dive the same people would not come up. That is when we knew.",
+    "Captain Hany",
+    "Twenty years on this reef. He taught most of our team how to read the water before he let us bring anyone else."
+   ],
+   [
+    "2018",
+    "The first night we were invited to sit, we did not understand half the words. We understood the welcome. Our name comes from that fire.",
+    "Sheikh Salem",
+    "He told us what a hajeela is: going out together for the joy of it. He still pours the first glass."
+   ],
+   [
+    "2018",
+    "Our first climb, we got the timing wrong and reached the top in the dark. We sat close and waited. Nobody has forgotten that hour.",
+    "Mousa",
+    "A Jebeliya guide who has walked this path since he was a boy. He sets the pace, and he has never left anyone behind."
+   ],
+   [
+    "2019",
+    "The first time in Siwa, one of us lay back in the lake and went quiet for twenty minutes. We built the whole trip around that silence.",
+    "Youssef",
+    "Born in Shali. He showed us the lake that is not on the map, on the condition that we keep it slow."
+   ],
+   [
+    "2018",
+    "The first pizza on board was a joke, made by a crew member with a small oven and a point to prove. It has been on every boat since.",
+    "Captain Mido",
+    "He still makes the first tray himself, and he still will not share the recipe."
+   ],
+   [
+    "2018",
+    "On that first Fayoum trip we followed the smell to a clay oven and ate standing up. We have stopped there every single time since.",
+    "Om Hassan",
+    "She bakes from before sunrise. She counts our group by eye and always makes two extra."
+   ],
+   [
+    "2018",
+    "Our first night here we forgot half the gear and did not care. Everyone slept outside the tents, just to keep looking up.",
+    "Hamada",
+    "Our camp host from the start. He taught us to switch the torches off and let our eyes adjust."
+   ]
+  ],
+  "READS": [
+   {
+    "id": "pack-boat",
+    "tag": "How to pack",
+    "t": "Packing for a weekend on a boat",
+    "s": "What to bring, what to leave, and what's already on board.",
+    "mins": 4
+   },
+   {
+    "id": "first-dive",
+    "tag": "First-time tips",
+    "t": "Your first dive, step by step",
+    "s": "What happens before, during and after, so nothing surprises you.",
+    "mins": 5
+   },
+   {
+    "id": "desert-night",
+    "tag": "How to pack",
+    "t": "The desert night list",
+    "s": "It gets colder than you think. Here's what keeps you warm.",
+    "mins": 3
+   },
+   {
+    "id": "pocket-money",
+    "tag": "Money",
+    "t": "How much pocket money do you need?",
+    "s": "Real numbers for every destination type.",
+    "mins": 4
+   },
+   {
+    "id": "going-solo",
+    "tag": "First-time tips",
+    "t": "Coming on your own",
+    "s": "How we introduce people, and what the first hour usually looks like.",
+    "mins": 3
+   },
+   {
+    "id": "parents",
+    "tag": "First-time tips",
+    "t": "Asking your parents about an overnight trip",
+    "s": "What we share with families: who's hosting, where you'll sleep and our safety plan.",
+    "mins": 4
+   },
+   {
+    "id": "hosts",
+    "tag": "Places & people",
+    "t": "Who are our Bedouin hosts?",
+    "s": "The families we travel with in Fayoum, Siwa and Sinai.",
+    "mins": 5
+   }
+  ],
+  "MADE": [
+   {
+    "id": "bachelorette",
+    "t": "A bachelorette on a private boat, Hurghada",
+    "kicker": "Celebration · Bachelorette",
+    "facts": [
+     "14 friends",
+     "3 days",
+     "March",
+     "Hurghada",
+     "Planned in 9 days"
+    ],
+    "msg": "My sister gets married in April. We are 14 girls, we want the sea, one big night, and she must not find out. Can you help?",
+    "from": "Mariam’s sister, on WhatsApp",
+    "plan": "celebration",
+    "occ": "Bachelorette",
+    "w": "sea",
+    "acts": [
+     "boat",
+     "snorkelling",
+     "party",
+     "surprise"
+    ],
+    "n": 14,
+    "budget": 7500,
+    "road": [
+     [
+      "Day 1",
+      "The idea arrives",
+      "One WhatsApp message, late at night.",
+      "We replied the next morning with three questions: the dates, the budget, and what the bride loves."
+     ],
+     [
+      "Day 2",
+      "A quick call",
+      "Twenty minutes with the sister. A secret group chat without the bride.",
+      "We checked boats, a house by the water, and who in the group does not swim."
+     ],
+     [
+      "Day 4",
+      "The proposal",
+      "They opened one link with the plan, the price per person and two options for the big night.",
+      "We held a private boat and the house for a week so nothing slipped away."
+     ],
+     [
+      "Day 6",
+      "Shaping it",
+      "They asked for a vegetarian menu and a later start on the last day.",
+      "We swapped the dinner, moved the transfer, and added the surprise cake on the island."
+     ],
+     [
+      "Day 9",
+      "Approved and paid",
+      "One person approved. Everyone paid their own share from a link.",
+      "We confirmed the crew, the captain and the photographer."
+     ],
+     [
+      "One week before",
+      "Getting ready",
+      "A packing list and a playlist request landed in the group chat.",
+      "We briefed the guide on the surprise and shared who to call on the day."
+     ],
+     [
+      "The trip",
+      "Three days by the sea",
+      "They showed up. That was it.",
+      "A guide, a photographer and a plan B for wind, all quietly in the background."
+     ],
+     [
+      "After",
+      "The memories",
+      "A film and a shared album, a week later.",
+      "We sent the album and a note for the bride."
+     ]
+    ],
+    "days": [
+     [
+      "Day one",
+      "Arrive, settle in, sunset on the roof"
+     ],
+     [
+      "Day two",
+      "Private boat, two reefs, cake on the island, the big night"
+     ],
+     [
+      "Day three",
+      "Slow breakfast, last swim, home"
+     ]
+    ],
+    "mems": [
+     [
+      "The cake on the island",
+      "big"
+     ],
+     [
+      "Fourteen girls, one boat",
+      ""
+     ],
+     [
+      "First jump",
+      "tall"
+     ],
+     [
+      "The roof at sunset",
+      ""
+     ],
+     [
+      "Her face when she found out",
+      "wide"
+     ],
+     [
+      "Last swim",
+      ""
+     ]
+    ],
+    "quote": "She still has no idea how long we were planning it.",
+    "qby": "Mariam’s sister"
+   },
+   {
+    "id": "family",
+    "t": "A family weekend in Siwa",
+    "kicker": "Family trip",
+    "facts": [
+     "3 generations",
+     "9 people",
+     "2 nights",
+     "October",
+     "Siwa"
+    ],
+    "msg": "We are nine, from my mother who is 71 to my nephew who is 6. We want Siwa without anyone being exhausted.",
+    "from": "Omar, through the planning form",
+    "plan": "family",
+    "occ": null,
+    "w": "sand",
+    "acts": [
+     "stargazing",
+     "culture",
+     "camping"
+    ],
+    "n": 9,
+    "budget": 6000,
+    "road": [
+     [
+      "Day 1",
+      "The idea arrives",
+      "The planning form, filled in over a coffee.",
+      "We read it and noted two things: easy pace, and rooms close together."
+     ],
+     [
+      "Day 2",
+      "A quick message",
+      "A few questions on WhatsApp about walking and food.",
+      "We checked ground-floor rooms and a driver who is good with children."
+     ],
+     [
+      "Day 3",
+      "The proposal",
+      "One link with a gentle plan and the price for the family.",
+      "We held four rooms around one courtyard."
+     ],
+     [
+      "Day 5",
+      "Shaping it",
+      "They asked for a free afternoon and an early dinner for the youngest.",
+      "We moved the salt lake to the morning and kept the dunes short."
+     ],
+     [
+      "Day 6",
+      "Approved and paid",
+      "One payment for the whole family.",
+      "We confirmed the rooms, the driver and the guide."
+     ],
+     [
+      "One week before",
+      "Getting ready",
+      "A short list of what to pack for every age.",
+      "We shared the plan hour by hour, with the rest times marked."
+     ],
+     [
+      "The trip",
+      "Two slow days",
+      "Everyone at their own pace, together for meals.",
+      "A second car on standby in case someone wanted to head back early."
+     ],
+     [
+      "After",
+      "The memories",
+      "An album for the family group.",
+      "We sent the photos and the recipe for the date dessert they loved."
+     ]
+    ],
+    "days": [
+     [
+      "Day one",
+      "Arrive, lunch in the courtyard, sunset at the lake"
+     ],
+     [
+      "Day two",
+      "Floating in the salt lake, a nap, a short dune ride, stars"
+     ],
+     [
+      "Day three",
+      "Old town walk, dates to take home"
+     ]
+    ],
+    "mems": [
+     [
+      "Three generations, one table",
+      "big"
+     ],
+     [
+      "Floating, not trying",
+      ""
+     ],
+     [
+      "First time on a dune",
+      "tall"
+     ],
+     [
+      "Tea at sunset",
+      ""
+     ],
+     [
+      "The courtyard at night",
+      "wide"
+     ],
+     [
+      "Dates for the road",
+      ""
+     ]
+    ],
+    "quote": "My mother did every single thing, and nobody had to carry anybody.",
+    "qby": "Omar"
+   },
+   {
+    "id": "birthday",
+    "t": "A 30th birthday under the stars, White Desert",
+    "kicker": "Celebration · Birthday",
+    "facts": [
+     "12 friends",
+     "1 night",
+     "December",
+     "White Desert",
+     "Planned in 6 days"
+    ],
+    "msg": "I am turning 30 and I do not want a restaurant. I want a fire, my friends, and a sky full of stars.",
+    "from": "Nour, through the planning form",
+    "plan": "celebration",
+    "occ": "Birthday",
+    "w": "sand",
+    "acts": [
+     "camping",
+     "stargazing",
+     "surprise"
+    ],
+    "n": 12,
+    "budget": 4500,
+    "road": [
+     [
+      "Day 1",
+      "The idea arrives",
+      "Three lines in the planning form.",
+      "We answered with two dates that had no moon, for the best sky."
+     ],
+     [
+      "Day 2",
+      "A quick call",
+      "Ten minutes about food, music and who has never camped.",
+      "We planned proper beds and warm layers for the first-timers."
+     ],
+     [
+      "Day 3",
+      "The proposal",
+      "One link, one price per person, one optional extra.",
+      "We held the cars, the camp crew and a cook."
+     ],
+     [
+      "Day 4",
+      "Shaping it",
+      "A friend secretly asked for a film of birthday messages.",
+      "We arranged a screen on the side of a car, after dinner."
+     ],
+     [
+      "Day 6",
+      "Approved and paid",
+      "Everyone paid their own share from a link.",
+      "We confirmed the route and the camp spot."
+     ],
+     [
+      "One week before",
+      "Getting ready",
+      "A packing list: it gets cold at night.",
+      "We checked the weather and the sky, and told the group what to expect."
+     ],
+     [
+      "The trip",
+      "One night out there",
+      "They drove in at sunset and stayed up late.",
+      "Dinner, the fire, the film, and a guide who knows the stars by name."
+     ],
+     [
+      "After",
+      "The memories",
+      "Photos of the camp, and one of the whole sky.",
+      "We sent the album and the star photo, printed."
+     ]
+    ],
+    "days": [
+     [
+      "Afternoon",
+      "Drive in, the chalk rocks at golden hour"
+     ],
+     [
+      "Night",
+      "Dinner by the fire, the surprise film, the stars"
+     ],
+     [
+      "Morning",
+      "Sunrise tea, a slow drive home"
+     ]
+    ],
+    "mems": [
+     [
+      "The whole camp looking up",
+      "big"
+     ],
+     [
+      "Candles in the sand",
+      ""
+     ],
+     [
+      "The film on the side of the car",
+      "tall"
+     ],
+     [
+      "Tea at sunrise",
+      ""
+     ],
+     [
+      "Thirty, out here",
+      "wide"
+     ],
+     [
+      "The drive in",
+      ""
+     ]
+    ],
+    "quote": "Best birthday I have had. Nobody looked at their phone.",
+    "qby": "Nour"
+   }
+  ],
+  "PLANS": [
+   [
+    "friends",
+    "A getaway with friends",
+    "Your group, your dates, your kind of trip."
+   ],
+   [
+    "private",
+    "A private trip",
+    "Just your people, your plans and a trip made around you."
+   ],
+   [
+    "family",
+    "A family trip",
+    "Different ages, different needs, one trip everyone can enjoy."
+   ],
+   [
+    "celebration",
+    "A special celebration",
+    "Birthdays, bachelorettes, anniversaries or any excuse to get together."
+   ],
+   [
+    "honeymoon",
+    "A honeymoon",
+    "Just the two of you, somewhere worth remembering."
+   ],
+   [
+    "different",
+    "Something completely different",
+    "Tell us what you have in mind. We'll figure it out together."
+   ]
+  ],
+  "OCCASIONS": [
+   "Bachelorette",
+   "Bachelors",
+   "Birthday",
+   "Senior trip",
+   "Graduation",
+   "Anniversary",
+   "Something else"
+  ],
+  "CARDS": [
+   {
+    "t": "Waking up on a boat, with the sea right outside",
+    "w": "sea"
+   },
+   {
+    "t": "Sliding down a dune at sunrise",
+    "w": "sand"
+   },
+   {
+    "t": "A 2 am start for a sunrise at the top",
+    "w": "summit"
+   },
+   {
+    "t": "Dinner cooked by a local family",
+    "w": "sand"
+   },
+   {
+    "t": "A first dive, with an instructor beside you",
+    "w": "sea"
+   },
+   {
+    "t": "A night under more stars than you've ever seen",
+    "w": "sand"
+   },
+   {
+    "t": "A long trail with a guide who knows every stone",
+    "w": "summit"
+   },
+   {
+    "t": "An old town you'd never heard of",
+    "w": "sand"
+   }
+  ],
+  "RESULTS": {
+   "Classic": {
+    "w": "sea",
+    "trip": "ras-mohamed",
+    "line": "You love the trips people come back from talking about: the sea, the dunes, the sunsets. Here's one to start with."
+   },
+   "Adventurer": {
+    "w": "summit",
+    "trip": "sinai-sunrise",
+    "line": "You'd rather earn the view. Early starts and long trails sound good to you."
+   },
+   "Uncharted": {
+    "w": "sand",
+    "trip": "white-desert",
+    "line": "Familiar places aren't your thing. You want to go where few people have been."
+   },
+   "Snow chaser": {
+    "w": "snow",
+    "trip": "lebanon-cedars",
+    "line": "For you, the best days are cold, bright and ended by something warm."
+   }
+  },
+  "LW": [
+   {
+    "name": "Coptic Christmas",
+    "start": "2027-01-07",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "Thursday holiday + weekend"
+   },
+   {
+    "name": "Revolution & Police Day",
+    "start": "2027-01-28",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "25 Jan is a Monday; usually moved to Thursday"
+   },
+   {
+    "name": "Eid al-Fitr",
+    "start": "2027-03-09",
+    "days": [
+     "off",
+     "off",
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "Estimated, depends on the moon sighting",
+    "est": true
+   },
+   {
+    "name": "Sinai Liberation Day",
+    "start": "2027-04-22",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "25 Apr is a Sunday; usually moved to Thursday"
+   },
+   {
+    "name": "Labour Day & Sham El Nessim",
+    "start": "2027-04-30",
+    "days": [
+     "we",
+     "we",
+     "bridge",
+     "off"
+    ],
+    "note": "Take Sunday off and you have four days"
+   },
+   {
+    "name": "Arafat Day & Eid al-Adha",
+    "start": "2027-05-14",
+    "days": [
+     "we",
+     "off",
+     "off",
+     "off",
+     "off",
+     "off"
+    ],
+    "note": "Estimated, depends on the moon sighting",
+    "est": true
+   },
+   {
+    "name": "Islamic New Year",
+    "start": "2027-06-03",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "Estimated; likely moved to Thursday",
+    "est": true
+   },
+   {
+    "name": "30 June Revolution",
+    "start": "2027-07-01",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "30 Jun is a Wednesday; usually moved to Thursday"
+   },
+   {
+    "name": "Prophet's Birthday",
+    "start": "2027-08-12",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "Estimated; likely moved to Thursday",
+    "est": true
+   },
+   {
+    "name": "Armed Forces Day",
+    "start": "2027-10-07",
+    "days": [
+     "off",
+     "we",
+     "we"
+    ],
+    "note": "6 Oct is a Wednesday; usually moved to Thursday"
+   }
+  ],
+  "KINDS": [
+   [
+    "day",
+    "Day trips",
+    "Back in Cairo by night."
+   ],
+   [
+    "weekend",
+    "Weekends",
+    "Two or three days, leaving Thursday."
+   ],
+   [
+    "long",
+    "Longer trips",
+    "Four days or more."
+   ],
+   [
+    "abroad",
+    "Abroad",
+    "Coming soon."
+   ]
+  ],
+  "LEVELS": [
+   "",
+   "Gentle",
+   "Easy going",
+   "Active",
+   "Challenging",
+   "Demanding"
+  ],
+  "MET": [
+   "Effort",
+   "Early starts",
+   "Time in water",
+   "Comfort"
+  ],
+  "RLAB": [
+   "Physical effort",
+   "Adventure level",
+   "Comfort level",
+   "Experience required"
+  ],
+  "RTAG": [
+   "",
+   "Beginner friendly",
+   "Beginner friendly",
+   "Some experience helps",
+   "For returning explorers",
+   "For seasoned explorers"
+  ],
+  "DIFF": [
+   "Warm-up",
+   "Easy",
+   "Getting harder",
+   "Hard",
+   "Expert"
+  ],
+  "KINDB": {
+   "Adventurer": [
+    "▲",
+    "Adventure"
+   ],
+   "Uncharted": [
+    "✦",
+    "Uncharted"
+   ],
+   "Snow chaser": [
+    "❄",
+    "Snow chaser"
+   ],
+   "Classic": null
+  },
+  "PREP": [
+   [
+    "Now",
+    "Confirmation by email and WhatsApp, with your booking reference."
+   ],
+   [
+    "7 days before",
+    "Your preparation pack: packing list, what to expect, the group chat."
+   ],
+   [
+    "24 hours before",
+    "Bus details, pickup point and your host's number."
+   ],
+   [
+    "The trip",
+    ""
+   ],
+   [
+    "After",
+    "Your photos, a quick feedback request, and an idea for your next trip."
+   ]
+  ],
+  "TIPS": [
+   [
+    "Coming alone?",
+    "Most people do. Your host introduces everyone in the first hour.",
+    "going-solo"
+   ],
+   [
+    "First dive?",
+    "An instructor stays within arm's reach the whole time.",
+    "first-dive"
+   ],
+   [
+    "Cold nights",
+    "The desert drops fast after sunset. Pack one more layer than you think.",
+    "desert-night"
+   ],
+   [
+    "Cash",
+    "Most places off the main road do not take cards.",
+    "pocket-money"
+   ],
+   [
+    "Parents asking?",
+    "We share the host, the stay and the safety plan.",
+    "parents"
+   ],
+   [
+    "On the boat",
+    "Sit in the middle, eyes on the horizon.",
+    "pack-boat"
+   ]
+  ],
+  "TPLAN": {
+   "ras-mohamed": {
+    "one": "Two days on a boat in one of the Red Sea's oldest protected reefs. Swim, snorkel, try a dive, or just watch the water from the deck.",
+    "pop": [
+     "Snorkelling over the Shark and Yolanda reefs",
+     "A quiet beach stop that's only reachable by boat",
+     "Sunset from the top deck"
+    ],
+    "exp": [
+     [
+      "Thursday night",
+      "We leave Cairo after work and sleep on the bus. You wake up by the sea."
+     ],
+     [
+      "Friday",
+      "Breakfast, then the boat. First swim before ten. An intro dive for anyone who'd like one, and lunch on board."
+     ],
+     [
+      "Saturday",
+      "A slower morning, one last island, lunch on deck. Back in Cairo by 10 pm."
+     ]
+    ],
+    "learn": [
+     "How to clear your mask and equalise your ears",
+     "How to enjoy a reef without touching it",
+     "The names of the fish you'll keep seeing"
+    ],
+    "add": [
+     [
+      "Intro dive with an instructor",
+      1200
+     ],
+     [
+      "Underwater photos",
+      450
+     ],
+     [
+      "Private room",
+      900
+     ]
+    ],
+    "buy": [
+     "Reef-safe sunscreen, if you didn't pack it",
+     "Spices and dried hibiscus from the old market"
+    ],
+    "stay": "Two nights in a sea-view guesthouse, shared twin rooms. Private rooms on request.",
+    "pocket": [
+     [
+      "Snacks and coffee",
+      300
+     ],
+     [
+      "Souvenirs",
+      400
+     ],
+     [
+      "Tips for the boat crew",
+      150
+     ]
+    ],
+    "_copy": ""
+   },
+   "dahab": {
+    "one": "Two days on a boat in one of the Red Sea's oldest protected reefs. Swim, snorkel, try a dive, or just watch the water from the deck.",
+    "pop": [
+     "Snorkelling over the Shark and Yolanda reefs",
+     "A quiet beach stop that's only reachable by boat",
+     "Sunset from the top deck"
+    ],
+    "exp": [
+     [
+      "Thursday night",
+      "We leave Cairo after work and sleep on the bus. You wake up by the sea."
+     ],
+     [
+      "Friday",
+      "Breakfast, then the boat. First swim before ten. An intro dive for anyone who'd like one, and lunch on board."
+     ],
+     [
+      "Saturday",
+      "A slower morning, one last island, lunch on deck. Back in Cairo by 10 pm."
+     ]
+    ],
+    "learn": [
+     "How to clear your mask and equalise your ears",
+     "How to enjoy a reef without touching it",
+     "The names of the fish you'll keep seeing"
+    ],
+    "add": [
+     [
+      "Intro dive with an instructor",
+      1200
+     ],
+     [
+      "Underwater photos",
+      450
+     ],
+     [
+      "Private room",
+      900
+     ]
+    ],
+    "buy": [
+     "Reef-safe sunscreen, if you didn't pack it",
+     "Spices and dried hibiscus from the old market"
+    ],
+    "stay": "Two nights in a sea-view guesthouse, shared twin rooms. Private rooms on request.",
+    "pocket": [
+     [
+      "Snacks and coffee",
+      300
+     ],
+     [
+      "Souvenirs",
+      400
+     ],
+     [
+      "Tips for the boat crew",
+      150
+     ]
+    ],
+    "_copy": "ras-mohamed"
+   },
+   "marsa-alam": {
+    "one": "Two days on a boat in one of the Red Sea's oldest protected reefs. Swim, snorkel, try a dive, or just watch the water from the deck.",
+    "pop": [
+     "Snorkelling over the Shark and Yolanda reefs",
+     "A quiet beach stop that's only reachable by boat",
+     "Sunset from the top deck"
+    ],
+    "exp": [
+     [
+      "Thursday night",
+      "We leave Cairo after work and sleep on the bus. You wake up by the sea."
+     ],
+     [
+      "Friday",
+      "Breakfast, then the boat. First swim before ten. An intro dive for anyone who'd like one, and lunch on board."
+     ],
+     [
+      "Saturday",
+      "A slower morning, one last island, lunch on deck. Back in Cairo by 10 pm."
+     ]
+    ],
+    "learn": [
+     "How to clear your mask and equalise your ears",
+     "How to enjoy a reef without touching it",
+     "The names of the fish you'll keep seeing"
+    ],
+    "add": [
+     [
+      "Intro dive with an instructor",
+      1200
+     ],
+     [
+      "Underwater photos",
+      450
+     ],
+     [
+      "Private room",
+      900
+     ]
+    ],
+    "buy": [
+     "Reef-safe sunscreen, if you didn't pack it",
+     "Spices and dried hibiscus from the old market"
+    ],
+    "stay": "Two nights in a sea-view guesthouse, shared twin rooms. Private rooms on request.",
+    "pocket": [
+     [
+      "Snacks and coffee",
+      300
+     ],
+     [
+      "Souvenirs",
+      400
+     ],
+     [
+      "Tips for the boat crew",
+      150
+     ]
+    ],
+    "_copy": "ras-mohamed"
+   },
+   "hurghada": {
+    "one": "Two days on a boat in one of the Red Sea's oldest protected reefs. Swim, snorkel, try a dive, or just watch the water from the deck.",
+    "pop": [
+     "Snorkelling over the Shark and Yolanda reefs",
+     "A quiet beach stop that's only reachable by boat",
+     "Sunset from the top deck"
+    ],
+    "exp": [
+     [
+      "Thursday night",
+      "We leave Cairo after work and sleep on the bus. You wake up by the sea."
+     ],
+     [
+      "Friday",
+      "Breakfast, then the boat. First swim before ten. An intro dive for anyone who'd like one, and lunch on board."
+     ],
+     [
+      "Saturday",
+      "A slower morning, one last island, lunch on deck. Back in Cairo by 10 pm."
+     ]
+    ],
+    "learn": [
+     "How to clear your mask and equalise your ears",
+     "How to enjoy a reef without touching it",
+     "The names of the fish you'll keep seeing"
+    ],
+    "add": [
+     [
+      "Intro dive with an instructor",
+      1200
+     ],
+     [
+      "Underwater photos",
+      450
+     ],
+     [
+      "Private room",
+      900
+     ]
+    ],
+    "buy": [
+     "Reef-safe sunscreen, if you didn't pack it",
+     "Spices and dried hibiscus from the old market"
+    ],
+    "stay": "Two nights in a sea-view guesthouse, shared twin rooms. Private rooms on request.",
+    "pocket": [
+     [
+      "Snacks and coffee",
+      300
+     ],
+     [
+      "Souvenirs",
+      400
+     ],
+     [
+      "Tips for the boat crew",
+      150
+     ]
+    ],
+    "_copy": "ras-mohamed"
+   },
+   "fayoum-day": {
+    "one": "A morning on the dunes, an afternoon at the pottery wheels in Tunis village, and sunset over the lake.",
+    "pop": [
+     "Sandboarding at Wadi El Rayan",
+     "The pottery studios of Tunis village",
+     "Lunch at a desert camp"
+    ],
+    "exp": [
+     [
+      "Morning",
+      "An early start, so we're out before the heat. [Placeholder: times per trip]"
+     ],
+     [
+      "Midday",
+      "Time on the dunes or by the water, then lunch."
+     ],
+     [
+      "Evening",
+      "Sunset, dinner and, on overnight trips, a sky full of stars."
+     ]
+    ],
+    "learn": [
+     "How to stand up on a sandboard",
+     "How to shape a pot on a wheel",
+     "How to find north without a phone"
+    ],
+    "add": [
+     [
+      "An hour on a quad bike",
+      600
+     ],
+     [
+      "Your pot fired and delivered",
+      250
+     ],
+     [
+      "Stay the night at camp",
+      1500
+     ]
+    ],
+    "buy": [
+     "Handmade pottery from Tunis village",
+     "Dates and local honey",
+     "Palm-weave baskets"
+    ],
+    "stay": "Day trip, or a Bedouin-style camp with shared tents for overnight trips.",
+    "pocket": [
+     [
+      "Snacks",
+      150
+     ],
+     [
+      "Pottery and souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      100
+     ]
+    ],
+    "_copy": ""
+   },
+   "white-desert": {
+    "one": "A morning on the dunes, an afternoon at the pottery wheels in Tunis village, and sunset over the lake.",
+    "pop": [
+     "Sandboarding at Wadi El Rayan",
+     "The pottery studios of Tunis village",
+     "Lunch at a desert camp"
+    ],
+    "exp": [
+     [
+      "Morning",
+      "An early start, so we're out before the heat. [Placeholder: times per trip]"
+     ],
+     [
+      "Midday",
+      "Time on the dunes or by the water, then lunch."
+     ],
+     [
+      "Evening",
+      "Sunset, dinner and, on overnight trips, a sky full of stars."
+     ]
+    ],
+    "learn": [
+     "How to stand up on a sandboard",
+     "How to shape a pot on a wheel",
+     "How to find north without a phone"
+    ],
+    "add": [
+     [
+      "An hour on a quad bike",
+      600
+     ],
+     [
+      "Your pot fired and delivered",
+      250
+     ],
+     [
+      "Stay the night at camp",
+      1500
+     ]
+    ],
+    "buy": [
+     "Handmade pottery from Tunis village",
+     "Dates and local honey",
+     "Palm-weave baskets"
+    ],
+    "stay": "Day trip, or a Bedouin-style camp with shared tents for overnight trips.",
+    "pocket": [
+     [
+      "Snacks",
+      150
+     ],
+     [
+      "Pottery and souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      100
+     ]
+    ],
+    "_copy": "fayoum-day"
+   },
+   "siwa": {
+    "one": "A morning on the dunes, an afternoon at the pottery wheels in Tunis village, and sunset over the lake.",
+    "pop": [
+     "Sandboarding at Wadi El Rayan",
+     "The pottery studios of Tunis village",
+     "Lunch at a desert camp"
+    ],
+    "exp": [
+     [
+      "Morning",
+      "An early start, so we're out before the heat. [Placeholder: times per trip]"
+     ],
+     [
+      "Midday",
+      "Time on the dunes or by the water, then lunch."
+     ],
+     [
+      "Evening",
+      "Sunset, dinner and, on overnight trips, a sky full of stars."
+     ]
+    ],
+    "learn": [
+     "How to stand up on a sandboard",
+     "How to shape a pot on a wheel",
+     "How to find north without a phone"
+    ],
+    "add": [
+     [
+      "An hour on a quad bike",
+      600
+     ],
+     [
+      "Your pot fired and delivered",
+      250
+     ],
+     [
+      "Stay the night at camp",
+      1500
+     ]
+    ],
+    "buy": [
+     "Handmade pottery from Tunis village",
+     "Dates and local honey",
+     "Palm-weave baskets"
+    ],
+    "stay": "Day trip, or a Bedouin-style camp with shared tents for overnight trips.",
+    "pocket": [
+     [
+      "Snacks",
+      150
+     ],
+     [
+      "Pottery and souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      100
+     ]
+    ],
+    "_copy": "fayoum-day"
+   },
+   "sinai-sunrise": {
+    "one": "A night climb up Mount Sinai with a Bedouin guide, timed so you reach the top as the sun comes up.",
+    "pop": [
+     "The summit at sunrise",
+     "Tea with our Bedouin guides",
+     "A sky full of stars on the way up"
+    ],
+    "exp": [
+     [
+      "Night",
+      "We start the climb by torchlight with a local guide."
+     ],
+     [
+      "Sunrise",
+      "The top, sweet tea, and a long quiet look around."
+     ],
+     [
+      "Afternoon",
+      "Rest at camp, a Bedouin dinner and an early night."
+     ]
+    ],
+    "learn": [
+     "How to pace yourself on a long climb",
+     "How Bedouin tea is made",
+     "How to find three constellations"
+    ],
+    "add": [
+     [
+      "A camel for the first stretch",
+      500
+     ],
+     [
+      "Warm layer rental",
+      200
+     ],
+     [
+      "An extra night in St Catherine",
+      1100
+     ]
+    ],
+    "buy": [
+     "Herbs and tea from the Bedouin market",
+     "Hand-stitched Sinai embroidery",
+     "Thick socks for the climb"
+    ],
+    "stay": "An eco-lodge in St Catherine village, shared rooms.",
+    "pocket": [
+     [
+      "Snacks and tea",
+      200
+     ],
+     [
+      "Souvenirs",
+      350
+     ],
+     [
+      "Tips for the guides",
+      200
+     ]
+    ],
+    "_copy": ""
+   },
+   "st-catherine": {
+    "one": "A night climb up Mount Sinai with a Bedouin guide, timed so you reach the top as the sun comes up.",
+    "pop": [
+     "The summit at sunrise",
+     "Tea with our Bedouin guides",
+     "A sky full of stars on the way up"
+    ],
+    "exp": [
+     [
+      "Night",
+      "We start the climb by torchlight with a local guide."
+     ],
+     [
+      "Sunrise",
+      "The top, sweet tea, and a long quiet look around."
+     ],
+     [
+      "Afternoon",
+      "Rest at camp, a Bedouin dinner and an early night."
+     ]
+    ],
+    "learn": [
+     "How to pace yourself on a long climb",
+     "How Bedouin tea is made",
+     "How to find three constellations"
+    ],
+    "add": [
+     [
+      "A camel for the first stretch",
+      500
+     ],
+     [
+      "Warm layer rental",
+      200
+     ],
+     [
+      "An extra night in St Catherine",
+      1100
+     ]
+    ],
+    "buy": [
+     "Herbs and tea from the Bedouin market",
+     "Hand-stitched Sinai embroidery",
+     "Thick socks for the climb"
+    ],
+    "stay": "An eco-lodge in St Catherine village, shared rooms.",
+    "pocket": [
+     [
+      "Snacks and tea",
+      200
+     ],
+     [
+      "Souvenirs",
+      350
+     ],
+     [
+      "Tips for the guides",
+      200
+     ]
+    ],
+    "_copy": "sinai-sunrise"
+   },
+   "dakhla-kharga": {
+    "one": "A morning on the dunes, an afternoon at the pottery wheels in Tunis village, and sunset over the lake.",
+    "pop": [
+     "Sandboarding at Wadi El Rayan",
+     "The pottery studios of Tunis village",
+     "Lunch at a desert camp"
+    ],
+    "exp": [
+     [
+      "Morning",
+      "An early start, so we're out before the heat. [Placeholder: times per trip]"
+     ],
+     [
+      "Midday",
+      "Time on the dunes or by the water, then lunch."
+     ],
+     [
+      "Evening",
+      "Sunset, dinner and, on overnight trips, a sky full of stars."
+     ]
+    ],
+    "learn": [
+     "How to stand up on a sandboard",
+     "How to shape a pot on a wheel",
+     "How to find north without a phone"
+    ],
+    "add": [
+     [
+      "An hour on a quad bike",
+      600
+     ],
+     [
+      "Your pot fired and delivered",
+      250
+     ],
+     [
+      "Stay the night at camp",
+      1500
+     ]
+    ],
+    "buy": [
+     "Handmade pottery from Tunis village",
+     "Dates and local honey",
+     "Palm-weave baskets"
+    ],
+    "stay": "Day trip, or a Bedouin-style camp with shared tents for overnight trips.",
+    "pocket": [
+     [
+      "Snacks",
+      150
+     ],
+     [
+      "Pottery and souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      100
+     ]
+    ],
+    "_copy": "fayoum-day"
+   },
+   "lebanon-cedars": {
+    "one": "A snowy weekend in Lebanon, or a bigger trip to the Alps: slopes, cedars and warm cabins, with people who have done it before.",
+    "pop": [
+     "Fresh snow on the cedars",
+     "A cabin fire after the last run",
+     "Fondue at the end of the day"
+    ],
+    "exp": [
+     [
+      "Day 1",
+      "Fly in, drive up to the mountains and settle into the cabin."
+     ],
+     [
+      "Day 2",
+      "Snowshoe through the cedars with a local guide, soup at the top."
+     ],
+     [
+      "Day 3",
+      "A slow morning, one last walk in the snow, then home."
+     ]
+    ],
+    "learn": [
+     "How to walk on snow in snowshoes",
+     "Why the cedar is on the flag",
+     "How to layer for a full day in the cold"
+    ],
+    "add": [
+     [
+      "Ski or snowboard lesson",
+      900
+     ],
+     [
+      "Private cabin for your group",
+      2400
+     ],
+     [
+      "Photographer for a day",
+      600
+     ]
+    ],
+    "buy": [
+     "Local honey and thyme from the village",
+     "Wool socks you will not want to take off",
+     "A Hajeela Snow pin"
+    ],
+    "stay": "Warm mountain cabins and small chalets, shared rooms or private.",
+    "pocket": [
+     [
+      "Hot drinks and snacks",
+      250
+     ],
+     [
+      "Souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      150
+     ]
+    ],
+    "_copy": ""
+   },
+   "switzerland-alps": {
+    "one": "A snowy weekend in Lebanon, or a bigger trip to the Alps: slopes, cedars and warm cabins, with people who have done it before.",
+    "pop": [
+     "Fresh snow on the cedars",
+     "A cabin fire after the last run",
+     "Fondue at the end of the day"
+    ],
+    "exp": [
+     [
+      "Day 1",
+      "Fly in, drive up to the mountains and settle into the cabin."
+     ],
+     [
+      "Day 2",
+      "Snowshoe through the cedars with a local guide, soup at the top."
+     ],
+     [
+      "Day 3",
+      "A slow morning, one last walk in the snow, then home."
+     ]
+    ],
+    "learn": [
+     "How to walk on snow in snowshoes",
+     "Why the cedar is on the flag",
+     "How to layer for a full day in the cold"
+    ],
+    "add": [
+     [
+      "Ski or snowboard lesson",
+      900
+     ],
+     [
+      "Private cabin for your group",
+      2400
+     ],
+     [
+      "Photographer for a day",
+      600
+     ]
+    ],
+    "buy": [
+     "Local honey and thyme from the village",
+     "Wool socks you will not want to take off",
+     "A Hajeela Snow pin"
+    ],
+    "stay": "Warm mountain cabins and small chalets, shared rooms or private.",
+    "pocket": [
+     [
+      "Hot drinks and snacks",
+      250
+     ],
+     [
+      "Souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      150
+     ]
+    ],
+    "_copy": "lebanon-cedars"
+   },
+   "austria-tyrol": {
+    "one": "A snowy weekend in Lebanon, or a bigger trip to the Alps: slopes, cedars and warm cabins, with people who have done it before.",
+    "pop": [
+     "Fresh snow on the cedars",
+     "A cabin fire after the last run",
+     "Fondue at the end of the day"
+    ],
+    "exp": [
+     [
+      "Day 1",
+      "Fly in, drive up to the mountains and settle into the cabin."
+     ],
+     [
+      "Day 2",
+      "Snowshoe through the cedars with a local guide, soup at the top."
+     ],
+     [
+      "Day 3",
+      "A slow morning, one last walk in the snow, then home."
+     ]
+    ],
+    "learn": [
+     "How to walk on snow in snowshoes",
+     "Why the cedar is on the flag",
+     "How to layer for a full day in the cold"
+    ],
+    "add": [
+     [
+      "Ski or snowboard lesson",
+      900
+     ],
+     [
+      "Private cabin for your group",
+      2400
+     ],
+     [
+      "Photographer for a day",
+      600
+     ]
+    ],
+    "buy": [
+     "Local honey and thyme from the village",
+     "Wool socks you will not want to take off",
+     "A Hajeela Snow pin"
+    ],
+    "stay": "Warm mountain cabins and small chalets, shared rooms or private.",
+    "pocket": [
+     [
+      "Hot drinks and snacks",
+      250
+     ],
+     [
+      "Souvenirs",
+      300
+     ],
+     [
+      "Tips",
+      150
+     ]
+    ],
+    "_copy": "lebanon-cedars"
+   },
+   "greece-islands": {
+    "one": "Two days on a boat in one of the Red Sea's oldest protected reefs. Swim, snorkel, try a dive, or just watch the water from the deck.",
+    "pop": [
+     "Snorkelling over the Shark and Yolanda reefs",
+     "A quiet beach stop that's only reachable by boat",
+     "Sunset from the top deck"
+    ],
+    "exp": [
+     [
+      "Thursday night",
+      "We leave Cairo after work and sleep on the bus. You wake up by the sea."
+     ],
+     [
+      "Friday",
+      "Breakfast, then the boat. First swim before ten. An intro dive for anyone who'd like one, and lunch on board."
+     ],
+     [
+      "Saturday",
+      "A slower morning, one last island, lunch on deck. Back in Cairo by 10 pm."
+     ]
+    ],
+    "learn": [
+     "How to clear your mask and equalise your ears",
+     "How to enjoy a reef without touching it",
+     "The names of the fish you'll keep seeing"
+    ],
+    "add": [
+     [
+      "Intro dive with an instructor",
+      1200
+     ],
+     [
+      "Underwater photos",
+      450
+     ],
+     [
+      "Private room",
+      900
+     ]
+    ],
+    "buy": [
+     "Reef-safe sunscreen, if you didn't pack it",
+     "Spices and dried hibiscus from the old market"
+    ],
+    "stay": "Two nights in a sea-view guesthouse, shared twin rooms. Private rooms on request.",
+    "pocket": [
+     [
+      "Snacks and coffee",
+      300
+     ],
+     [
+      "Souvenirs",
+      400
+     ],
+     [
+      "Tips for the boat crew",
+      150
+     ]
+    ],
+    "_copy": "ras-mohamed"
+   }
+  }
+ },
+ "t": {
+  "part.expNeed.1-adventure-trip": "1 Adventure trip",
+  "part.expNeed.open-to-everyone-this-can": "Open to everyone. This can be your first Hajeela trip.",
+  "part.expNeed.open-to-everyone-good-if": "Open to everyone. Good if you've been on a group trip before.",
+  "part.expNeed.best-after-one": "Best after one",
+  "part.expNeed.trip-with-us": "trip with us.",
+  "part.expNeed.trip-and-one-adventure-trip": "trip and one Adventure trip with us.",
+  "part.expNeed.best-after-two": "Best after two",
+  "part.expNeed.trips-and-one-adventure-trip": "trips and one Adventure trip with us.",
+  "part.rateBlock.what-you-re-signing-up": "What you're signing up for",
+  "part.rateBlock.experience-that-helps": "Experience that helps",
+  "part.rateBlock.badges-you-can-earn": "Badges you can earn",
+  "part.rateBlock.illustrative-scoring-real-ratings-are": "Illustrative scoring. Real ratings are set per trip against clear criteria.",
+  "part.rateBlock.good-to-have": "Good to have",
+  "part.rateBlock.not-there-yet-message-us": " Not there yet? Message us and we'll talk it through",
+  "part.rateBlock.or-start-here": ", or start here:",
+  "list.PLAY.you-reached": "You reached",
+  "list.PLAY.ras-mohammed-became-egypt-s": "Ras Mohammed became Egypt's first national park in which year?",
+  "list.PLAY.it-was-declared-a-protected": "It was declared a protected area in 1983, and the reefs have been protected ever since.",
+  "list.PLAY.the-yolanda-wreck-at-ras": "The Yolanda wreck at Ras Mohammed was carrying what when it sank?",
+  "list.PLAY.bathroom-fittings": "Bathroom fittings",
+  "list.PLAY.it-sank-in-1980-with": "It sank in 1980 with a cargo of toilets and baths, which you can still see on the reef.",
+  "list.PLAY.on-a-dive-what-do": "On a dive, what do you do to stop your ears hurting?",
+  "list.PLAY.hold-your-breath": "Hold your breath",
+  "list.PLAY.swim-faster": "Swim faster",
+  "list.PLAY.you-gently-equalise-the-pressure": "You gently equalise the pressure as you go down. Your instructor shows you how before you get in.",
+  "list.PLAY.clownfish-make-their-homes-in": "Clownfish make their homes in what?",
+  "list.PLAY.sea-anemones": "Sea anemones",
+  "list.PLAY.coral-caves": "Coral caves",
+  "list.PLAY.they-live-among-the-anemone": "They live among the anemone's tentacles, which protect them.",
+  "list.PLAY.hurghada-sits-on-the-coast": "Hurghada sits on the coast of which sea?",
+  "list.PLAY.the-red-sea": "The Red Sea",
+  "list.PLAY.the-mediterranean": "The Mediterranean",
+  "list.PLAY.the-dead-sea": "The Dead Sea",
+  "list.PLAY.the-red-sea-home-to": "The Red Sea, home to more than a thousand kinds of fish.",
+  "list.PLAY.dune-safari-to-camp": "Dune safari to camp",
+  "list.PLAY.tarmac-ends": "Tarmac ends",
+  "list.PLAY.tyres-down": "Tyres down",
+  "list.PLAY.first-big-dune": "First big dune",
+  "list.PLAY.the-ridge": "The ridge",
+  "list.PLAY.camp-lights": "Camp lights",
+  "list.PLAY.you": "You",
+  "list.PLAY.are-still-where-the-tarmac": "are still where the tarmac ends",
+  "list.PLAY.got-as-far-as-the": "got as far as the tyre stop",
+  "list.PLAY.made-it-over-the-first": "made it over the first big dune",
+  "list.PLAY.can-see-the-camp-lights": "can see the camp lights",
+  "list.PLAY.before-the-dunes-your-driver": "Before the dunes, your driver lets air out of the tyres. Why?",
+  "list.PLAY.softer-tyres-float-on-top": "Softer tyres float on top of the sand",
+  "list.PLAY.it-saves-fuel": "It saves fuel",
+  "list.PLAY.it-makes-the-car-faster": "It makes the car faster",
+  "list.PLAY.lower-pressure-spreads-the-weight": "Lower pressure spreads the weight, so the car rides on the sand instead of digging in.",
+  "list.PLAY.the-car-is-heading-for": "The car is heading for Wadi El Rayan. Which governorate are you in?",
+  "list.PLAY.fayoum-about-two-hours-from": "Fayoum, about two hours from Cairo. It's where most people try sandboarding for the first time.",
+  "list.PLAY.you-cross-a-valley-full": "You cross a valley full of fossils. Fossils of what?",
+  "list.PLAY.whales-wadi-al-hitan-was": "Whales. Wadi Al-Hitan was once under the sea, and it's now a UNESCO site.",
+  "list.PLAY.the-sun-has-gone-and": "The sun has gone and there is no signal. Which star did desert travellers steer by?",
+  "list.PLAY.the-north-star": "The North Star",
+  "list.PLAY.the-evening-star": "The Evening Star",
+  "list.PLAY.the-dog-star": "The Dog Star",
+  "list.PLAY.the-north-star-barely-moves": "The North Star barely moves, so it always shows which way is north.",
+  "list.PLAY.you-can-see-the-fire": "You can see the fire. One last question from your host: what does hajeela mean?",
+  "list.PLAY.a-trip-taken-for-the": "A trip taken for the joy of it",
+  "list.PLAY.a-long-caravan-route": "A long caravan route",
+  "list.PLAY.a-desert-camp": "A desert camp",
+  "list.PLAY.a-bedouin-word-for-going": "A Bedouin word for going out together for the joy of it, with no mission.",
+  "list.PLAY.the-base": "The base",
+  "list.PLAY.the-monastery": "The monastery",
+  "list.PLAY.elijah-s-basin": "Elijah's Basin",
+  "list.PLAY.the-steps": "The steps",
+  "list.PLAY.the-last-ridge": "The last ridge",
+  "list.PLAY.the-summit": "The summit",
+  "list.PLAY.the-summit-2-285-m": "the summit, 2,285 m",
+  "list.PLAY.what-is-the-highest-mountain": "What is the highest mountain in Egypt?",
+  "list.PLAY.mount-catherine": "Mount Catherine",
+  "list.PLAY.mount-sinai": "Mount Sinai",
+  "list.PLAY.gebel-elba": "Gebel Elba",
+  "list.PLAY.mount-catherine-at-about-2": "Mount Catherine, at about 2,629 m. Mount Sinai is its neighbour.",
+  "list.PLAY.roughly-how-high-is-mount": "Roughly how high is Mount Sinai?",
+  "list.PLAY.about-2-285-m-most": "About 2,285 m. Most people reach the top in around three hours.",
+  "list.PLAY.the-steps-of-repentance-to": "The Steps of Repentance to the summit number about how many?",
+  "list.PLAY.about-3-750-stone-steps": "About 3,750 stone steps, cut by monks.",
+  "list.PLAY.which-monastery-sits-at-the": "Which monastery sits at the foot of Mount Sinai?",
+  "list.PLAY.st-catherine-s": "St Catherine's",
+  "list.PLAY.st-anthony-s": "St Anthony's",
+  "list.PLAY.st-simeon-s": "St Simeon's",
+  "list.PLAY.st-catherine-s-one-of": "St Catherine's, one of the oldest working monasteries in the world.",
+  "list.PLAY.when-do-you-usually-start": "When do you usually start the climb to see sunrise?",
+  "list.PLAY.around-2-am": "Around 2 am",
+  "list.PLAY.around-6-am": "Around 6 am",
+  "list.PLAY.the-evening-before": "The evening before",
+  "list.PLAY.around-2-am-by-torchlight": "Around 2 am, by torchlight, so you reach the top as the light comes up.",
+  "list.PLAY.up-the-slope": "Up the slope",
+  "list.PLAY.the-valley": "The valley",
+  "list.PLAY.the-lift": "The lift",
+  "list.PLAY.the-tree-line": "The tree line",
+  "list.PLAY.the-last-slope": "The last slope",
+  "list.PLAY.the-cabin": "The cabin",
+  "list.PLAY.the-cabin-with-the-fire": "the cabin, with the fire lit",
+  "list.PLAY.which-swiss-dish-is-melted": "Which Swiss dish is melted cheese, shared from one pot?",
+  "list.PLAY.fondue-a-pot-of-melted": "Fondue: a pot of melted cheese and a long fork for everyone.",
+  "list.PLAY.which-tree-is-on-the": "Which tree is on the flag of Lebanon?",
+  "list.PLAY.the-cedar": "The cedar",
+  "list.PLAY.the-olive": "The olive",
+  "list.PLAY.the-palm": "The palm",
+  "list.PLAY.the-cedar-which-grows-high": "The cedar, which grows high in the snow-covered mountains.",
+  "list.PLAY.which-famous-swiss-peak-is": "Which famous Swiss peak is shaped like a pyramid?",
+  "list.PLAY.the-matterhorn": "The Matterhorn",
+  "list.PLAY.mont-blanc": "Mont Blanc",
+  "list.PLAY.the-matterhorn-on-the-border": "The Matterhorn, on the border with Italy.",
+  "list.PLAY.which-lebanese-village-is-best": "Which Lebanese village is best known for skiing?",
+  "list.PLAY.faraya-about-an-hour-from": "Faraya, about an hour from Beirut, with a ski area called Mzaar.",
+  "list.PLAY.which-of-these-countries-does": "Which of these countries does NOT have Alps?",
+  "list.PLAY.lebanon-has-mountains-but-the": "Lebanon has mountains, but the Alps run through Austria, Switzerland and others.",
+  "part.dots.level": "Level",
+  "part.availLine.request-to-book-we-confirm": "Request to book · we confirm within 24 h",
+  "part.availLine.next": "Next:",
+  "part.availLine.places-left": "places left",
+  "part.availLine.fully-booked": "Fully booked",
+  "part.badgesOf.this-trip-s-badge": "This trip's badge",
+  "part.depState.full-join-the-waitlist": "Full · join the waitlist",
+  "part.depState.on-request-we-confirm-in": "On request · we confirm in 24 h",
+  "part.depState.only": "Only",
+  "part.depState.places-left": "places left",
+  "part.depRow.from": "· from",
+  "part.nextBar.next-trip-out": "Next trip out",
+  "part.nextBar.places-left": "places left",
+  "part.nextBar.book-now": "Book now",
+  "part.lsCard.duration": "Duration",
+  "part.lsCard.level": "Level",
+  "part.lsCard.from-per-person": "From, per person",
+  "part.lsCard.view-trip": "View trip",
+  "part.lsCard.the-moment": "The moment · ",
+  "part.lsCard.join-waitlist": "Join waitlist",
+  "part.appBand.scan-to-download": "Scan to download",
+  "part.appBand.get-the-app": "Get the app",
+  "part.appBand.coming-soon": "Coming soon",
+  "part.appBand.trip-chat": "Trip chat",
+  "part.appBand.bus-details": "Bus details",
+  "part.jCard.min-read": "min read",
+  "part.jCard.read-the-story": "Read the story",
+  "part.jCard.illustration": "Illustration · ",
+  "part.heroCopy.there-s-always-somewhere-to": "There's always somewhere to go.",
+  "part.heroCopy.explore-places-discover-experiences-and": "Explore places, discover experiences and make plans your own.",
+  "part.heroCopy.explore": "Explore",
+  "part.heroCopy.create": "Create",
+  "part.heroCopy.see-hajeela-through-your-eyes": "See Hajeela through your eyes",
+  "part.heroCopy.see": "See",
+  "part.heroCopy.play": "Play",
+  "part.homeFind.find-a-trip-your-way": "Find a trip your way.",
+  "part.homeFind.all-upcoming-trips": "All upcoming trips",
+  "part.homeFind.not-sure-what-you-want": "Not sure what you want yet?",
+  "part.homeFind.swipe-through-eight-moments-and": "Swipe through eight moments and we'll match you with a trip.",
+  "part.homeFind.find-your-travel-match": "Find your travel match",
+  "part.homeFind.photo-a-place": "Photo · a place",
+  "part.homeFind.by-destination": "By destination",
+  "part.homeFind.where-do-you-want-to": "Where do you want to go?",
+  "part.homeFind.see-destinations": "See destinations",
+  "part.homeFind.photo-something-to-do": "Photo · something to do",
+  "part.homeFind.by-experience": "By experience",
+  "part.homeFind.what-do-you-want-to": "What do you want to do?",
+  "part.homeFind.see-experiences": "See experiences",
+  "part.homeFind.photo-how-long": "Photo · how long",
+  "part.homeFind.by-trip-type": "By trip type",
+  "part.homeFind.how-do-you-want-to": "How do you want to travel?",
+  "part.homeFind.see-trip-types": "See trip types",
+  "part.homeEnvs.four-places-to-start": "Four places to start.",
+  "part.homeEnvs.film-or-photo": "Film or photo · ",
+  "part.homeEnvs.see": "See ",
+  "part.homeEnvs.close": "Close ✕",
+  "part.homeEnvs.places": "Places",
+  "part.homeEnvs.pick-an-environment-to-see": "Pick an environment to see its places and the trips leaving next.",
+  "part.homeEnvs.environments-are-sand-sea-summit": "Environments are Sand, Sea, Summit and Snow. Each carries its own sign from the identity system. Abroad trips (Switzerland, Austria, Greece) sit under their environment, marked as flights.",
+  "part.homeFavs.what-we-keep-going-back": "What we keep going back for.",
+  "part.homeFavs.all-hajeela-favs": "All Hajeela favs",
+  "part.homeFavs.photo": "Photo · ",
+  "part.homeFavs.since": " · since ",
+  "part.homeFavs.the-local-behind-it": "· the local behind it",
+  "part.homeJournal.a-few-things-worth-knowing": "A few things worth knowing.",
+  "part.homeJournal.open-the-journal": "Open the journal",
+  "part.homeJournal.destination-guides": "Destination guides",
+  "part.homeJournal.a-mini-guide-for-every": "A mini guide for every place",
+  "part.homeJournal.packing-guides": "Packing guides",
+  "part.homeJournal.a-list-for-every-environment": "A list for every environment",
+  "part.homeJournal.travel-tips": "Travel tips",
+  "part.homeJournal.small-things-big-difference": "Small things, big difference",
+  "part.homeJournal.activity-guides": "Activity guides",
+  "part.homeJournal.what-each-activity-is-really": "What each activity is really like",
+  "part.homeJournal.first-time-guides": "First-time guides",
+  "part.homeJournal.first-dive-first-camp-first": "First dive, first camp, first solo trip",
+  "part.homeJournal.local-culture-discoveries": "Local culture & discoveries",
+  "part.homeJournal.the-people-and-places-behind": "The people and places behind the trips",
+  "page.home.full-bleed-film-from-real": "Full-bleed film from real trips · short loops, people first · the horizon line stays as our signature",
+  "page.home.scroll-for-trips-leaving-soon": "Scroll for trips leaving soon",
+  "page.home.pick-a-mood": "Pick a mood",
+  "page.home.film-full-screen-a-day": "Film · full screen · a day on a Hajeela trip",
+  "page.home.upcoming-trips": "Upcoming trips",
+  "page.home.leaving-soon": "Leaving soon",
+  "page.home.see-all-upcoming-trips": "See all upcoming trips",
+  "page.home.see-them-on-the-calendar": "See them on the calendar",
+  "page.home.this-is-hajeela": "This Is Hajeela",
+  "page.home.through-your-eyes": "Through Your Eyes.",
+  "page.home.real-moments-little-films-and": "Real moments, little films and memories made along the way by our travellers.",
+  "page.home.see-the-trips": "See the trips",
+  "page.home.sea": "Sea",
+  "page.home.summit": "Summit",
+  "page.home.hajeela-favs": "Hajeela favs",
+  "page.home.all-hajeela-favs": "All Hajeela favs",
+  "page.home.your-people-your-idea": "Your people. Your idea.",
+  "page.home.we-make-it-happen": "We make it happen.",
+  "page.home.tell-us-five-things-we": "Tell us five things. We'll come back with a plan.",
+  "page.home.create-your-own-trip": "Create your own trip",
+  "page.home.see-trips-we-ve-created": "See trips we've created",
+  "page.home.oct-2026": "Oct 2026",
+  "page.home.film-12-sec": "Film · 12 sec",
+  "page.home.mount-sinai": "Mount Sinai",
+  "page.home.ras-mohammed": "Ras Mohammed",
+  "page.home.sept-2026": "Sept 2026",
+  "page.home.film-8-sec": "Film · 8 sec",
+  "page.home.last-friday": "Last Friday",
+  "page.home.photo-the-whole-group": "Photo · the whole group",
+  "page.home.dakhla-kharga": "Dakhla & Kharga",
+  "page.home.by-4x4": "By 4x4",
+  "page.home.white-desert": "White Desert",
+  "page.home.new-year-s-eve": "New Year’s Eve",
+  "page.home.aug-2026": "Aug 2026",
+  "page.home.photo-portrait": "Photo · portrait",
+  "page.home.july-2026": "July 2026",
+  "page.home.film-6-sec": "Film · 6 sec",
+  "page.home.photo": "Photo · ",
+  "page.home.what-you-love": "What you love",
+  "page.home.sand-sea-snow-food-culture": "Sand, sea, snow, food, culture, quiet or loud.",
+  "page.home.who-is-coming": "Who is coming",
+  "page.home.friends-family-a-partner-or": "Friends, family, a partner or a whole team.",
+  "page.home.the-occasion": "The occasion",
+  "page.home.a-birthday-a-honeymoon-an": "A birthday, a honeymoon, an away day, just because.",
+  "page.home.egypt-or-abroad-or-tell": "Egypt or abroad. Or tell us to surprise you.",
+  "page.home.a-range-is-fine-we": "A range is fine. We'll plan around it.",
+  "part.swipeDoor.snow-chaser": "Snow chaser",
+  "part.swipeDoor.your-kind-of-trip": "Your kind of trip:",
+  "part.swipeDoor.trips-that-match-you": "Trips that match you",
+  "part.swipeDoor.see-your-places-on-the": "See your places on the map",
+  "part.swipeDoor.create-your-own": "Create your own",
+  "part.swipeDoor.swipe-again": "Swipe again",
+  "part.swipeDoor.not-for-me": "Not for me",
+  "part.swipeDoor.that-s-for-me": "THAT'S FOR ME",
+  "part.swipeDoor.not-for-me-2": "NOT FOR ME",
+  "part.swipeDoor.that-s-for-me-2": "That's for me",
+  "part.swipeDoor.does-this-feel-like-you": "Does this feel like you?",
+  "part.swipeDoor.eight-photos-thirty-seconds-no": "Eight photos, thirty seconds. No need to know any place or activity.",
+  "part.swipeDoor.swipe-right-if-it-s": "· swipe right if it's for you, left if not",
+  "part.swipeDoor.photo": "Photo: ",
+  "part.swipeDoor.photo-or-short-video": "Photo or short video: ",
+  "part.playDoor.experiences": "Experiences",
+  "part.playDoor.tap-a-card-to-turn": "Tap a card to turn it over.",
+  "part.playDoor.turned-over": "turned over",
+  "part.playDoor.see": "See",
+  "part.playDoor.show-on-the-map": "Show on the map",
+  "part.playDoor.photo": "Photo · ",
+  "part.playDoor.all-eight-turned-over": "All eight turned over.",
+  "part.playDoor.pick-one-to-see-where": "Pick one to see where you can try it.",
+  "page.explore.upcoming-trips": "Upcoming trips",
+  "page.explore.everything-you-can-book-now": "Everything you can book now.",
+  "page.explore.every-place-we-go-on": "Every place we go, on the map.",
+  "page.explore.turn-the-cards-and-see": "Turn the cards and see what you'd enjoy.",
+  "page.explore.where-to-next": "Where to next?",
+  "page.explore.all": "All",
+  "page.explore.one-thing-at-a-time": "One thing at a time: places on the map, or activity cards. Each ends on one clear button. People who are not sure go to Find your travel match.",
+  "page.explore.picked-for-your-kind-of": "Picked for your kind of trip:",
+  "page.explore.a-good-place-to-start": "A good place to start.",
+  "page.explore.all-trips": "All trips",
+  "page.explore.not-sure-find-your-travel": "Not sure? Find your travel match",
+  "page.destinations.where-do-you-want-to": "Where do you want to go?",
+  "page.destinations.list": "List",
+  "page.destinations.map": "Map",
+  "page.experiences.what-do-you-want-to": "What do you want to do?",
+  "page.kinds.how-do-you-want-to": "How do you want to travel?",
+  "page.kinds.coming-soon": "Coming soon",
+  "page.kinds.see-trips": "See trips",
+  "page.dest.things-to-do": "Things to do",
+  "page.dest.what-it-looks-like": "What it looks like",
+  "page.dest.the-essentials": "The essentials",
+  "page.dest.local-guide": "Local guide",
+  "page.dest.best-time-to-visit": "Best time to visit",
+  "page.dest.group-or-on-your-own": "Group or on your own?",
+  "page.dest.with-a-group": "With a group",
+  "page.dest.on-your-own": "On your own",
+  "page.dest.the-good": "The good",
+  "page.dest.worth-knowing": "Worth knowing",
+  "page.dest.what-people-enjoyed-most": "What people enjoyed most",
+  "page.dest.climate": "Climate",
+  "page.dest.environment": "Environment",
+  "page.dest.getting-there": "Getting there",
+  "page.dest.pace": "Pace",
+  "page.dest.level": ", level",
+  "page.dest.what-to-pack": "What to pack",
+  "page.dest.the-full-list-comes-seven": "The full list comes seven days before, and lives in the app.",
+  "page.dest.worth-buying-there": "Worth buying there",
+  "page.dest.bring-about": "Bring about",
+  "page.dest.on-top-of-the-trip": "On top of the trip price.",
+  "page.dest.people-have-been-here-with": "people have been here with us",
+  "page.dest.trips-we-ve-organised": "trips we've organised",
+  "page.dest.said-they-would-go-again": "said they would go again",
+  "page.dest.our-first-trip-here": "our first trip here",
+  "page.dest.placeholder-these-figures-are-sample": "Placeholder: these figures are sample numbers until real, verified data is supplied.",
+  "page.dest.collect-here": "Collect here",
+  "page.dest.activities": "Activities",
+  "page.dest.every-trip-here-has-its": "Every trip here has its own badge, and so does every activity you complete. They live in your collection in the app.",
+  "page.dest.want": "Want",
+  "page.dest.on-your-own-dates-with": "on your own dates, with your own people?",
+  "page.dest.create-your-trip": "Create your trip",
+  "page.dest.all-destinations": "All destinations",
+  "page.dest.explore-destinations": "Explore / Destinations",
+  "page.dest.destination-guide": "· Destination guide",
+  "page.dest.from-cairo": "From Cairo",
+  "page.dest.hero-destination-film-or-photo": "Hero · destination film or photo of ",
+  "page.dest.photo": "Photo · ",
+  "page.dest.view": "View",
+  "page.dest.pick-one-to-see-where": "Pick one to see where else you can do it.",
+  "page.dest.experiences-here-are-coming-soon": "Experiences here are coming soon.",
+  "page.dest.film": "Film · ",
+  "page.dest.8-sec-loop": ", 8 sec loop",
+  "page.dest.your-local": ", your local",
+  "page.dest.from-cairo-2": ", from Cairo",
+  "page.dest.your-local-guide": "Your local guide",
+  "page.dest.portrait": "Portrait · ",
+  "page.dest.trips-in": "Trips in ",
+  "page.dest.no-dates-are-open-here": "No dates are open here yet. Tell us what you want and we plan it with you.",
+  "page.dest.more-in": "More in",
+  "page.exp.what-it-feels-like": "What it feels like",
+  "page.exp.how-demanding": "How demanding",
+  "page.exp.physical-level": "Physical level",
+  "page.exp.never-tried-it": "Never tried it?",
+  "page.exp.all-experiences": "All experiences",
+  "page.exp.explore-experiences": "Explore / Experiences",
+  "page.exp.experience": "Experience",
+  "page.exp.first-time": "First time?",
+  "page.exp.film-or-hero-photo": " · film or hero photo",
+  "page.exp.photo": "Photo · ",
+  "page.exp.view": "View",
+  "page.exp.film-8-sec-loop": "Film · 8 sec loop · ",
+  "page.exp.how-demanding-is-it": "How demanding is it?",
+  "page.exp.where-you-can-do-it": "Where you can do it",
+  "page.exp.no-trips-include-this-yet": "No trips include this yet.",
+  "page.exp.trips-with": "Trips with ",
+  "page.exp.no-dates-are-open-yet": "No dates are open yet.",
+  "list.SLOTS.under-2-000-egp": "under 2,000 EGP",
+  "list.SLOTS.under-5-000-egp": "under 5,000 EGP",
+  "list.SLOTS.under-8-000-egp": "under 8,000 EGP",
+  "list.SLOTS.under-20-000-egp": "under 20,000 EGP",
+  "list.SLOTS.egp": " EGP",
+  "part.plainSentence.take-me": "Take me",
+  "part.plainSentence.i-m-up-for": ". I'm up for",
+  "part.plainSentence.pace-on": "pace, on",
+  "part.listen.take-me-to-the-sand": "Take me to the sand for a day in December, under 5000",
+  "part.ticket.how-long": "How long",
+  "part.ticket.open-road": "Open road",
+  "part.ticket.your-hajeela-ticket": "Your Hajeela ticket",
+  "part.ticket.of-6-stamps": "of 6 stamps",
+  "part.ticket.unlocked-every-extra-stamp-sharpens": "Unlocked. Every extra stamp sharpens your match.",
+  "part.ticket.fill": "Fill",
+  "part.ticket.more-blank": "more blank",
+  "part.ticket.to-unlock-your-traveller-card": "to unlock your traveller card.",
+  "part.ticket.you-re-a": "You're a",
+  "part.ticket.a-card-for-your-collection": "A card for your collection. Save it in the app.",
+  "part.ticket.your-best-match": "Your best match",
+  "part.ticket.your-traveller-card-appears-here": "Your traveller card appears here.",
+  "part.sentence.how-long": "How long",
+  "part.sentence.any": "Any",
+  "part.sentence.open-road": "Open road",
+  "part.sentence.your-hajeela-ticket": "Your Hajeela ticket",
+  "part.sentence.traveller-card-unlocked": "Traveller card unlocked",
+  "part.sentence.pick": "Pick",
+  "part.sentence.more-for-your-traveller-card": "more for your traveller card",
+  "part.sentence.show": "Show",
+  "part.sentence.you-re-a": "You're a",
+  "part.sentence.your-best-match": "Your best match",
+  "part.sentence.your-traveller-card": "Your traveller card",
+  "part.sentence.clear-filters": "Clear filters",
+  "part.sentence.nothing-for-that-yet-tell": "Nothing for that yet · tell us what you want",
+  "part.worldSwitch.choose-a-world": "Choose a world",
+  "part.destInfo.would-go-again": "would go again",
+  "part.destInfo.works-best": "works best",
+  "part.destInfo.see": "See",
+  "part.destInfo.you-can-book": "you can book",
+  "part.destInfo.photo": "Photo · ",
+  "part.destInfo.next": " · next ",
+  "part.mapBlock.mediterranean-sea": "MEDITERRANEAN SEA",
+  "part.mapBlock.red-sea": "RED SEA",
+  "part.mapBlock.black-sea": "BLACK SEA",
+  "part.mapBlock.atlantic-ocean": "ATLANTIC OCEAN",
+  "part.mapBlock.cairo": "Cairo",
+  "part.mapBlock.egypt-zoom-in": "Egypt · zoom in",
+  "part.mapBlock.map-key": "Map key",
+  "part.mapBlock.a-place-hajeela-goes": "A place Hajeela goes",
+  "part.mapBlock.bigger-glow-more-trips": "Bigger glow, more trips",
+  "part.mapBlock.cairo-where-every-trip-starts": "Cairo, where every trip starts",
+  "part.mapBlock.drag-to-move-and-or": "Drag to move · + and − or double-click to zoom · Ctrl or ⌘ + scroll to zoom · Egypt opens up as you zoom in",
+  "part.nearMisses.if-you-drop-the-search": "If you drop the search words",
+  "part.nearMisses.if-you-can-move-the": "If you can move the month",
+  "part.nearMisses.if-the-budget-can-stretch": "If the budget can stretch a little",
+  "part.nearMisses.if-you-are-open-on": "If you are open on pace",
+  "part.nearMisses.if-the-length-can-change": "If the length can change",
+  "part.nearMisses.if-you-are-open-on-2": "If you are open on the activity",
+  "part.nearMisses.full-for-now-with-a": "Full for now, with a waitlist",
+  "part.nearMisses.same-spirit-another-place": "Same spirit, another place",
+  "part.nearMisses.same-plan-another-world": "Same plan, another world",
+  "part.noResults.let-s-work-it-out": "Let's work it out together.",
+  "part.noResults.that-is-not-a-dead": "That is not a dead end. Tell us what you had in mind and a real person from the team will come back with ideas, or plan it with you from scratch.",
+  "part.noResults.start-over": "Start over",
+  "part.noResults.or-tell-us-what-you": "Or tell us what you are looking for",
+  "part.noResults.talk-to-a-person": "Talk to a person",
+  "part.noResults.rather-just-ask-someone": "Rather just ask someone?",
+  "part.noResults.the-hajeela-team": "The Hajeela team",
+  "part.noResults.sun-to-thu-10-am": "Sun to Thu, 10 am to 6 pm",
+  "part.noResults.send-a-message-or-a": "Send a message or a voice note. We will ask a couple of questions to understand what you want, then suggest something.",
+  "part.noResults.ask-hajeela": "Ask Hajeela",
+  "part.noResults.coming-later": "Coming later",
+  "part.noResults.chat-it-through-any-time": "Chat it through, any time",
+  "part.noResults.somewhere-quiet-by-the-sea": "Somewhere quiet by the sea for two days in January, small budget.",
+  "part.noResults.nothing-on-the-calendar-for": "Nothing on the calendar for that in January yet. I can show you a day by the sea that month, or pass this to the team to plan it with you.",
+  "part.noResults.type-what-you-have-in": "Type what you have in mind…",
+  "part.noResults.a-future-phase-an-ai": "A future phase: an AI guide that understands plain language, suggests trips, and hands over to a person when it should.",
+  "part.noResults.want-something-fully-your-own": "Want something fully your own?",
+  "part.noResults.create-your-trip": "Create your trip",
+  "part.noResults.we-couldn-t-find": "We couldn't find “",
+  "part.noResults.we-don-t-have-that": "We don't have that exact trip yet.",
+  "part.noResults.close-to-what-you-asked": "Close to what you asked for",
+  "part.noResults.sent-req-0412": "Sent · REQ-0412",
+  "part.noResults.got-it-we-ll-take": "Got it. We'll take it from here.",
+  "part.noResults.someone-from-the-team-replies": "Someone from the team replies within one working day, on WhatsApp or email, whichever you gave us.",
+  "part.noResults.back-to-home": "Back to home",
+  "part.noResults.keep-exploring": "Keep exploring",
+  "part.noResults.we-will-also-tell-you": " We will also tell you the moment a trip like this opens.",
+  "part.noResults.fill-a-short-form": "Fill a short form",
+  "part.noResults.tell-us-in-a-few": "Tell us in a few lines",
+  "part.noResults.what-you-have-in-mind": "What you have in mind",
+  "part.noResults.your-name": "Your name",
+  "part.noResults.whatsapp-or-email": "WhatsApp or email",
+  "part.noResults.tell-me-when-a-trip": "Tell me when a trip like this opens",
+  "part.noResults.send-to-the-team": "Send to the team",
+  "part.noResults.no-account-needed": "No account needed",
+  "part.noResults.i-was-looking-for": "I was looking for: ",
+  "part.noResults.call-back-requested": "Call back requested",
+  "part.noResults.whatsapp-us": "WhatsApp us",
+  "part.noResults.ask-for-a-call-back": "Ask for a call back",
+  "page.trips.level": "Level ",
+  "page.trips.under": "Under ",
+  "page.trips.egp": " EGP",
+  "page.trips.places-left": "Places left",
+  "page.trips.where-do-you-feel-like": "Where do you feel like going?",
+  "page.trips.all-trips": "All trips",
+  "page.trips.tell-us-more": "Tell us more",
+  "page.trips.when-duration-activity-budget": "When · Duration · Activity · Budget",
+  "page.trips.results-for": "Results for “",
+  "page.trips.every-trip-you-can-book": "Every trip you can book.",
+  "page.trips.clear-all": "Clear all",
+  "page.trip.what-s-included": "What's included",
+  "page.trip.what-to-expect": "What to expect",
+  "page.trip.the-essentials": "The essentials",
+  "page.trip.sold-out": "Sold out",
+  "page.trip.on-request": "On request",
+  "page.trip.share-with-friends": "Share with friends",
+  "page.trip.bring-your-people": "Bring your people.",
+  "page.trip.itinerary-pdf": "Itinerary · PDF",
+  "page.trip.level": "· Level",
+  "page.trip.from": "· from",
+  "page.trip.included-transport-host-equipment": "Included: transport, host, equipment",
+  "page.trip.bring-about": ". Bring about",
+  "page.trip.pocket-money": "pocket money.",
+  "page.trip.scan-to-see-the-trip": "Scan to see the trip and book the same date.",
+  "page.trip.add-a-note-optional": "Add a note (optional)",
+  "page.trip.i-found-this-come-with": "I found this. Come with me?",
+  "page.trip.whatsapp": "WhatsApp",
+  "page.trip.email": "Email",
+  "page.trip.copy-link": "Copy link",
+  "page.trip.download-pdf": "Download PDF",
+  "page.trip.no-account-needed-for-you": "No account needed, for you or for them. Booking together? Each friend books their own place on the same date.",
+  "page.trip.trip-photo": "Trip photo",
+  "page.trip.stay": ", stay",
+  "page.trip.on-its-way": "On its way.",
+  "page.trip.your-friends-get-your-note": "Your friends get your note, the itinerary as a PDF they can keep, and a link to book the same date.",
+  "page.trip.itinerary-downloaded": "Itinerary downloaded.",
+  "page.trip.itinerary-pdf-is-saved-send": "-itinerary.pdf is saved. Send it anywhere you like.",
+  "page.trip.link-copied": "Link copied.",
+  "page.trip.anyone-who-opens-it-sees": "Anyone who opens it sees this trip and can download the itinerary.",
+  "page.trip.all-trips": "← All trips",
+  "page.trip.explore": "Explore /",
+  "page.trip.duration": "Duration",
+  "page.trip.level-2": "Level",
+  "page.trip.group": "Group",
+  "page.trip.12-to-20-people": "12 to 20 people",
+  "page.trip.from-2": "From",
+  "page.trip.view-all-24-photos": "View all 24 photos",
+  "page.trip.the-detail": "The detail",
+  "page.trip.transport": "Transport",
+  "page.trip.from-cairo-and-back": "From Cairo and back",
+  "page.trip.stay-2": "Stay",
+  "page.trip.meals": "Meals",
+  "page.trip.as-listed-on-the-plan": "As listed on the plan",
+  "page.trip.host": "Host",
+  "page.trip.with-you-the-whole-trip": "With you the whole trip",
+  "page.trip.placeholder-exact-times-meal-by": "Placeholder: exact times, meal by meal and room details per day come from operations and are not in this prototype yet.",
+  "page.trip.not-included": "Not included",
+  "page.trip.pocket-money-and-add-ons": "Pocket money and add-ons",
+  "page.trip.you-ll-learn": "You'll learn",
+  "page.trip.you-can-add": "You can add",
+  "page.trip.worth-buying-there": "Worth buying there",
+  "page.trip.bring-about-2": "Bring about",
+  "page.trip.per-person": "per person",
+  "page.trip.departures": "Departures",
+  "page.trip.make-it-private": "Make it private",
+  "page.trip.no-account-needed": "· no account needed",
+  "page.trip.every-trip-has-a-group": "Every trip has a group chat in the app.",
+  "page.trip.once-you-ve-booked-you": "Once you've booked, you're in. Say hello, ask what to pack, swap photos after. Join in as much or as little as you like.",
+  "page.trip.get-the-app": "Get the app",
+  "page.trip.more-from": "More from",
+  "page.trip.hero-film-or-photo-of": "Hero · film or photo of ",
+  "page.trip.real-people-mid-moment": ", real people mid-moment",
+  "page.trip.photo": "Photo · ",
+  "page.trip.film-8-sec-loop": "Film · 8 sec loop · ",
+  "page.trip.a-host-stays-with-the": "A host stays with the group the whole time, and you can sit anything out.",
+  "page.trip.doable-if-you-re-reasonably": "Doable if you're reasonably fit and fine with an early start. We'll send a short prep plan when you book.",
+  "page.trip.stops-from-cairo-and-back": " stops · from Cairo and back",
+  "page.trip.day-trip-home-by-night": "Day trip, home by night",
+  "page.trip.everything-for-the-activities": "Everything for the activities",
+  "page.trip.your-trip-badge": "Your trip badge",
+  "page.trip.in-your-collection-in-the": "In your collection in the app, once you've completed the trip",
+  "page.trip.do-i-need-experience": "Do I need experience?",
+  "page.trip.no-every-activity-is-taught": "No. Every activity is taught on the day, and you can sit anything out.",
+  "page.trip.i-m-coming-on-my": "I'm coming on my own. Is that okay?",
+  "page.trip.yes-one-in-three-people": "Yes. One in three people do. We introduce everyone before the trip.",
+  "page.trip.what-should-i-pack": "What should I pack?",
+  "page.trip.we-send-a-packing-list": "We send a packing list 7 days before. Short version: comfortable shoes, a warm layer and your ID.",
+  "page.trip.what-if-i-need-to": "What if I need to cancel?",
+  "page.trip.free-date-change-up-to": "Free date change up to 7 days before. Placeholder.",
+  "page.trip.is-it-safe": "Is it safe?",
+  "page.trip.every-trip-has-a-trained": "Every trip has a trained host, a safety plan and a 24-hour contact number.",
+  "page.trip.film-the-moment-8-sec": "Film · the moment, 8 sec loop",
+  "page.trip.photo-the-group-on-arrival": "Photo · the group on arrival",
+  "page.trip.photo-the-local-host": "Photo · the local host",
+  "page.trip.reserve-with": "Reserve with",
+  "page.trip.pay-the-rest-later": ", pay the rest later.",
+  "page.trip.book-this-trip": "Book this trip",
+  "page.trip.request-to-book": "Request to book",
+  "page.trip.instant-confirmation": "Instant confirmation",
+  "page.trip.we-confirm-within-24-hours": "We confirm within 24 hours",
+  "part.bkCheck.choose-a-departure-to-continue": "Choose a departure to continue.",
+  "part.bkCheck.enter-your-full-name-as": "Enter your full name as it appears on your ID.",
+  "part.bkCheck.enter-an-email-address-like": "Enter an email address like name@example.com.",
+  "part.bkCheck.enter-a-phone-number-with": "Enter a phone number with at least 8 digits.",
+  "part.bkCheck.enter-their-full-name-as": "Enter their full name as on their ID.",
+  "page.book.your-trip": "Your trip",
+  "page.book.review-and-pay": "Review and pay",
+  "page.book.review-and-request": "Review and request",
+  "page.book.traveller": "Traveller ",
+  "page.book.lead-traveller": "Lead traveller",
+  "page.book.fully-booked-join-the-waitlist": "Fully booked · join the waitlist",
+  "page.book.places-available": "Places available",
+  "page.book.we-confirm-availability-within-24": "We confirm availability within 24 hours",
+  "page.book.none-noted": "None noted",
+  "page.book.departure": "Departure",
+  "page.book.duration": "Duration",
+  "page.book.travellers": "Travellers",
+  "page.book.total": "Total",
+  "page.book.guest-checkout-no-account-needed": "Guest checkout. No account needed.",
+  "page.book.due-today": "Due today",
+  "page.book.balance-14-days-before": "Balance, 14 days before",
+  "page.book.choose-your-departure": "Choose your departure.",
+  "page.book.how-many-travellers": "How many travellers?",
+  "page.book.pick-a-date-and-tell": "Pick a date and tell us how many of you are coming.",
+  "page.book.this-trip-is-request-to": "This trip is request to book. Pick a date and we confirm your places within 24 hours. Nothing is charged until we do.",
+  "page.book.the-fully-booked-date-has": "The fully booked date has a waitlist: we message you if a place opens up.",
+  "page.book.choose-a-date-to-see": "Choose a date to see the price",
+  "page.book.id-added": "ID added",
+  "page.book.id-front-jpg": "· id-front.jpg",
+  "page.book.only-our-trip-team-can": "Only our trip team can see it.",
+  "page.book.we-ll-send-them-a": "We'll send them a link",
+  "page.book.they-add-their-own-id": "They add their own ID from their phone, up to 3 days before.",
+  "page.book.national-id-or-passport": "National ID or passport",
+  "page.book.a-clear-photo-of-the": "A clear photo of the front. JPG, PNG or PDF. You can add it later.",
+  "page.book.change": "Change",
+  "page.book.upload-a-photo": "Upload a photo",
+  "page.book.send-them-a-link": "Send them a link",
+  "page.book.traveller-2": "Traveller",
+  "page.book.full-name-as-on-their": "Full name, as on their ID",
+  "page.book.phone-for-the-trip-group": "Phone, for the trip group",
+  "page.book.age-group": "Age group",
+  "page.book.18-or-over": "18 or over",
+  "page.book.under-18": "Under 18",
+  "page.book.we-send-the-confirmation-and": "We send the confirmation and trip updates to this person.",
+  "page.book.full-name-as-on-your": "Full name, as on your ID",
+  "page.book.email": "Email",
+  "page.book.phone": "Phone",
+  "page.book.who-s-travelling": "Who's travelling?",
+  "page.book.no-account-needed-we-only": "No account needed. We only ask what the road, the permits and the kitchen need.",
+  "page.book.why-we-ask-for-an": "Why we ask for an ID",
+  "page.book.checkpoints-and-protected-areas-need": "Checkpoints and protected areas need a name and ID for everyone on the bus. We keep it private, use it only for this trip and delete it afterwards. IDs are needed before the trip, not before paying, so they never block a booking. (Placeholder policy.)",
+  "page.book.food-and-dietary-needs": "Food and dietary needs",
+  "page.book.allergies-or-anything-medical-or": "Allergies or anything medical or practical we should know? (optional)",
+  "page.book.no-restrictions": "No restrictions",
+  "page.book.gluten-free": "Gluten free",
+  "page.book.lactose-free": "Lactose free",
+  "page.book.nut-allergy": "Nut allergy",
+  "page.book.seafood-allergy": "Seafood allergy",
+  "page.book.something-else": "Something else",
+  "page.book.how-should-we-look-after": "How should we look after you?",
+  "page.book.so-the-bus-stops-in": "So the bus stops in the right place and the kitchen knows what to cook.",
+  "page.book.pickup-point": "Pickup point",
+  "page.book.tagamoa": "Tagamoa",
+  "page.book.sheikh-zayed": "Sheikh Zayed",
+  "page.book.maadi": "Maadi",
+  "page.book.send-trip-updates-on-whatsapp": "Send trip updates on WhatsApp too",
+  "page.book.have-a-code-from-the": "Have a code from the app? (optional)",
+  "page.book.apply": "Apply",
+  "page.book.cancellation-policy": "Cancellation policy",
+  "page.book.free-date-change-up-to": "Free date change up to 7 days before. Cancel more than 14 days before for a full refund, less the deposit. Within 14 days, no refund, but you can pass your place to a friend. (Placeholder.)",
+  "page.book.read-the-full-policy": "Read the full policy",
+  "page.book.i-agree-to-the-booking": "I agree to the booking terms and cancellation policy.",
+  "page.book.check-it-then-confirm": "Check it, then confirm.",
+  "page.book.check-it-then-send-your": "Check it, then send your request.",
+  "page.book.everything-in-one-place-change": "Everything in one place. Change anything with one click.",
+  "page.book.this-is-a-request-not": "This is a request, not a confirmed booking yet. We'll check availability and confirm within 24 hours. Nothing is charged today.",
+  "page.book.dietary-needs": "Dietary needs",
+  "page.book.how-would-you-like-to": "How would you like to pay?",
+  "page.book.reserve-with-a-deposit": "Reserve with a deposit",
+  "page.book.today": "today,",
+  "page.book.due-14-days-before": "due 14 days before",
+  "page.book.pay-in-full": "Pay in full",
+  "page.book.payment": "Payment",
+  "page.book.secure-payment-through-the-payment": "Secure payment through the payment provider. Prices in EGP.",
+  "page.book.your-payment-didn-t-go": "Your payment didn't go through, and you haven't been charged.",
+  "page.book.try-again-or-choose-another": "Try again, or choose another way to pay.",
+  "page.book.you-ve-already-booked-this": "You've already booked this departure.",
+  "page.book.your-reference-is": "Your reference is",
+  "page.book.we-haven-t-charged-you": ". We haven't charged you again.",
+  "page.book.manage-your-booking": "Manage your booking",
+  "page.book.mobile-wallet": "Mobile wallet",
+  "page.book.card-number": "Card number",
+  "page.book.expiry-and-cvc": "Expiry and CVC",
+  "page.book.you-will-be-sent-to": "You will be sent to your bank app to approve the payment.",
+  "page.book.stays-pending": "Stays pending",
+  "page.book.your-places-are-confirmed-and": "Your places are confirmed and paid.",
+  "page.book.confirmed-deposit-paid": "Confirmed · deposit paid",
+  "page.book.your-places-are-held": "Your places are held.",
+  "page.book.is-due-14-days-before": "is due 14 days before the trip. We'll remind you.",
+  "page.book.awaiting-payment": "Awaiting payment",
+  "page.book.we-re-waiting-for-your": "We're waiting for your bank to confirm the payment. Your places are held for 30 minutes. We'll email you as soon as it clears.",
+  "page.book.pending-awaiting-hajeela-s-approval": "Pending · awaiting Hajeela's approval",
+  "page.book.we-ve-got-your-request": "We've got your request. We'll confirm your places within 24 hours and send a payment link. Nothing has been charged.",
+  "page.book.booking-reference": "Booking reference",
+  "page.book.trip": "Trip",
+  "page.book.date": "Date",
+  "page.book.paid": "Paid",
+  "page.book.we-ve-sent-this-to": "We've sent this to your email",
+  "page.book.what-happens-next": "What happens next",
+  "page.book.scan-to-get-the-app": "Scan to get the app",
+  "page.book.get-the-app": "Get the app",
+  "page.book.one-more-step": "One more step",
+  "page.book.your-trip-lives-in-the": "Your trip lives in the Hajeela app.",
+  "page.book.reminders": "Reminders",
+  "page.book.what-to-pack-when-to": "What to pack, when to sleep early, when the bus leaves.",
+  "page.book.your-trip-s-whatsapp-group": "Your trip's WhatsApp group",
+  "page.book.join-the-people-you-re": "Join the people you're travelling with, and your host.",
+  "page.book.find-your-bus-stop": "Find your bus stop",
+  "page.book.the-exact-pickup-pin-the": "The exact pickup pin, the time, and where the bus is.",
+  "page.book.your-trip-status": "Your trip status",
+  "page.book.confirmed-balance-due-what-happens": "Confirmed, balance due, what happens next. Always up to date.",
+  "page.book.log-in-with-the-phone": "Log in with the phone number you booked with and this trip is already there. Prefer not to? The essentials still reach you by email and WhatsApp.",
+  "page.book.explore-more-trips": "Explore more trips",
+  "page.book.request-received": "Request received.",
+  "page.book.almost-there": "Almost there.",
+  "page.book.you-re-going-to": "You're going to ",
+  "page.book.and-whatsapp": " and WhatsApp",
+  "page.book.traveller-id": "traveller ID",
+  "page.book.still-to-add": "still to add.",
+  "page.book.no-rush-today-add": "No rush today. Add",
+  "page.book.from-manage-your-booking-or": "from Manage your booking or in the app, up to 3 days before the trip.",
+  "page.book.back": "Back",
+  "page.book.processing": "Processing…",
+  "page.book.pay": "Pay ",
+  "page.book.request": "Request",
+  "page.book.step": "Step",
+  "page.book.book-your-place": "Book your place.",
+  "page.book.all-done": "All done.",
+  "page.manage.confirmed-balance-due": "Confirmed · balance due",
+  "page.manage.awaiting-payment": "Awaiting payment",
+  "page.manage.pending-awaiting-hajeela-s-approval": "Pending · awaiting Hajeela's approval",
+  "page.manage.cancellation-requested": "Cancellation requested",
+  "page.manage.your-trip-status": "Your trip status",
+  "page.manage.scan-to-get-the-app": "Scan to get the app",
+  "page.manage.get-the-app": "Get the app",
+  "page.manage.the-quickest-way": "The quickest way",
+  "page.manage.your-trip-status-is-in": "Your trip status is in the app.",
+  "page.manage.log-in-with-the-phone": "Log in with the phone number you booked with. You will see whether you are confirmed, what is left to pay, your reminders, your group and your bus stop.",
+  "page.manage.no-app-yet": "No app yet?",
+  "page.manage.check-here-with-the-reference": "Check here with the reference from your confirmation email.",
+  "page.manage.booking-reference": "Booking reference",
+  "page.manage.email-you-booked-with": "Email you booked with",
+  "page.manage.find-my-booking": "Find my booking",
+  "page.manage.find-another-booking": "Find another booking",
+  "page.manage.payment": "Payment",
+  "page.manage.travellers": "Travellers",
+  "page.manage.add-to-calendar": "Add to calendar",
+  "page.manage.everything-for-the-day-in": "Everything for the day, in one place.",
+  "page.manage.contact-us": "Contact us",
+  "page.manage.whatsapp-or-email": "WhatsApp or email",
+  "page.manage.paid": "Paid",
+  "page.manage.balance-due-14-days-before": "Balance due 14 days before",
+  "page.manage.pay-the-balance": "Pay the balance",
+  "page.manage.waiting-for-your-bank-to": "Waiting for your bank to confirm.",
+  "page.manage.try-paying-again": "Try paying again",
+  "page.manage.we-ll-send-a-payment": "We'll send a payment link once your places are confirmed.",
+  "page.manage.name-on-file": "Name on file",
+  "page.manage.traveller": "Traveller ",
+  "page.manage.lead-traveller": "Lead traveller",
+  "page.manage.change-request-sent": "Change request sent.",
+  "page.manage.we-ll-confirm-the-new": "We'll confirm the new details by email within a day.",
+  "page.manage.change-traveller-details": "Change traveller details",
+  "page.manage.cancellation-requested-2": "Cancellation requested.",
+  "page.manage.we-ll-reply-within-one": "We'll reply within one working day with what's refundable under the policy.",
+  "page.manage.request-to-cancel-this-booking": "Request to cancel this booking?",
+  "page.manage.under-the-policy-a-cancellation": "Under the policy, a cancellation now would be refunded in full, less the deposit. (Placeholder.)",
+  "page.manage.keep-my-booking": "Keep my booking",
+  "page.manage.request-cancellation": "Request cancellation",
+  "page.manage.can-t-make-it-you": "Can't make it? You can pass your place to a friend or ask to cancel.",
+  "page.manage.booking-states-the-page-can": "Booking states the page can show: Pending, Awaiting payment, Confirmed, Payment failed, Cancelled, Refunded. Exact hold, deposit and refund rules come from Hajeela's policies.",
+  "page.create.bring-your-people": "Bring Your People.",
+  "page.create.tell-us-what-you-have": "Tell us what you have in mind and we'll help you bring it together.",
+  "page.create.a-trip-for-your-people": "A trip for your people.",
+  "page.create.getaways-birthdays-bachelorettes-honeymoons-and": "Getaways, birthdays, bachelorettes, honeymoons and family weekends, planned around you.",
+  "page.create.plan-with-friends-family": "Plan with friends & family",
+  "page.create.a-day-your-team-will": "A day your team will talk about.",
+  "page.create.away-days-team-building-graduation": "Away days, team building, graduation trips and school groups, with one contact and a clear quote.",
+  "page.create.plan-for-your-team": "Plan for your team",
+  "page.create.have-something-in-mind": "Have something in mind?",
+  "page.create.a-few-simple-steps-and": "A few simple steps and we'll help you make it happen.",
+  "page.create.a-look-at-what-we": "A look at what we've created.",
+  "page.create.a-little-look-at-the": "A little look at the ideas, people and moments behind each trip.",
+  "page.create.photo-friends-on-a-boat": "Photo · friends on a boat",
+  "page.create.photo-a-team-on-a": "Photo · a team on a dune",
+  "page.create.corporate-experiences": "Corporate experiences",
+  "page.create.team-building": "Team building",
+  "page.create.university-trips": "University trips",
+  "page.create.student-groups": "Student groups",
+  "page.create.tell-us-what-you-re": "Tell us what you're thinking",
+  "page.create.share-a-little-about-your": "Share a little about your group, what you'd like to do and when you're thinking of going.",
+  "page.create.we-ll-put-some-ideas": "We'll put some ideas together",
+  "page.create.we-ll-look-at-the": "We'll look at the details and send you a plan with everything laid out.",
+  "page.create.make-it-yours": "Make it yours",
+  "page.create.we-ll-work-through-the": "We'll work through the details together until everything feels right.",
+  "page.create.get-ready-to-go": "Get ready to go",
+  "page.create.once-everything-is-approved-and": "Once everything is approved and confirmed, we'll take care of the next steps.",
+  "page.createForm.who-s-coming-along": "Who’s coming along?",
+  "page.createForm.where-are-you-dreaming-of": "Where are you dreaming of going?",
+  "page.createForm.when-works-for-you": "When works for you?",
+  "page.createForm.what-do-you-have-in": "What do you have in mind?",
+  "page.createForm.let-s-make-it-happen": "Let’s make it happen.",
+  "page.createForm.tell-us-who-you-re": "Tell us who you’re travelling with and we’ll shape the next questions around them.",
+  "page.createForm.somewhere-quiet-just-the-two": "Somewhere quiet, just the two of you. Pick a landscape, or let us surprise you.",
+  "page.createForm.somewhere-everyone-from-the-smallest": "Somewhere everyone, from the smallest to the oldest, will enjoy.",
+  "page.createForm.somewhere-that-fits-the-moment": "Somewhere that fits the moment. Pick a landscape, or let us surprise you.",
+  "page.createForm.pick-a-landscape-or-let": "Pick a landscape, or let us surprise you. You can always change your mind.",
+  "page.createForm.is-there-a-date-that": "Is there a date that can’t move? Start there. If not, pick a long weekend.",
+  "page.createForm.roughly-is-fine-we-ll": "Roughly is fine. We’ll check dates and places and come back with options.",
+  "page.createForm.a-few-details-so-we": "A few details so we can make it feel like yours.",
+  "page.createForm.tell-us-who-we-re": "Tell us who we’re planning around, and what everyone would enjoy.",
+  "page.createForm.budget-what-you-d-enjoy": "Budget, what you’d enjoy, and anything we should know. We’ll take it from there.",
+  "page.createForm.just-how-to-reach-you": "Just how to reach you. Then it’s with us, and a plan with a price comes back within 2 working days.",
+  "page.createForm.not-sure-yet": "Not sure yet",
+  "page.createForm.flexible": " · flexible",
+  "page.createForm.a-party-night": "A party night",
+  "page.createForm.a-surprise-moment": "A surprise moment",
+  "page.createForm.who-are-we-planning-around": "Who are we planning around?",
+  "page.createForm.little-kids": "Little kids",
+  "page.createForm.accessibility-needs": "Accessibility needs",
+  "page.createForm.what-pace-suits-the-group": "What pace suits the group?",
+  "page.createForm.lazy-days": "Lazy days",
+  "page.createForm.a-bit-of-both": "A bit of both",
+  "page.createForm.full-on-adventure": "Full-on adventure",
+  "page.createForm.what-would-make-it-feel": "What would make it feel special?",
+  "page.createForm.quiet-and-slow": "Quiet and slow",
+  "page.createForm.a-romantic-dinner": "A romantic dinner",
+  "page.createForm.a-little-adventure": "A little adventure",
+  "page.createForm.how-big-is-the-moment": "How big is the moment?",
+  "page.createForm.low-key-and-close": "Low-key and close",
+  "page.createForm.a-proper-party": "A proper party",
+  "page.createForm.somewhere-in-between": "Somewhere in between",
+  "page.createForm.how-private-should-it-be": "How private should it be?",
+  "page.createForm.just-us": "Just us",
+  "page.createForm.a-few-friends": "A few friends",
+  "page.createForm.happy-to-meet-others": "Happy to meet others",
+  "page.createForm.anything-else-we-should-know": "Anything else we should know? Dietary needs, kids’ ages, naps, a favourite food…",
+  "page.createForm.anything-that-would-make-it": "Anything that would make it feel like yours? A view, a dinner, a surprise…",
+  "page.createForm.what-s-the-vibe-anything": "What’s the vibe? Anything the group loves or can’t stand?",
+  "page.createForm.tell-us-about-the-person": "Tell us about the person or the moment we’re celebrating.",
+  "page.createForm.what-would-make-it-perfect": "What would make it perfect for you?",
+  "page.createForm.tell-us-the-idea-in": "Tell us the idea in a sentence. We’ll take it from there.",
+  "page.createForm.anything-we-should-know-dietary": "Anything we should know: dietary needs, accessibility, a surprise… We’ll take it from there.",
+  "page.createForm.what-are-we-celebrating": "What are we celebrating?",
+  "page.createForm.how-many-of-you": "How many of you?",
+  "page.createForm.usually-two-change-it-if": "Usually two. Change it if you like.",
+  "page.createForm.roughly-is-fine": "Roughly is fine.",
+  "page.createForm.not-sure-yet-surprise-me": "Not sure yet, surprise me",
+  "page.createForm.we-ll-suggest-a-few": "We’ll suggest a few places that fit your people and your dates.",
+  "page.createForm.from": "From",
+  "page.createForm.to": "To",
+  "page.createForm.or-a-long-weekend": "Or a long weekend",
+  "page.createForm.my-dates-are-flexible": "My dates are flexible",
+  "page.createForm.budget": "Budget",
+  "page.createForm.budget-is": "Budget is",
+  "page.createForm.per-person": "Per person",
+  "page.createForm.total": "Total",
+  "page.createForm.what-you-d-enjoy": "What you’d enjoy",
+  "page.createForm.optional": "(optional)",
+  "page.createForm.change": "Change",
+  "page.createForm.name": "Name",
+  "page.createForm.email": "Email",
+  "page.createForm.phone": "Phone",
+  "page.createForm.best-way-to-reach-you": "Best way to reach you",
+  "page.createForm.your-idea-so-far": "Your idea so far",
+  "page.createForm.phone-call": "Phone call",
+  "page.createForm.not-chosen-yet": "Not chosen yet",
+  "page.createForm.your-dates": "Your dates",
+  "page.createForm.egp": " EGP ",
+  "page.createForm.step": "Step",
+  "page.createForm.let-s-plan-it-together": "Let’s plan it together",
+  "page.createForm.starting-from": "Starting from:",
+  "page.createForm.we-filled-in-the-basics": ". We filled in the basics. Change anything you like.",
+  "page.createForm.start-blank-instead": "Start blank instead",
+  "page.createForm.back": "← Back",
+  "page.createForm.continue": "Continue",
+  "page.createForm.send-my-idea": "Send my idea",
+  "page.sent.within-48-hours": "Within 48 hours",
+  "page.sent.we-send-a-quote-and": "We send a quote and an invoice, ready for finance.",
+  "page.sent.a-short-call-to-shape": "A short call to shape the day around your group.",
+  "page.sent.when-it-feels-right": "When it feels right",
+  "page.sent.approve-it-and-your-trip": "Approve it, and your trip is confirmed.",
+  "page.sent.within-1-working-day": "Within 1 working day",
+  "page.sent.we-call-or-whatsapp-you": "We call or WhatsApp you to talk it through.",
+  "page.sent.within-2-working-days-after": "Within 2 working days after",
+  "page.sent.we-send-a-proposal-with": "We send a proposal with a plan and a price.",
+  "page.sent.within-2-working-days": "Within 2 working days",
+  "page.sent.we-send-a-proposal-with-2": "We send a proposal with a plan, a price and a payment link.",
+  "page.sent.a-quick-message-to-confirm": "A quick message to confirm we've understood. For bigger trips, a call.",
+  "page.sent.your-quote-with-a-plan": "Your quote, with a plan and a price.",
+  "page.sent.approve-it-and-pay-online": "Approve it and pay online. Your trip is confirmed.",
+  "page.sent.your-idea-has-been-sent": "Your idea has been sent.",
+  "page.sent.we-have-it-and-a": "We have it, and a quote is on its way to you.",
+  "page.sent.reference": "Reference",
+  "page.sent.what-you-sent": "What you sent",
+  "page.sent.what-happens-next": "What happens next",
+  "page.sent.back-to-home": "Back to home",
+  "page.sent.thank-you": "Thank you, ",
+  "page.sent.thank-you-2": "Thank you. ",
+  "page.sent.see-an-example-proposal": "See an example proposal",
+  "page.proposal.mariam-s-bachelorette-hurghada": "Mariam's bachelorette, Hurghada",
+  "page.proposal.thu-11-to-sat-13": "Thu 11 to Sat 13 March · 14 people · Prepared by Hajeela · Held until 20 November",
+  "page.proposal.the-plan": "The plan",
+  "page.proposal.included": "Included",
+  "page.proposal.private-bus": "Private bus",
+  "page.proposal.two-nights-shared-double-rooms": "Two nights, shared double rooms",
+  "page.proposal.private-boat-day": "Private boat day",
+  "page.proposal.all-meals-except-one-dinner": "All meals except one dinner",
+  "page.proposal.a-hajeela-host": "A Hajeela host",
+  "page.proposal.options": "Options",
+  "page.proposal.price": "Price",
+  "page.proposal.total": "Total",
+  "page.proposal.confirmed-cr-0217": "Confirmed · CR-0217",
+  "page.proposal.you-re-all-set": "You're all set.",
+  "page.proposal.payment-received-your-confirmation-with": "Payment received. Your confirmation, with everything you need, is on its way by email and WhatsApp.",
+  "page.proposal.manage-your-booking": "Manage your booking",
+  "page.proposal.mood-photo-for-this-trip": "Mood photo for this trip",
+  "page.proposal.private-bus-from-cairo-at": "Private bus from Cairo at 3 pm. Check in, sunset dinner on the beach.",
+  "page.proposal.your-own-boat-for-the": "Your own boat for the day: two islands, snorkelling, lunch on board, a surprise for the bride.",
+  "page.proposal.slow-breakfast-pool-time-back": "Slow breakfast, pool time, back in Cairo by 9 pm.",
+  "page.proposal.photographer-for-the-boat-day": "Photographer for the boat day",
+  "page.proposal.decorations-and-a-cake": "Decorations and a cake",
+  "page.proposal.photographer": "Photographer",
+  "page.proposal.decorations-and-cake": "Decorations and cake",
+  "page.proposal.got-it": "Got it.",
+  "page.proposal.we-ll-send-an-updated": "We'll send an updated proposal within a day.",
+  "page.proposal.approve-and-pay": "Approve and pay",
+  "page.proposal.ask-for-changes": "Ask for changes",
+  "page.proposal.or-message-us-on-whatsapp": "Or message us on WhatsApp: +20 000 000 0000",
+  "page.proposal.approve-and-pay-opens-the": "Approve and pay opens the same checkout components as Path 01 (summary, payment, confirmation), so both paths feel like one site.",
+  "page.groups.corporate-experiences": "Corporate Experiences",
+  "page.groups.offsites-away-days-and-retreats": "Offsites, away days and retreats that give a team room to think, and a reason to talk afterwards.",
+  "page.groups.photo-a-leadership-offsite-at": "Photo · a leadership offsite at a desert camp",
+  "page.groups.team-building": "Team Building",
+  "page.groups.shared-challenges-and-long-tables": "Shared challenges and long tables. Activities that get people talking to people they rarely meet.",
+  "page.groups.photo-a-team-laughing-on": "Photo · a team laughing on a sandboard",
+  "page.groups.university-trips": "University Trips",
+  "page.groups.clubs-faculties-and-graduation-trips": "Clubs, faculties and graduation trips, planned with student budgets and campus calendars in mind.",
+  "page.groups.photo-a-class-on-the": "Photo · a class on the summit at sunrise",
+  "page.groups.school-trips": "School Trips",
+  "page.groups.day-trips-and-overnights-with": "Day trips and overnights with a clear safety plan, a ratio of adults you can trust and parents kept in the loop.",
+  "page.groups.photo-a-school-group-at": "Photo · a school group at the reef",
+  "page.groups.tell-us-about-your-group": "Tell us about your group in about three minutes.",
+  "page.groups.a-clear-quote-and-invoice": "A clear quote and invoice within 48 hours.",
+  "page.groups.one-coordinator-shapes-dates-places": "One coordinator shapes dates, places and safety with you.",
+  "page.groups.approve-pay-by-invoice-and": "Approve, pay by invoice, and we lock the details.",
+  "page.groups.a-host-with-your-group": "A host with your group, from the first pickup to the bus home.",
+  "page.groups.safety-planning": "Safety planning",
+  "page.groups.a-written-safety-plan-before": "A written safety plan before anything is booked, a trained host and a 24-hour contact.",
+  "page.groups.one-dedicated-coordinator": "One dedicated coordinator",
+  "page.groups.one-person-who-knows-your": "One person who knows your trip from first call to the last photo.",
+  "page.groups.quotations-in-48-hours": "Quotations in 48 hours",
+  "page.groups.clear-per-person-prices-with": "Clear per-person prices, with options if the budget moves.",
+  "page.groups.invoicing-for-finance": "Invoicing for finance",
+  "page.groups.proper-invoices-and-payment-terms": "Proper invoices and payment terms your finance team can approve.",
+  "page.groups.flexible-arrangements": "Flexible arrangements",
+  "page.groups.date-changes-headcount-changes-and": "Date changes, headcount changes and a plan B for the weather.",
+  "page.groups.your-group": "Your group",
+  "page.groups.where-and-when": "Where and when",
+  "page.groups.your-needs": "Your needs",
+  "page.groups.what-kind-of-group": "What kind of group?",
+  "page.groups.organisation-name": "Organisation name",
+  "page.groups.group-size": "Group size",
+  "page.groups.exact-headcount-if-you-know": "Exact headcount, if you know it",
+  "page.groups.teams-departments-and-leadership-groups": "Teams, departments and leadership groups.",
+  "page.groups.clubs-faculties-and-graduating-classes": "Clubs, faculties and graduating classes.",
+  "page.groups.classes-year-groups-and-school": "Classes, year groups and school societies.",
+  "page.groups.another-organised-group": "Another organised group",
+  "page.groups.associations-sports-clubs-families-on": "Associations, sports clubs, families on a big occasion.",
+  "page.groups.under-20": "Under 20",
+  "page.groups.preferred-dates-from": "Preferred dates, from",
+  "page.groups.to": "To",
+  "page.groups.our-dates-are-flexible": "Our dates are flexible",
+  "page.groups.where-would-you-like-to": "Where would you like to go?",
+  "page.groups.budget-per-person": "Budget per person",
+  "page.groups.not-sure": "Not sure",
+  "page.groups.what-should-the-trip-achieve": "What should the trip achieve?",
+  "page.groups.requirements": "Requirements",
+  "page.groups.anything-else-we-should-know": "Anything else we should know?",
+  "page.groups.optional": "(optional)",
+  "page.groups.bring-the-team-together": "Bring the team together",
+  "page.groups.reward-and-celebrate": "Reward and celebrate",
+  "page.groups.learning-and-development": "Learning and development",
+  "page.groups.a-graduation-or-farewell": "A graduation or farewell",
+  "page.groups.a-safe-memorable-day-out": "A safe, memorable day out",
+  "page.groups.overnight-stay": "Overnight stay",
+  "page.groups.dietary-needs": "Dietary needs",
+  "page.groups.accessibility-needs": "Accessibility needs",
+  "page.groups.under-18-travellers": "Under-18 travellers",
+  "page.groups.invoice-and-purchase-order": "Invoice and purchase order",
+  "page.groups.transport-from-our-site": "Transport from our site",
+  "page.groups.your-name-and-role": "Your name and role",
+  "page.groups.work-email": "Work email",
+  "page.groups.phone": "Phone",
+  "page.groups.your-enquiry-so-far": "Your enquiry so far",
+  "page.groups.not-given": "Not given",
+  "page.groups.none-noted": "None noted",
+  "page.groups.change": "Change",
+  "page.groups.step": "Step",
+  "page.groups.tell-us-about-your-group-2": "Tell us about your group.",
+  "page.groups.where-and-when-2": "Where and when?",
+  "page.groups.what-do-you-need": "What do you need?",
+  "page.groups.where-do-we-send-the": "Where do we send the quote?",
+  "page.groups.three-quick-answers-and-we": "Three quick answers and we can start shaping a quote.",
+  "page.groups.roughly-is-fine-a-coordinator": "Roughly is fine. A coordinator will confirm what works.",
+  "page.groups.pick-what-applies-we-ll": "Pick what applies. We’ll ask about the rest on a call.",
+  "page.groups.then-one-coordinator-takes-it": "Then one coordinator takes it from here.",
+  "page.groups.trips-for-teams-universities-and": "Trips for teams, universities and schools.",
+  "page.groups.one-contact-a-clear-quote": "One contact, a clear quote and invoice, a safety plan and flexible dates. You bring the group. We take care of the rest.",
+  "page.groups.get-a-quote": "Get a quote",
+  "page.groups.who-it-s-for": "Who it’s for",
+  "page.groups.four-kinds-of-group-one": "Four kinds of group. One way of working.",
+  "page.groups.how-it-works": "How it works",
+  "page.groups.from-enquiry-to-delivery": "From enquiry to delivery.",
+  "page.groups.why-teams-book-with-us": "Why teams book with us",
+  "page.groups.built-for-the-people-who": "Built for the people who have to sign it off.",
+  "page.groups.photo-a-team-on-a": "Photo · a team on a dune",
+  "page.groups.plan": "Plan",
+  "page.groups.thanks-we-ll-send-a": "Thanks. We'll send a quote within 48 hours.",
+  "page.groups.your-enquiry-reference-is-gr": "Your enquiry reference is GR-0094.",
+  "page.groups.back": "← Back",
+  "page.groups.continue": "Continue",
+  "page.groups.request-a-quote": "Request a quote",
+  "page.world.our-story": "Our story",
+  "page.world.a-trip-taken-simply-for": "A trip taken simply for the joy of going.",
+  "page.world.hajeela-is-a-bedouin-word": "Hajeela is a Bedouin word for a trip taken simply for the joy of going. No fixed destination, just the pleasure of discovering what's ahead, together.",
+  "page.world.it-s-as-much-about": "It's as much about who you go with as where you go. Hajeela began with two friends who wanted to explore more, and grew into a way for others to do the same. Today, every group brings its own people, plans and stories.",
+  "page.world.what-we-care-about": "What we care about",
+  "page.world.two-friends-who-love-to": "Two friends who love to travel, and the hosts who make it work.",
+  "page.world.from-the-road": "From the road",
+  "page.world.all-stories": "All stories",
+  "page.world.want-to-host-with-us": "Want to host with us?",
+  "page.world.we-re-always-looking-for": "We're always looking for hosts, guides and photographers who love this as much as we do.",
+  "page.world.host-with-us": "Host with us",
+  "page.world.photo-a-hajeela-on-a": "Photo · a hajeela on a dune",
+  "page.world.photo-the-first-trip": "Photo · the first trip",
+  "page.world.we-care": "We care",
+  "page.world.about-the-people-who-travel": "About the people who travel with us, the places we visit and every detail in between. We take care of what matters without taking over.",
+  "page.world.we-re-curious": "We're curious",
+  "page.world.about-places-people-and-cultures": "About places, people and cultures, for what they really are. We stay open to wherever the trip leads.",
+  "page.world.we-make-room-for-connection": "We make room for connection",
+  "page.world.the-people-you-meet-on": "The people you meet on a trip can become part of your life. We leave room for that to happen on its own, and never force it.",
+  "page.world.founder-one": "Founder one",
+  "page.world.founder-two": "Founder two",
+  "page.world.placeholder-bio-their-first-trip": "Placeholder bio: their first trip, the thing they always pack, and the place they'd go back to tomorrow.",
+  "page.world.first-trip": "First trip",
+  "page.world.placeholder": "Placeholder",
+  "page.world.always-packs": "Always packs",
+  "page.world.name": "· name",
+  "page.help.how-can-we-help": "How can we help?",
+  "page.help.manage-your-booking": "Manage your booking",
+  "page.help.check-status-pay-a-balance": "Check status, pay a balance, change details or cancel.",
+  "page.help.whatsapp-us": "WhatsApp us",
+  "page.help.every-day-10-am-to": "Every day, 10 am to 10 pm.",
+  "page.help.email": "Email",
+  "page.help.hello-hajeela-com": "hello@hajeela.com",
+  "page.help.we-reply-within-a-working": "We reply within a working day.",
+  "page.help.booking-process": "Booking process",
+  "page.help.how-do-i-book": "How do I book?",
+  "page.help.choose-a-trip-and-a": "Choose a trip and a date, add your travellers, check the summary and pay. No account needed.",
+  "page.help.what-does-request-to-book": "What does \"request to book\" mean?",
+  "page.help.for-some-trips-we-confirm": "For some trips we confirm places by hand. You send a request, we confirm within 24 hours, then you pay. Until then, your place isn't confirmed.",
+  "page.help.what-s-the-difference-between": "What's the difference between pending and confirmed?",
+  "page.help.pending-means-we-have-your": "Pending means we have your booking but it isn't final yet: either we're checking availability or your payment hasn't cleared. Confirmed means your place is yours.",
+  "page.help.payment-information": "Payment information",
+  "page.help.how-can-i-pay": "How can I pay?",
+  "page.help.card-visa-mastercard-meeza-instapay": "Card (Visa, Mastercard, Meeza), InstaPay or a mobile wallet.",
+  "page.help.can-i-pay-a-deposit": "Can I pay a deposit?",
+  "page.help.on-some-trips-yes-you": "On some trips, yes. You pay 30% to reserve and the rest 14 days before. (Placeholder, depends on the policy.)",
+  "page.help.my-payment-failed-was-i": "My payment failed. Was I charged?",
+  "page.help.no-a-failed-payment-isn": "No. A failed payment isn't taken. Try again, or use another method.",
+  "page.help.cancellation-policy": "Cancellation policy",
+  "page.help.can-i-change-my-date": "Can I change my date?",
+  "page.help.free-up-to-7-days": "Free up to 7 days before the trip. (Placeholder.)",
+  "page.help.can-i-cancel": "Can I cancel?",
+  "page.help.request-it-from-manage-your": "Request it from Manage your booking. Refunds follow the policy shown when you booked.",
+  "page.help.what-if-hajeela-cancels": "What if Hajeela cancels?",
+  "page.help.you-get-a-full-refund": "You get a full refund or a free move to another date, whichever you prefer.",
+  "page.help.terms-privacy": "Terms & privacy",
+  "page.help.terms-and-conditions": "Terms and conditions",
+  "page.help.placeholder-link-to-the-full": "Placeholder link to the full terms.",
+  "page.help.privacy-policy": "Privacy policy",
+  "page.help.placeholder-link-we-only-use": "Placeholder link. We only use your details to run your trip and, if you agree, to tell you about new ones.",
+  "part.lay.height": "height:",
+  "part.lay.width": "width:",
+  "part.stageLayers.yolanda-wreck": "Yolanda wreck",
+  "part.stageCard.five-quick-questions-that-get": "Five quick questions that get harder as you go. Every right answer takes you",
+  "part.stageCard.and-the-whole-screen-goes": ", and the whole screen goes with you.",
+  "part.stageCard.get-all-5-right-to": "Get all 5 right to unlock a reward in the",
+  "part.stageCard.hajeela-app": "Hajeela app",
+  "part.stageCard.reward-to-be-confirmed": "(reward to be confirmed)",
+  "part.stageCard.see": "See",
+  "part.stageCard.five-out-of-five-your": "Five out of five. Your reward is waiting in the app.",
+  "part.stageCard.placeholder-the-quiz-reward-is": "Placeholder: the quiz reward is still to be confirmed.",
+  "part.stageCard.you-re-on-your-phone": "You're on your phone, so there is nothing to scan.",
+  "part.stageCard.the-app-is-coming-soon": "The app is coming soon. We'll keep your reward safe until it lands.",
+  "part.stageCard.scan-to-join-the-waitlist": "Scan to join the waitlist",
+  "part.stageCard.how-to-claim": "How to claim",
+  "part.stageCard.scan-the-code-with-your": "Scan the code with your phone",
+  "part.stageCard.get-the-app-from-your": "Get the app from your app store",
+  "part.stageCard.create-your-account-in-the": "Create your account in the app",
+  "part.stageCard.your-reward-appears-in-the": "Your reward appears in the app",
+  "part.stageCard.what-the-app-gives-you": "What the app gives you",
+  "part.stageCard.trip-information": "Trip information",
+  "part.stageCard.bus-details": "Bus details",
+  "part.stageCard.packing-lists": "Packing lists",
+  "part.stageCard.group-chat": "Group chat",
+  "part.stageCard.shared-memories": "Shared memories",
+  "part.stageCard.trip-and-activity-badges": "Trip and activity badges",
+  "part.stageCard.so-close-you-got": "So close. You got",
+  "part.stageCard.all-five-unlock-your-reward": "All five unlock your reward in the app. The questions stay the same, so one more go should do it.",
+  "part.stageCard.play-again": "Play again",
+  "part.stageCard.try-again": "Try again ↺",
+  "part.stageCard.try-another-world": "Try another world",
+  "part.stageCard.question": "Question",
+  "part.stageCard.not-this-one": "Not this one",
+  "part.stageCard.see-your-reward": "See your reward",
+  "part.stageCard.dive-deeper": "Dive deeper",
+  "part.stageCard.climb-higher": "Climb higher",
+  "part.stageCard.drive-on": "Drive on",
+  "part.stageCard.go-further-back": "Go further back",
+  "part.stageCard.not-quite-have-another-go": "Not quite. Have another go, your progress is safe.",
+  "part.stageCard.finish-without-it": "Finish without it",
+  "part.stageCard.skip-this-one": "Skip this one",
+  "part.stageHTML.see-all": "See all",
+  "part.stageHTML.home": "← Home",
+  "part.stageUpdate.you-made-it": "You made it!",
+  "part.stageUpdate.level": "Level ",
+  "part.triviaCore.your-next-step": "Your next step:",
+  "part.triviaCore.see-this-trip": "See this trip",
+  "part.triviaCore.play-again": "Play again",
+  "part.triviaCore.try-another-world": "Try another world",
+  "part.triviaCore.you-know-your-way-around": "You know your way around. The real thing is closer than you think.",
+  "part.triviaCore.good-start-the-best-way": "Good start. The best way to learn the rest is to go.",
+  "part.triviaCore.5-out-of-5-you": "5 out of 5 · you've unlocked",
+  "part.triviaCore.your-quiz-reward": "Your quiz reward.",
+  "part.triviaCore.scan-to-download-the-hajeela": "Scan to download the Hajeela app. Your reward is waiting inside.",
+  "part.triviaCore.placeholder-reward-details-to-be": "Placeholder: reward details to be confirmed",
+  "part.triviaCore.scan-to-claim": "Scan to claim",
+  "part.triviaCore.get-the-app": "Get the app",
+  "part.triviaCore.get-all-5-right-to": "Get all 5 right to unlock your reward.",
+  "part.triviaCore.you-got": "You got",
+  "part.triviaCore.one-more-go": ". One more go?",
+  "part.triviaCore.quiz-every-right-answer-takes": "quiz · every right answer takes you",
+  "part.triviaCore.get-all-5-right-to-2": "Get all 5 right to unlock a reward in the app",
+  "part.triviaCore.to-be-confirmed": "(to be confirmed)",
+  "part.triviaCore.not-this-one": "Not this one",
+  "part.triviaCore.next-question": "Next question",
+  "part.triviaCore.see-how-far-you-got": "See how far you got",
+  "page.match.here-is-your-kind-of": "Here is your kind of trip.",
+  "part.calLW.national-holiday": "National holiday",
+  "part.calLW.days-in-a-row": "days in a row ·",
+  "part.calLW.plan-your-own-for-these": "Plan your own for these days",
+  "part.calLW.estimate": " · estimate",
+  "page.weekends.national-holiday": "national holiday, ",
+  "page.weekends.hajeela-trip": " Hajeela trip",
+  "page.weekends.whole-month": "Whole month",
+  "page.weekends.create-your-own-trip": "Create your own trip",
+  "page.weekends.national-holiday-2": "National holiday",
+  "page.weekends.weekend": "Weekend",
+  "page.weekends.take-this-day-off": "Take this day off",
+  "page.weekends.work-day": "Work day",
+  "page.weekends.hajeela-trips-on-this-day": "Hajeela trips on this day",
+  "page.weekends.nothing-of-ours-leaves-this": "Nothing of ours leaves this day yet. Make it yours.",
+  "page.weekends.in": "In",
+  "page.weekends.no-national-holidays-this-month": "No national holidays this month. Weekends are still yours.",
+  "page.weekends.hajeela-trips-leaving": "Hajeela trips leaving",
+  "page.weekends.no-trips-scheduled-yet-this": "No trips scheduled yet this month.",
+  "page.weekends.your-year-of-days-off": "Your year of days off.",
+  "page.weekends.tap-a-day-see-what": "Tap a day. See what's coming up, which trips you can join and when to take a day off.",
+  "page.weekends.trip": "Trip",
+  "page.weekends.hajeela-trip-2": "Hajeela trip",
+  "page.weekends.day-you-need-to-take": "Day you need to take off",
+  "page.weekends.next-long-weekend": "Next long weekend",
+  "page.weekends.islamic-holidays-depend-on-the": "Islamic holidays depend on the moon sighting, and some holidays move to Thursday. Dates update when announced.",
+  "page.favs.what-we-keep-going-back": "What we keep going back for.",
+  "page.favs.every-fav-has-two-things": "Every fav has two things behind it: the first time we found it, and the local who made it what it is. That's why we keep going back, and why we want you there too.",
+  "page.favs.got-a-fav-of-your": "Got a fav of your own?",
+  "page.favs.share-it-with-us-after": "Share it with us after your trip. The ones that make us want to go back end up here, with your name on them.",
+  "page.favs.fav-moment": "Fav moment",
+  "page.favs.fav-taste": "Fav taste",
+  "page.favs.fav-corner": "Fav corner",
+  "page.favs.fav-people": "Fav people",
+  "page.favs.first-time": "First time ·",
+  "page.favs.see-the-trip": "See the trip",
+  "page.favs.photo": "Photo · ",
+  "part.packList.you-bring": "You bring",
+  "part.packList.you-re-packed": "You're packed.",
+  "part.packList.see": "See",
+  "part.packList.we-bring": "We bring",
+  "page.reads.travel-tips": "Travel tips",
+  "page.reads.everything-to-know-before-you": "Everything to know before you go.",
+  "page.reads.what-goes-in-the-bag": "What goes in the bag?",
+  "page.reads.min-read": "min read",
+  "page.reads.photo-the-bag-laid-out": "Photo · the bag, laid out flat · ",
+  "list.ART.a-weekend-on-a-boat": "A weekend on a boat is mostly sun, salt and not much space. Pack light, pack smart, and leave the rest on shore.",
+  "list.ART.pack-for-the-water-not": "Pack for the water, not the deck",
+  "list.ART.everything-you-bring-will-get": "Everything you bring will get wet at some point. Soft bags, quick-dry layers and one dry set for the evening beat a big suitcase every time.",
+  "list.ART.your-boat-list": "Your boat list",
+  "list.ART.sit-in-the-middle-of": "Sit in the middle of the boat with your eyes on the horizon. It is the calmest seat, and it helps more than any tablet.",
+  "list.ART.the-deck-at-sunrise-before": "The deck at sunrise, before anyone is awake",
+  "list.ART.what-is-already-on-board": "What is already on board",
+  "list.ART.masks-fins-life-jackets-and": "Masks, fins, life jackets and towels are on us. Bring your own only if you love your own.",
+  "list.ART.bring-one-thing-that-makes": "Bring one thing that makes you laugh. A card game, a speaker, a terrible hat. Boats run on mood.",
+  "list.ART.do-i-need-to-swim": "Do I need to swim well?",
+  "list.ART.no-life-jackets-are-on": "No. Life jackets are on board and your guide stays close.",
+  "list.ART.what-if-i-get-seasick": "What if I get seasick?",
+  "list.ART.tell-your-host-early-sitting": "Tell your host early. Sitting mid-ship and eating lightly helps most people.",
+  "list.ART.can-i-charge-my-phone": "Can I charge my phone?",
+  "list.ART.there-is-a-power-bank": "There is a power bank on board, but bring your own.",
+  "list.ART.nothing-about-your-first-dive": "Nothing about your first dive needs to be a surprise. Here is the whole thing, in the order it happens.",
+  "list.ART.the-day-step-by-step": "The day, step by step",
+  "list.ART.meet-your-instructor": "Meet your instructor",
+  "list.ART.you-sign-a-short-form": "You sign a short form, try on the gear and ask every question you have. Nobody is rushing.",
+  "list.ART.practise-in-shallow-water": "Practise in shallow water",
+  "list.ART.breathing-clearing-the-mask-giving": "Breathing, clearing the mask, giving a thumbs up. Knee-deep, standing up.",
+  "list.ART.go-down-slowly": "Go down, slowly",
+  "list.ART.your-instructor-is-within-arm": "Your instructor is within arm’s reach. You sink a little at a time, and you equalise as you go.",
+  "list.ART.look-around": "Look around",
+  "list.ART.this-is-the-bit-people": "This is the bit people remember. Fish, light, quiet. Twenty minutes feels like five.",
+  "list.ART.come-up-and-talk-about": "Come up and talk about it",
+  "list.ART.tea-on-deck-everyone-talks": "Tea on deck. Everyone talks at once.",
+  "list.ART.the-deepest-point-of-a": "The deepest point of a first dive with us. Close enough to see the surface the whole time.",
+  "list.ART.the-first-time-under-you": "The first time under, you’re thinking about your breathing. The second time, you look around.",
+  "list.ART.captain-hany": "Captain Hany",
+  "list.ART.breathe-slower-than-feels-natural": "Breathe slower than feels natural. Long in, longer out. It keeps you calm and makes your air last.",
+  "list.ART.do-i-need-to-know": "Do I need to know how to swim?",
+  "list.ART.you-should-be-comfortable-in": "You should be comfortable in water. You do not need to be fast.",
+  "list.ART.is-it-safe": "Is it safe?",
+  "list.ART.instructors-carry-the-safety-plan": "Instructors carry the safety plan, the gear is checked daily and groups are small.",
+  "list.ART.what-if-i-panic": "What if I panic?",
+  "list.ART.give-the-signal-your-instructor": "Give the signal. Your instructor brings you up, and you can try again or sit it out.",
+  "list.ART.the-desert-drops-fast-after": "The desert drops fast after sunset. A hot afternoon and a cold night live in the same day.",
+  "list.ART.typical-drop-between-a-desert": "Typical drop between a desert afternoon and the middle of the night. More if the sky is clear.",
+  "list.ART.the-desert-night-list": "The desert night list",
+  "list.ART.the-camp-after-dark-one": "The camp after dark, one fire and a lot of sky",
+  "list.ART.layers-beat-one-big-coat": "Layers beat one big coat",
+  "list.ART.three-thin-layers-you-can": "Three thin layers you can add or drop are warmer and easier than one heavy jacket. Wool or fleece next to the skin, a windproof on top.",
+  "list.ART.bring-one-more-layer-than": "Bring one more layer than you think. We have blankets and a fire, but nobody ever said no to a spare hat.",
+  "list.ART.do-you-provide-sleeping-bags": "Do you provide sleeping bags?",
+  "list.ART.tents-mattresses-and-blankets-are": "Tents, mattresses and blankets are on us. A warm sleeping bag is worth bringing.",
+  "list.ART.is-there-a-toilet": "Is there a toilet?",
+  "list.ART.yes-a-simple-one-at": "Yes, a simple one at camp. We will show you where.",
+  "list.ART.everything-important-is-included-pocket": "Everything important is included. Pocket money is for the small things: a tea, a souvenir, a tip.",
+  "list.ART.day-trips": "Day trips",
+  "list.ART.bring-300-to-500-egp": "Bring 300 to 500 EGP. A drink, something sweet and a little extra. Most people spend less than they bring.",
+  "list.ART.overnight-trips": "Overnight trips",
+  "list.ART.bring-500-to-800-egp": "Bring 500 to 800 EGP. Extra drinks, a handmade thing from a host, and tips for guides.",
+  "list.ART.most-places-off-the-main": "Most places off the main road do not take cards. Small notes are easier than large ones.",
+  "list.ART.keep-your-cash-in-two": "Keep your cash in two places. A little in your pocket, the rest zipped inside your bag.",
+  "list.ART.entirely-optional-many-groups-pool": "Entirely optional. Many groups pool a tip for the guide at the end, and your host will mention it.",
+  "list.ART.not-sure-what-a-place": "Not sure what a place costs? Ask your host in the group chat before you go. They will tell you honestly.",
+  "list.ART.are-meals-included": "Are meals included?",
+  "list.ART.as-listed-on-each-trip": "As listed on each trip. Your trip page says exactly what is covered.",
+  "list.ART.can-i-pay-by-card": "Can I pay by card?",
+  "list.ART.for-your-booking-yes-on": "For your booking, yes. On the day, bring cash.",
+  "list.ART.most-of-our-travellers-come": "Most of our travellers come on their own. You will not be the only one, and you will not be alone for long.",
+  "list.ART.before-you-go": "Before you go",
+  "list.ART.your-trip-has-its-own": "Your trip has its own group chat. Say hello, see who is coming, and ask your host anything. By the time you leave, a few faces will already feel familiar.",
+  "list.ART.come-hungry-come-curious-and": "Come hungry, come curious, and come as you are.",
+  "list.ART.am-sayed-host-in-fayoum": "Am Sayed, host in Fayoum",
+  "list.ART.the-first-hour": "The first hour",
+  "list.ART.your-host-introduces-everyone-in": "Your host introduces everyone, in small groups and with easy questions. Nobody is put on the spot. Within an hour most people are already sharing snacks.",
+  "list.ART.sit-next-to-someone-new": "Sit next to someone new on the bus. It is the easiest conversation you will have all week.",
+  "list.ART.coming-alone-and-nervous-tell": "Coming alone and nervous? Tell your host. They will make sure you are never left standing at the edge of the group.",
+  "list.ART.will-i-be-the-only": "Will I be the only solo traveller?",
+  "list.ART.almost-never-usually-a-third": "Almost never. Usually a third of the group arrives alone.",
+  "list.ART.can-i-have-a-room": "Can I have a room to myself?",
+  "list.ART.on-overnight-trips-you-can": "On overnight trips you can request a private room for an extra fee.",
+  "list.ART.parents-ask-good-questions-here": "Parents ask good questions. Here is what we tell them, so you can tell them too.",
+  "list.ART.who-is-hosting": "Who is hosting",
+  "list.ART.a-named-host-who-travels": "A named host who travels with the group the whole way. They know the place, the route and the people, and they are on the other end of the phone.",
+  "list.ART.where-you-will-sleep": "Where you will sleep",
+  "list.ART.overnight-trips-use-tents-cabins": "Overnight trips use tents, cabins or guesthouses that we know. Rooms and bedding are listed on every trip page.",
+  "list.ART.the-safety-plan": "The safety plan",
+  "list.ART.first-aid-trained-hosts-small": "First-aid trained hosts, small groups, check-ins during the day and a plan for bad weather. We share the full plan with any parent who asks.",
+  "list.ART.we-are-happy-to-talk": "We are happy to talk to your family before you book. Just send us their number and a good time to call.",
+  "list.ART.can-my-parents-call-the": "Can my parents call the host?",
+  "list.ART.yes-we-share-the-host": "Yes. We share the host’s contact details before the trip.",
+  "list.ART.what-if-the-weather-turns": "What if the weather turns?",
+  "list.ART.we-change-the-plan-not": "We change the plan, not the safety. Your host decides on the day.",
+  "list.ART.we-do-not-just-go": "We do not just go to the desert. We go with the families who live in it.",
+  "list.ART.a-fire-sweet-tea-and": "A fire, sweet tea and stories told in a dialect older than the road in. That is how every trip starts.",
+  "list.ART.sheikh-salem": "Sheikh Salem",
+  "list.ART.potters-farmers-and-a-bakery": "Potters, farmers and a bakery that has not changed in forty years. You eat what they eat, in their courtyard.",
+  "list.ART.tea-around-the-fire-with": "Tea around the fire with our hosts",
+  "list.ART.salt-lakes-palm-gardens-and": "Salt lakes, palm gardens and a town of mud-brick houses. Your host grew up here and still lives here.",
+  "list.ART.bedouin-guides-who-have-walked": "Bedouin guides who have walked these mountains since they were children. They carry the water, the tea and the stories.",
+  "list.ART.the-year-our-first-bedouin": "The year our first Bedouin host family joined Hajeela. It is where our name comes from.",
+  "list.ART.every-host-trip-pays-the": "Every host trip pays the host family directly. It is part of why they keep inviting us back.",
+  "part.artMods.what-you-need-to-know": "What you need to know",
+  "part.artMods.placeholder-the-story-goes-here": "Placeholder: the story goes here, in a short, friendly voice.",
+  "part.artMods.placeholder-tip-one-small-thing": "Placeholder tip: one small thing that makes a big difference.",
+  "part.artMods.a-question-people-often-ask": "A question people often ask?",
+  "part.artMods.a-short-honest-answer": "A short, honest answer.",
+  "part.artBlock.tip": "Tip",
+  "part.artBlock.you-re-packed": "You're packed.",
+  "part.artBlock.step-by-step": "Step by step",
+  "part.artBlock.photo": "Photo · ",
+  "part.artBlock.a-hajeela-note": "A Hajeela note",
+  "part.artBlock.see": "See",
+  "part.artBlock.good-to-know": "Good to know",
+  "part.artBlock.questions-we-get-asked": "Questions we get asked",
+  "page.read.travel-journal": "← Travel journal",
+  "page.read.min-read-by-the-hajeela": "min read · by the Hajeela team",
+  "page.read.keep-reading": "Keep reading",
+  "page.read.more-from-the-journal": "More from the journal",
+  "page.read.header-illustration": "Header illustration",
+  "page.app.meet-your-people-before-you": "Meet your people before you go",
+  "page.app.every-trip-has-its-own": "Every trip has its own group chat, opened when you book.",
+  "page.app.say-hello-in-the-trip": "Say hello in the trip chat",
+  "page.app.see-who-is-coming": "See who is coming",
+  "page.app.ask-your-host-anything": "Ask your host anything",
+  "page.app.trip-chat": "Trip chat",
+  "page.app.everything-for-the-day": "Everything for the day",
+  "page.app.the-practical-bits-in-one": "The practical bits, in one place, the night before and on the day.",
+  "page.app.bus-and-pickup-point": "Bus and pickup point",
+  "page.app.the-packing-list-for-your": "The packing list for your trip",
+  "page.app.your-host-one-tap-away": "Your host, one tap away",
+  "page.app.changes-shown-the-moment-they": "Changes shown the moment they happen",
+  "page.app.trip-day": "Trip day",
+  "page.app.collect-as-you-go": "Collect as you go",
+  "page.app.every-trip-you-complete-counts": "Every trip you complete counts.",
+  "page.app.a-badge-for-every-trip": "A badge for every trip you complete",
+  "page.app.a-badge-for-every-activity": "A badge for every activity you try",
+  "page.app.membership-that-grows-with-you": "Membership that grows with you, from The Wanderer to The Legend",
+  "page.app.badges-and-membership": "Badges and membership",
+  "page.app.keep-the-memories": "Keep the memories",
+  "page.app.the-trip-ends-the-photos": "The trip ends. The photos do not.",
+  "page.app.one-album-for-every-trip": "One album for every trip",
+  "page.app.everyone-s-photos-in-one": "Everyone’s photos in one place",
+  "page.app.save-the-best-share-with": "Save the best, share with friends",
+  "page.app.shared-album": "Shared album",
+  "page.app.find-the-trip-that-fits": "Find the trip that fits your mood.",
+  "page.app.pick-a-date-pay-done": "Pick a date, pay, done.",
+  "page.app.join-your-group-chat": "Join your group chat.",
+  "page.app.get-ready": "Get ready",
+  "page.app.packing-list-and-pickup-point": "Packing list and pickup point.",
+  "page.app.your-host-and-the-plan": "Your host and the plan, live.",
+  "page.app.trip-badges-activity-badges-and": "Trip badges, activity badges and membership.",
+  "page.app.your-trip-album": "Your trip album.",
+  "page.app.everything-for-the-trip-in": "Everything for the trip, in your pocket.",
+  "page.app.the-website-books-your-seat": "The website books your seat. The app is where your group, your plan for the day and your photos live.",
+  "page.app.app-store": "App Store",
+  "page.app.google-play": "Google Play",
+  "page.app.free-on-iphone-and-android": "Free on iPhone and Android.",
+  "page.app.your-trip-end-to-end": "Your trip, end to end.",
+  "page.app.trips-this-season": "trips this season",
+  "page.app.membership-statuses": "membership statuses",
+  "page.app.group-chat-for-every-trip": "group chat for every trip",
+  "page.app.start-in-three-steps": "Start in three steps.",
+  "page.app.scan-it-when-it-lands": "Scan it when it lands.",
+  "page.app.your-day": "Your day",
+  "page.app.get-the-app": "Get the app",
+  "page.app.join-a-trip": "Join a trip",
+  "page.app.book-on-the-website-your": "Book on the website. Your seat appears in the app.",
+  "page.app.meet-your-group": "Meet your group",
+  "page.app.sign-in-with-your-booking": "Sign in with your booking email and say hello.",
+  "page.flows.hajeela-booking-system": "Hajeela booking system",
+  "page.flows.two-paths-from-one-discovery": "Two paths from one discovery layer, ending in one shared experience. Click any step to open it in the wireframe.",
+  "page.flows.discover-hajeela": "Discover Hajeela",
+  "page.flows.path-01-book-a-trip": "Path 01 · Book a trip · ready-made",
+  "page.flows.branch": "Branch ·",
+  "page.flows.request-to-book-trips": "Request-to-book trips",
+  "page.flows.summary-send-request-pending-awaiting": "Summary → Send request → Pending · awaiting approval → payment link → Confirmed",
+  "page.flows.path-02-create-your-trip": "Path 02 · Create your trip · private & custom",
+  "page.flows.your-hajeela-experience-shared-by": "Your Hajeela experience · shared by both paths",
+  "page.flows.guest-booking-manage-your-booking": "Guest booking + Manage your booking now. The app takes over in Release 3.",
+  "page.flows.what-the-customer-sees-at": "What the customer sees at each state",
+  "page.flows.open-the-full-state-library": "Open the full state library",
+  "page.flows.state": "State",
+  "page.flows.meaning": "Meaning",
+  "page.flows.what-the-page-says": "What the page says",
+  "page.flows.see-it": "see it",
+  "page.flows.fully-booked-departures-waitlist-duplicate": "), fully booked departures (waitlist), duplicate submissions (no second charge, shows the existing reference), changes to traveller details and cancellation requests (from Manage your booking), and bookings that need manual review.",
+  "page.flows.current-settings-in-this-prototype": "Current settings in this prototype",
+  "page.flows.change-them-in-booking-rules": "Change them in \"Booking rules\" at the top. The whole wireframe updates.",
+  "page.flows.build-in-three-steps": "Build in three steps",
+  "page.flows.release": "Release",
+  "page.flows.scope": "Scope",
+  "page.flows.launch-essential": "Launch: Essential",
+  "page.flows.homepage-trip-catalogue-trip-details": "Homepage, trip catalogue, trip details, destination and experience pages, guest booking, payment, custom enquiry, corporate enquiry, FAQs and CMS",
+  "page.flows.release-2-experience": "Release 2: Experience",
+  "page.flows.interactive-destination-map-stories-reviews": "Interactive destination map, stories, reviews, saved trips, richer editorial and personalisation. (Trivia, mood test and long weekends could sit here.)",
+  "page.flows.release-3-connected": "Release 3: Connected",
+  "page.flows.app-integration-loyalty-digital-passport": "App integration, loyalty, digital passport, trip memories, referrals and community",
+  "page.flows.all-trips": "All trips",
+  "page.flows.choose-a-trip": "Choose a trip",
+  "page.flows.trip-detail-page": "Trip detail page",
+  "page.flows.select-departure": "Select departure",
+  "page.flows.traveller-details": "Traveller details",
+  "page.flows.lead-traveller-each-participant-one": "Lead traveller + each participant, one step, no account",
+  "page.flows.booking-summary": "Booking summary",
+  "page.flows.itemised-price-payment-terms-cancellation": "Itemised price, payment terms, cancellation policy",
+  "page.flows.pay-online": "Pay online",
+  "page.flows.full-or-deposit": "Full or deposit · ",
+  "page.flows.reference-status-next-steps-email": "Reference, status, next steps, email + WhatsApp",
+  "page.flows.choose-experience-type": "Choose experience type",
+  "page.flows.friends-private-family-celebration-honeymoon": "Friends, private, family, celebration, honeymoon, different",
+  "page.flows.share-preferences": "Share preferences",
+  "page.flows.where-what-when-who-budget": "Where, what, when, who, budget, special requirements",
+  "page.flows.submit-enquiry": "Submit enquiry",
+  "page.flows.contact-details-what-happens-next": "Contact details + what happens next",
+  "page.flows.discuss-proposal": "Discuss proposal",
+  "page.flows.approve-details": "Approve details",
+  "page.flows.options-changes-approve": "Options, changes, approve",
+  "page.flows.pay-and-confirm": "Pay and confirm",
+  "page.flows.same-checkout-components-as-path": "Same checkout components as Path 01",
+  "page.flows.submitted-not-yet-confirmed": "Submitted, not yet confirmed",
+  "page.flows.we-ve-got-your-request": "We've got your request. We'll confirm within 24 hours. Nothing charged.",
+  "page.flows.awaiting-payment": "Awaiting payment",
+  "page.flows.payment-not-complete": "Payment not complete",
+  "page.flows.we-re-waiting-for-your": "We're waiting for your bank. Your places are held for 30 minutes.",
+  "page.flows.booking-and-payment-conditions-met": "Booking and payment conditions met",
+  "page.flows.you-re-going-here-s": "You're going. Here's your reference and what happens next.",
+  "page.flows.payment-failed": "Payment failed",
+  "page.flows.payment-needs-to-be-retried": "Payment needs to be retried",
+  "page.flows.your-payment-didn-t-go": "Your payment didn't go through, and you haven't been charged.",
+  "page.flows.booking-cancelled": "Booking cancelled",
+  "page.flows.this-booking-is-cancelled-any": "This booking is cancelled. Any refund follows the policy.",
+  "page.flows.refund-processed": "Refund processed",
+  "page.flows.your-refund-of-x-egp": "Your refund of X EGP is on its way. It can take 5 to 10 working days.",
+  "page.states.your-request-is-with-hajeela": "Your request is with Hajeela. It isn't confirmed yet. We'll update you once we've checked availability, usually within 24 hours. Nothing has been charged.",
+  "page.states.see-other-trips": "See other trips",
+  "page.states.awaiting-payment": "Awaiting payment",
+  "page.states.your-payment-isn-t-complete": "Your payment isn't complete. Pick up where you left off. Your places are held for a short time, as set by the policy.",
+  "page.states.continue-payment": "Continue payment",
+  "page.states.you-re-going-your-booking": "You're going. Your booking and payment are complete. Check your email for what happens next.",
+  "page.states.view-confirmation": "View confirmation",
+  "page.states.payment-failed": "Payment failed",
+  "page.states.your-payment-didn-t-go": "Your payment didn't go through, and you haven't been charged. Try again. Your traveller details are saved.",
+  "page.states.retry-payment": "Retry payment",
+  "page.states.this-booking-has-been-cancelled": "This booking has been cancelled. Any refund, and when it arrives, follows the cancellation policy.",
+  "page.states.see-trips": "See trips",
+  "page.states.your-refund-has-been-sent": "Your refund has been sent. We show the amount, the currency and the status from the payment provider.",
+  "page.states.fully-booked-departure": "Fully booked departure",
+  "page.states.this-date-is-full-choose": "This date is full. Choose another date, join the waitlist, or ask us about alternatives.",
+  "page.states.choose-another-departure": "Choose another departure",
+  "page.states.duplicate-submission": "Duplicate submission",
+  "page.states.we-already-have-this-booking": "We already have this booking and it's being processed. You don't need to book again, and you won't be charged twice.",
+  "page.states.review-booking-summary": "Review booking summary",
+  "page.states.change-or-cancellation-request": "Change or cancellation request",
+  "page.states.a-request-isn-t-a": "A request isn't a change yet. Hajeela confirms the outcome. Cancellation and refund are shown as separate statuses.",
+  "page.states.review-traveller-details": "Review traveller details",
+  "page.states.clear-status-a-clear-next": "Clear status. A clear next step.",
+  "page.states.these-are-alternative-states-not": "These are alternative states, not one booking's history. A submitted request is never labelled as confirmed.",
+  "page.states.guest-access-a-secure-link": "Guest access: a secure link in the confirmation email. No forced account creation. The same trip and booking records carry over to the app later.",
+  "page.states.status": "Status /",
+  "page.sitemap.inspiration-discovery-conversion": "Inspiration · discovery · conversion",
+  "page.sitemap.01-explore": "01 Explore",
+  "page.sitemap.all-trips": "All trips",
+  "page.sitemap.upcoming-trips": "Upcoming trips",
+  "page.sitemap.trip-types": "Trip types",
+  "page.sitemap.trip-detail": "Trip detail",
+  "page.sitemap.search-results": "Search results",
+  "page.sitemap.long-weekends": "Long weekends",
+  "page.sitemap.find-your-travel-match": "Find your travel match",
+  "page.sitemap.world-quiz": "World quiz",
+  "page.sitemap.02-create": "02 Create",
+  "page.sitemap.custom-experiences": "Custom experiences",
+  "page.sitemap.private-trips": "Private trips",
+  "page.sitemap.friends-groups": "Friends & groups",
+  "page.sitemap.special-occasions": "Special occasions",
+  "page.sitemap.planning-form": "Planning form",
+  "page.sitemap.03-groups": "03 Groups",
+  "page.sitemap.corporate-experiences": "Corporate experiences",
+  "page.sitemap.university-trips": "University trips",
+  "page.sitemap.student-groups": "Student groups",
+  "page.sitemap.team-building": "Team building",
+  "page.sitemap.group-enquiry": "Group enquiry",
+  "page.sitemap.04-our-world": "04 Our World",
+  "page.sitemap.about-hajeela": "About Hajeela",
+  "page.sitemap.our-philosophy": "Our philosophy",
+  "page.sitemap.our-people": "Our people",
+  "page.sitemap.travel-journal": "Travel journal",
+  "page.sitemap.hajeela-favs": "Hajeela favs",
+  "page.sitemap.05-help-support": "05 Help & support",
+  "page.sitemap.manage-your-booking": "Manage your booking",
+  "page.sitemap.contact-us": "Contact us",
+  "page.sitemap.booking-process": "Booking process",
+  "page.sitemap.payment-information": "Payment information",
+  "page.sitemap.cancellation-policy": "Cancellation policy",
+  "page.sitemap.terms-privacy": "Terms & privacy",
+  "page.sitemap.booking-flow": "Booking flow",
+  "page.sitemap.select-departure": "Select departure",
+  "page.sitemap.traveller-details": "Traveller details",
+  "page.sitemap.booking-summary": "Booking summary",
+  "page.sitemap.app-qr-code": "App QR code",
+  "page.sitemap.home-booking-confirmation-app-page": "Home, booking confirmation, app page",
+  "page.sitemap.discover-book-pay-download-the": "Discover, book, pay, download the app",
+  "page.sitemap.path-01-checkout": "Path 01 checkout",
+  "page.sitemap.level-system-4-logos": "Level system + 4 logos",
+  "page.sitemap.home-chooser-listing-filters-trip": "Home chooser, listing filters, trip page",
+  "page.sitemap.our-world": "Our World",
+  "page.sitemap.create-your-own-trip": "Create your own trip",
+  "page.sitemap.path-02-create": "Path 02: Create",
+  "page.sitemap.about-founders": "About + founders",
+  "page.sitemap.destination-details": "Destination details",
+  "page.sitemap.explore-create-form": "Explore, Create form",
+  "page.sitemap.mood-test": "Mood test",
+  "page.sitemap.community-in-the-app-was": "Community in the app (was: who is travelling)",
+  "page.sitemap.trip-detail-confirmation": "Trip detail, confirmation",
+  "page.sitemap.reason-first": "Reason first",
+  "page.sitemap.create-step-1": "Create, step 1",
+  "page.sitemap.all-trips-upcoming-search-results": "All trips, upcoming, search results",
+  "page.sitemap.siwa-dahab-fayoum": "Siwa, Dahab, Fayoum…",
+  "page.sitemap.experience-category": "Experience category",
+  "page.sitemap.diving-camping-hiking": "Diving, camping, hiking…",
+  "page.sitemap.every-trip": "Every trip",
+  "page.sitemap.custom-experience": "Custom experience",
+  "page.sitemap.create-landing": "Create landing",
+  "page.sitemap.b2b-landing": "B2B landing",
+  "page.sitemap.about-stories-careers": "About, stories, careers",
+  "page.sitemap.planning-form-group-enquiry": "Planning form, group enquiry",
+  "page.sitemap.checkout-payment-confirmation-proposal": "Checkout, payment, confirmation, proposal",
+  "page.sitemap.faqs-policies-contact-manage-booking": "FAQs, policies, contact, manage booking",
+  "page.sitemap.sitemap": "Sitemap",
+  "page.sitemap.main-navigation-explore-create-our": "Main navigation: Explore · Create · Our World · Get the app · Upcoming trips. Find your travel match lives in Explore, Groups in Create. Contact and FAQs live in the footer and Help.",
+  "page.sitemap.11-reusable-templates": "11 reusable templates",
+  "page.sitemap.so-hajeela-can-add-a": "So Hajeela can add a destination or trip in the CMS without a redesign.",
+  "page.sitemap.template": "Template",
+  "page.sitemap.pages-using-it": "Pages using it",
+  "page.sitemap.where-each-one-lives-now": "Where each one lives now",
+  "page.sitemap.idea": "Idea",
+  "page.sitemap.where": "Where",
+  "page.sitemap.open": "Open",
+  "page.made.create": "Create",
+  "page.made.it-started-with-one-message": "It started with one message",
+  "page.made.create-this-for-your-people": "Create this for your people",
+  "page.made.see-how-we-did-it": "See how we did it",
+  "page.made.from-that-message-to-the": "From that message to the trip.",
+  "page.made.tap-a-stop": "Tap a stop",
+  "page.made.what-they-did": "What they did",
+  "page.made.what-we-did-behind-the": "What we did behind the scenes",
+  "page.made.back": "Back",
+  "page.made.next-stop": "Next stop",
+  "page.made.how-the-days-went": "How the days went.",
+  "page.made.what-they-took-home": "What they took home.",
+  "page.made.placeholder-quote": "· placeholder quote",
+  "page.made.want-something-like-this-for": "Want something like this for your people?",
+  "page.made.start-from-this-trip-and": "Start from this trip and change anything: the place, the dates, the size of the group, the surprise. We will plan the rest with you.",
+  "page.made.start-from-this-trip": "Start from this trip",
+  "page.made.start-from-a-blank-page": "Start from a blank page",
+  "page.made.we-will-fill-this-in": "We will fill this in for you",
+  "page.made.around": "Around",
+  "page.made.egp-per-person": "EGP per person",
+  "page.made.every-line-can-be-changed": "Every line can be changed in the form.",
+  "page.made.more-trips-we-ve-created": "More trips we've created",
+  "page.made.photo-or-film": "Photo or film · ",
+  "page.made.photo": "Photo · ",
+  "page.made.the-same-road-every-custom": "The same road every custom trip follows, shown with a real one. It answers \"what happens after I send the form?\" before anyone has to ask.",
+  "page.made.a-party-night": "A party night",
+  "page.made.a-surprise-moment": "A surprise moment",
+  "part.madeCard.photo": "Photo · ",
+  "part.madeCard.see-how-we-made-it": "See how we made it",
+  "part.renderRules.recommended-starting-point-hybrid-both": "Recommended starting point: Hybrid · Both, by trip · Both, by enquiry · EGP only. Change any of these and the wireframe updates.",
+  "part.shared.please-agree-to-the-booking": "Please agree to the booking terms to continue.",
+  "part.shared.enter-the-booking-reference-from": "Enter the booking reference from your confirmation email.",
+  "part.shared.enter-the-email-you-booked": "Enter the email you booked with, like you@email.com.",
+  "part.shared.not-chosen": "Not chosen",
+  "part.shared.not-sure-yet": "Not sure yet",
+  "part.shared.your-dates": "Your dates",
+  "part.shared.flexible": " · flexible",
+  "part.shared.egp": " EGP ",
+  "part.shared.contact-by": "Contact by",
+  "part.shared.good-to-know": "Good to know",
+  "part.shared.not-given": "Not given",
+  "part.shared.type-and-size": "Type and size",
+  "part.shared.not-sure": "Not sure",
+  "part.shared.budget-per-person": "Budget per person",
+  "part.shared.none-noted": "None noted",
+  "part.shared.egp-2": " EGP",
+  "part.fling.deg": "deg)",
+  "part.bindSwipe.deg": "deg)"
+ },
+ "meta": {
+  "texts": {}
+ }
+}
