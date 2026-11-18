@@ -2915,18 +2915,15 @@ const OLD_TRIPS={'ras-mohamed':'sea','dahab':'sea','marsa-alam':'sea','hurghada'
 /* Per-trip page content. Anything not decided yet is a clear [placeholder]. Overrides the environment defaults in DEST. */
 const TC_=x=>[x,'[Plan to confirm]'],TBC=['[To confirm]'],TBC_POCKET=[['Pocket money',NaN]];
 const TCONTENT={
- 'fayoum-weekend':{one:'A day in Fayoum, Friday 8 January: Tunis Village, the lakes, a 4x4 safari, sandboarding at sunset, and dinner by the desert under the stars.',
-   /* Hania, 18 Nov: plan, inclusions and exclusions word for word (typos fixed) */
-   exp:[['Leave Cairo','8 am'],['Breakfast in Tunis Village','11 am'],['Pottery','Optional'],['Discover Fayoum Lakes',''],['4x4 Safari by the Desert',''],['Sandboarding and Sunset',''],['Dinner by the Desert',''],['Bonfire and Marshmallows',''],['Stargazing','']],
-   inc:[['Transportation',''],['National Park Tickets',''],['4x4 Safari',''],['Camping Gear',''],['Sandboarding',''],['Dinner','']],
+ 'fayoum-weekend':{one:'',/* Hania 18-19 Nov: plan, inclusions, exclusions and approved copy */
+   exp:[['Leave Cairo',"Pick-up at 7 am in Tagamoa, then 8 am in Zayed. We'll send the exact spots on WhatsApp."],['Breakfast in Tunis Village',"11 am. A slow breakfast in the village. It's not included, so you pay there."],['Pottery','Optional. Try the wheel in one of the village studios, or wander the lanes instead.'],['Discover Fayoum Lakes','Time by the water before the desert.'],['4x4 Safari by the Desert','Off the road and into the sand.'],['Sandboarding and Sunset','Stand up, fall, try again.'],['Dinner by the Desert','Dinner by sunset.'],['Bonfire and Marshmallows','A fire, something sweet and nowhere to be.'],['Stargazing','Lights off, heads back. Home around 11 pm.']],
+   transport:'From Tagamoa and Zayed, and back',pop:['Sandboarding and sunset','The pottery studios of Tunis Village','Breakfast in Tunis Village'],
+   inc:[['Transportation','From Tagamoa and Zayed, and back'],['National Park Tickets',''],['4x4 Safari',''],['Camping Gear',''],['Sandboarding',''],['Dinner','']],
    exc:'Breakfast in Tunis Village and pottery',add:[],pocket:TBC_POCKET},
- 'new-year-fayoum':{one:"New Year's Eve in Fayoum, with your people. [Plan to confirm]",
-   exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
- 'black-white-desert':{one:'Three days in the Black and White Desert, 28 to 30 January. [Plan to confirm]',
-   pop:['The Black Desert','The chalk rocks of the White Desert','Camp after dark'],
+ 'new-year-fayoum':{one:'',exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
+ 'black-white-desert':{one:'',pop:['The Black Desert','The chalk rocks of the White Desert','Camp after dark'],
    exp:['Thu 28 Jan','Fri 29 Jan','Sat 30 Jan'].map(TC_),stay:'[Stay to confirm]',learn:TBC,add:[],buy:TBC,pocket:TBC_POCKET},
- 'marsa-alam-eid':{one:'Six days in Marsa Alam over Eid el-Fitr, 9 to 14 March. [Plan to confirm]',
-   pop:['On the boat','Under the water','The Marsa Alam coast'],
+ 'marsa-alam-eid':{one:'',pop:['On the boat','Under the water','The Marsa Alam coast'],
    exp:['Tue 9 Mar','Wed 10 Mar','Thu 11 Mar','Fri 12 Mar','Sat 13 Mar','Sun 14 Mar'].map(TC_),stay:'[Stay to confirm]',learn:TBC,add:[],buy:TBC,pocket:TBC_POCKET}
 };
 
@@ -3117,11 +3114,11 @@ function availLine(t){
   if(availOf(t)==='request')return '<span class="mono muted">Request to book · we confirm within 24 h</span>';
   const open=t.dates.filter(d=>d.left!==0);return open.length?`<span class="mono muted">Next: ${open[0].d}${open[0].left!=null&&open[0].left<=8?` · ${open[0].left} places left`:''}</span>`:'<span class="mono muted">Fully booked</span>';
 }
-const MOMENT={'fayoum-weekend':'First light over Wadi El Rayan','new-year-fayoum':'Everyone falling off the sandboard, laughing','black-white-desert':'The whole camp lying back to watch the stars','marsa-alam-eid':'The first breath underwater','lebanon-cedars':'The first snowfall of the trip','switzerland-alps':'Fondue after the last run','austria-tyrol':'Hot chocolate at the top of the lift','greece-islands':'Swimming off the boat, anchor down','ras-mohamed':'Jumping off the top deck, all at once','dahab':'Tea on the shore after the last swim','marsa-alam':'The first breath underwater','hurghada':'Pizza on the boat between two islands','fayoum-day':'Everyone falling off the sandboard, laughing','white-desert':'The whole camp lying back to watch the stars','siwa':'Floating in the salt lake, not trying','sinai-sunrise':'The first light at the top, with new friends','st-catherine':'Bedouin tea halfway up','old-cairo':'Feteer at 11 pm on Al-Muizz','dakhla-kharga':'A hot spring at the end of a long road'};
+const MOMENT={'fayoum-weekend':'Sandboarding until the sun goes down','new-year-fayoum':'Everyone falling off the sandboard, laughing','black-white-desert':'The whole camp lying back to watch the stars','marsa-alam-eid':'The first breath underwater','lebanon-cedars':'The first snowfall of the trip','switzerland-alps':'Fondue after the last run','austria-tyrol':'Hot chocolate at the top of the lift','greece-islands':'Swimming off the boat, anchor down','ras-mohamed':'Jumping off the top deck, all at once','dahab':'Tea on the shore after the last swim','marsa-alam':'The first breath underwater','hurghada':'Pizza on the boat between two islands','fayoum-day':'Everyone falling off the sandboard, laughing','white-desert':'The whole camp lying back to watch the stars','siwa':'Floating in the salt lake, not trying','sinai-sunrise':'The first light at the top, with new friends','st-catherine':'Bedouin tea halfway up','old-cairo':'Feteer at 11 pm on Al-Muizz','dakhla-kharga':'A hot spring at the end of a long road'};
 const KINDB={Adventurer:['▲','Adventure'],Uncharted:['✦','Uncharted'],'Snow chaser':['❄','Snow chaser'],Classic:null};
 function badgesOf(t){const out=[`<span class="bdg">${sym(t.w,18)}This trip's badge</span>`];(t.exps||[]).forEach(x=>{const e=EXPS.find(e=>e[0]===x);if(e)out.push(`<span class="bdg"><i>✓</i>${e[1]} badge</span>`)});return out.join('')}
 function departures(w){if(!departures.c){const out=[];TRIPS.forEach(t=>t.dates.forEach(x=>{const p=(x.s||x.d).split(' '),m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].indexOf(p[2]),y=m>=10?2026:2027;out.push({t,x,wd:p[0],day:+p[1],mon:p[2],k:y*10000+(m+1)*100+ +p[1]})}));departures.c=out.filter(d=>d.k>=20261113).sort((a,b)=>a.k-b.k)}return w?departures.c.filter(d=>d.t.w===w):departures.c}
-function depState(d){const l=d.x.left;const go=l===0||l==null?`data-go="trip-${d.t.id}"`:`data-book="${d.t.id}" data-bdep="${d.t.dates.indexOf(d.x)}"`;return l===0?['Full · join the waitlist','Waitlist',go]:l==null?['Few seats left · we confirm in 24 h','Request',go]:[l<=8?`Only ${l} places left`:`${l} places left`,'Book',go]}
+function depState(d){const l=d.x.left;const go=l===0||l==null?`data-go="trip-${d.t.id}"`:`data-book="${d.t.id}" data-bdep="${d.t.dates.indexOf(d.x)}"`;return l===0?['Full · join the waitlist','Waitlist',go]:l==null?['Few places left · we confirm in 24 h','Request',go]:[l<=8?`Only ${l} places left`:`${l} places left`,'Book',go]}
 function depRow(d){const t=d.t,st=depState(d);return `<button class="dep ${d.x.left===0?'full':''}" ${st[2]}><span class="dd"><small>${d.wd}</small><b>${d.day}</b><small>${d.mon}</small></span><span class="dph" aria-hidden="true"></span><span class="di"><b>${esc(t.t)}</b><span class="small muted">${sym(t.w,14)} ${destOf(t.dest).n} · ${t.dur===1?'1 day':t.dur+' days'} · from ${money(t.price)}</span><span class="mono ds">${st[0]}</span></span><span class="btn sm ${st[1]==='Book'?'solid':''}">${st[1]}</span></button>`}
 function nextBar(){const d=departures().find(x=>x.x.left);if(!d)return '';return `<button class="nextbar" ${depState(d)[2]}><span class="mono">Next trip out</span><b>${esc(d.t.t)}</b><span>${d.wd} ${d.day} ${d.mon} · ${d.x.left} places left</span><span class="nb-go">Book now</span></button>`}
 const ENVS={};ORDER.forEach(w=>{ENVS[w]={n:WORLDS[w].name,line:WORLDS[w].line,feel:HEAD_ENV[w],get dests(){return DESTS.filter(d=>d.w===w).map(d=>d.id)},get trips(){return TRIPS.filter(t=>t.w===w).map(t=>t.id)}}});
@@ -3652,7 +3649,7 @@ V.trip=(id)=>{
   const tot=d.pocket.reduce((a,b)=>a+b[1],0);
   const next=t.dates.find(x=>x.left!==0)||t.dates[0];
   const SEC=[['overview','Overview'],['itinerary','Itinerary'],['included',"What's included"],['expect','What to expect'],['practical','The essentials'],['gallery','Gallery']];
-  const st=x=>av==='live'?(x.left===0?['Sold out','out']:x.left<=8?[x.left+' places left','few']:['Open','open']):['Few seats left','few'];
+  const st=x=>av==='live'?(x.left===0?['Sold out','out']:x.left<=8?[x.left+' places left','few']:['Open','open']):['Few places left','few'];
   const dur=t.dur===1?'1 day':t.dur+' days';
   const sh=state.share,shareSheet=sh?`<button class="sheet-bg" data-share="close" aria-label="Close"></button><div class="sheet reveal" role="dialog" aria-label="Share this trip">${N('H','Share: friends get the itinerary as a file plus a link')}
     <div class="row between"><div class="stack" style="gap:2px"><span class="eyebrow">Share with friends</span><h3>Bring your people.</h3></div><button class="round" style="width:40px;height:40px;font-size:1rem" data-share="close" aria-label="Close">✕</button></div>
@@ -3677,7 +3674,7 @@ V.trip=(id)=>{
     <div class="tx-title">
       <div class="row">${sym(t.w,26)}<span class="eyebrow">${WORLDS[t.w].name} · ${destOf(t.dest).n}</span><span class="pill">${t.b}</span></div>
       <h1 class="pg tx-h1">${esc(t.t)}</h1>
-      <p class="tx-one">${d.one}</p>
+      ${d.one?`<p class="tx-one">${d.one}</p>`:''}
     </div>
     <dl class="tx-facts"><div><dt>Duration</dt><dd>${dur}</dd></div><div><dt>Level</dt><dd>${t.lvl} of 5 · ${LEVELS[t.lvl]}</dd></div><div><dt>Group</dt><dd>12 to 20 people</dd></div><div><dt>From</dt><dd>${money(t.price)}</dd></div></dl>
   </div>
@@ -3687,7 +3684,7 @@ V.trip=(id)=>{
 <div class="tx-wrap">
 <main class="tx-main">
 <section class="tx-s" id="t-overview">${sh_(null,'Overview')}
-  <p class="tx-lede">${d.one}</p>
+  ${d.one?`<p class="tx-lede">${d.one}</p>`:''}
   <div class="tx-mom">${[MOMENT[t.id],...d.pop].map((x,i)=>`<figure class="m m${i}">${ph((i===0?'Film · 8 sec loop · ':'Photo · ')+x,100)}<figcaption>${x}</figcaption></figure>`).join('')}</div>
   <div class="tx-glance"><div>${rateBlock(t)}</div>
     <div class="tx-meters"><span class="eyebrow">The detail</span>${t.m.map((v,i)=>`<div class="meter"><span>${MET[i]}</span><span class="bar"><i style="width:${v*20}%"></i></span><span class="mono">${v}/5</span></div>`).join('')}<p class="muted small">${TRATE[t.id][3]<=2?'A host stays with the group the whole time, and you can sit anything out.':"Doable if you're reasonably fit and fine with an early start. We'll send a short prep plan when you book."}</p></div></div>
@@ -3695,7 +3692,7 @@ V.trip=(id)=>{
 <section class="tx-s" id="t-itinerary">${sh_(null,'Itinerary',dur+' · '+d.exp.length+' stops · from Cairo and back')}
   <ol class="tx-rail" aria-label="Itinerary at a glance">${d.exp.map((x,i)=>`<li><button data-scroll="t-step${i}"><span class="mono">${String(i+1).padStart(2,'0')}</span>${x[0]}</button></li>`).join('')}</ol>
   <ol class="tx-days">${d.exp.map((x,i)=>`<li class="tx-day" id="t-step${i}"><div class="tx-when"><span class="mono">${String(i+1).padStart(2,'0')}</span><b>${x[0]}</b></div><div class="tx-what"><p>${x[1]}</p>${ph('Photo · '+x[0].toLowerCase()+' on this trip',100)}</div></li>`).join('')}</ol>
-  <dl class="tx-logi"><div><dt>Transport</dt><dd>From Cairo and back</dd></div><div><dt>Stay</dt><dd>${t.dur>1?d.stay:'Day trip, home by night'}</dd></div><div><dt>Meals</dt><dd>As listed on the plan</dd></div><div><dt>Host</dt><dd>With you the whole trip</dd></div></dl>
+  <dl class="tx-logi"><div><dt>Transport</dt><dd>${d.transport||'From Cairo and back'}</dd></div><div><dt>Stay</dt><dd>${t.dur>1?d.stay:'Day trip, home by night'}</dd></div><div><dt>Meals</dt><dd>As listed on the plan</dd></div><div><dt>Host</dt><dd>With you the whole trip</dd></div></dl>
   <p class="tx-ph small muted">Placeholder: exact times, meal by meal and room details per day come from operations and are not in this prototype yet.</p>
 </section>
 <section class="tx-s" id="t-included">${sh_(null,"What's included")}
@@ -3750,7 +3747,7 @@ V.book=(id)=>{
   const er=b.err||{};const fe=k=>er[k]?`<span class="ferr" id="${k}-e" role="alert">${er[k]}</span>`:'';
   const ai=k=>er[k]?`aria-invalid="true" aria-describedby="${k}-e"`:'';
   const fv=state.fv||{};const nm=i=>(i?fv['tn'+i]:fv.ln)||(i?'Traveller '+(i+1):'Lead traveller');
-  const dst=x=>live?(x.left===0?'Fully booked · join the waitlist':x.left<=8?x.left+' places left':'Places available'):'Few seats left · we confirm within 24 hours';
+  const dst=x=>live?(x.left===0?'Fully booked · join the waitlist':x.left<=8?x.left+' places left':'Places available'):'Few places left · we confirm within 24 hours';
   const dietNames=i=>{const a=(b.diet||{})[i]||[];return a.length?a.join(', '):'None noted'};
   const ids=Object.values(b.ids||{});const idU=ids.filter(x=>x==='up').length,idL=ids.filter(x=>x==='link').length,idMiss=b.n-idU-idL;
   const sum=b.dep!=null?`<aside class="bk-sum" aria-label="Your trip"><span class="eyebrow">Your trip</span><h2 class="bk-st">${esc(t.t)}</h2><dl>
