@@ -2768,7 +2768,7 @@ const view=$('#view'), frame=$('#frame');
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const N=(n,t)=>`<span class="n"><b>${n}</b>${t}</span>`;
 const NP=t=>`<p class="note-p">${t}</p>`;
-const DIMG={fayoum:['img/destinations/fayoum.jpg','50% 62%'],siwa:['img/destinations/siwa.jpg','60% 55%'],'white-desert':['img/destinations/white-desert.jpg','50% 50%'],'dakhla-kharga':['img/destinations/dakhla-kharga.jpg','60% 50%']};
+const DIMG={fayoum:['img/destinations/fayoum.jpg','50% 62%'],siwa:['img/destinations/siwa.jpg','60% 55%'],'white-desert':['img/destinations/white-desert.jpg','50% 50%'],'dakhla-kharga':['img/destinations/dakhla-kharga.jpg','60% 50%'],'st-catherine':['img/destinations/st-catherine.jpg','50% 60%']};
 const dph=(d,h)=>DIMG[d.id]?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${DIMG[d.id][0]}" alt="" loading="lazy" decoding="async" style="object-position:${DIMG[d.id][1]}"></div>`:ph(d.n,h);
 const ph=(t,h)=>`<div class="ph" style="min-height:${h||140}px"><span>${t}</span></div>`;
 
