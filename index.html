@@ -2721,6 +2721,39 @@ html:not(.dev) .proto,html:not(.dev) .hero-lab,html:not(.dev) .tx-ph,html:not(.d
 @media (max-width:760px){.cp-hint{max-width:42ch}}
 .tx-stamps .stampc.sm{width:96px;height:96px;letter-spacing:.02em;padding:6px}
 @media (max-width:900px){.mo-links .mo-sub button{padding:9px 0;min-height:44px}}
+
+/* ---------- Phones get the desktop feel, 19 Nov 2026 ---------- */
+/* Lists with a photo (Destinations, Experiences, Things to do, Reads): no hover on touch,
+   so the row you scroll to lights up and the photo changes, like hovering on desktop. */
+@media (max-width:800px){
+ .alist .al-img{position:sticky!important;top:calc(var(--navh,72px) + 8px)!important;z-index:2;box-shadow:0 10px 24px -18px rgba(0,0,0,.35)}
+ .tx-s .alist .al-img{top:calc(var(--navh,72px) + 64px)!important}
+ .alist .al-row{opacity:.32;transition:opacity .3s}
+ .alist .al-row.on{opacity:1}
+ .alist .al-row.on .al-t{transform:translateX(8px)}
+}
+/* Quiz, every screen: the card steps away while the world moves, then the next question comes in */
+.stage.travel .tv-card,.stage.travel .stage-foot{animation:none!important;opacity:0!important;transform:translateY(24px)!important;pointer-events:none;transition:opacity .3s var(--ease-o),transform .3s var(--ease-o)}
+.stage.travel .bigread{animation:bigin 1.6s var(--ease-o) both}
+/* Quiz on phones: smaller question, card sits low so the world stays in view,
+   so you watch the world move above it. */
+@media (max-width:820px){
+ .stage.imm .stage-ui{grid-template-rows:auto 1fr auto auto;gap:10px}
+ .stage.imm .tv-card{margin-top:0!important;align-self:end;grid-row:3;padding:16px;gap:10px}
+ .stage.imm .stage-foot{grid-row:4}
+ #view .stage .tv-card h2:not(.big){font-size:1.12rem!important;line-height:1.28!important;letter-spacing:-.01em!important}
+ .stage .tv-card h2.big{font-size:1.6rem!important}
+ .stage .tv-card .ans{padding:10px 14px;min-height:44px;font-size:.95rem}
+ .stage .tv-card .fact{font-size:.88rem;padding:10px 12px}
+ .stage .tv-card .btn.lg{min-height:48px}
+ .stage .avatar{left:50%!important;right:auto!important;top:20%!important;bottom:auto!important;margin-left:-27px}
+ .stage .bigread{left:50%!important;top:calc(20% + 66px)!important;bottom:auto!important;translate:-50% 0!important}
+ .stage .lvl-pop{padding:8px 14px}.stage .lvl-pop b{font-size:1.3rem}.stage .lvl-pop span{white-space:nowrap}
+ .stage.imm .tv-card{background:rgba(255,255,255,.62);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px) saturate(1.1);box-shadow:0 8px 30px rgba(0,0,0,.12);border:1px solid rgba(255,255,255,.6)}
+ .stage.imm .tv-card .ans{background:rgba(255,255,255,.55)}
+ .stage.imm .tv-card .ans.right{background:rgba(255,255,255,.8)}
+ .stage.imm .tv-card .fact,.stage.imm .tv-card .prize{background:rgba(255,255,255,.45)}
+}
 </style>
 </head>
 <body>
@@ -4247,16 +4280,27 @@ function cheer(el,big){
 }
 function stageUpdate(kind){
   const el=document.querySelector('.stage'),s=state.play;if(!el)return false;
+  const phone=!matchMedia('(prefers-reduced-motion:reduce)').matches; /* every screen: the move plays on the button press */
   if(kind==='answer'){
     const right=s.last==='right';
-    if(right)s.cam=s.score;
+    if(right&&!phone)s.cam=s.score;
     stageSync();
     el.classList.remove('wrong','cheer');void el.offsetWidth;
+    if(right&&phone){cheer(el,false);return true}
     if(right){el.classList.add('cheer');cheer(el,false);
       const P_=PLAY[s.w];$('#tvBig').innerHTML=`<span class="lvl-pop"><b>${P_.steps[s.cam]}</b><span>${s.cam===5?'You made it!':'Level '+s.cam+' reached'} · ${FOUND[s.w][s.cam]}</span></span>`;
       clearTimeout(stageUpdate.t);stageUpdate.t=setTimeout(()=>el.classList.remove('cheer'),1700)}
     else el.classList.add('wrong');
     return true}
+  if(phone&&kind==='next'&&s.score>(s.cam||0)){
+    /* the card steps away, the world makes its move, then the next card comes in */
+    const P_=PLAY[s.w],c=$('#tvCard');s.cam=s.score;
+    c.classList.remove('swap');el.classList.remove('cheer');
+    $('#tvBig').innerHTML=`<span class="lvl-pop"><b>${P_.steps[Math.min(s.cam,5)]}</b><span>${s.cam===5?'You made it!':'Level '+s.cam+' reached'} · ${FOUND[s.w][Math.min(s.cam,5)]}</span></span>`;
+    el.classList.add('travel');stageSync();
+    clearTimeout(stageUpdate.tt);stageUpdate.tt=setTimeout(()=>{el.classList.remove('travel');stageSwap();if(s.i>=5&&s.score===5)cheer(el,true)},1600);
+    return true}
+  clearTimeout(stageUpdate.tt);el.classList.remove('travel');
   s.cam=s.score;stageSync();el.classList.remove('cheer');stageSwap();
   if(kind==='next'&&s.i>=5&&s.score===5)cheer(el,true);
   return true;
@@ -4924,6 +4968,14 @@ document.getElementById('themeSw').addEventListener('click',()=>{const n=R.datas
 
 /* experiences list: hover or focus picks the image */
 function alOn(L,r){L.dataset.a=r.dataset.i;L.querySelectorAll('.al-row').forEach(x=>x.classList.toggle('on',x===r));L.querySelectorAll('.al-pane').forEach((p,i)=>p.classList.toggle('on',i===+r.dataset.i))}
+
+/* phones: the row you scroll to becomes the hovered one */
+(()=>{const mq=matchMedia('(max-width:800px)');let t=false;
+ const spy=()=>{t=false;if(!mq.matches)return;document.querySelectorAll('.alist').forEach(L=>{const im=L.querySelector('.al-img'),rows=[...L.querySelectorAll('.al-row')];if(!im||!rows.length)return;
+  const lr=L.getBoundingClientRect();if(lr.bottom<0||lr.top>innerHeight)return;
+  const line=Math.max(im.getBoundingClientRect().bottom+40,innerHeight*.6);let r=rows[0];rows.forEach(x=>{if(x.getBoundingClientRect().top<line)r=x});
+  if(!r.classList.contains('on'))alOn(L,r)})};
+ addEventListener('scroll',()=>{if(!t){t=true;requestAnimationFrame(spy)}},{passive:true});addEventListener('hashchange',()=>setTimeout(spy,60));})();
 document.addEventListener('mouseover',e=>{const r=e.target.closest&&e.target.closest('.al-row');if(!r)return;alOn(r.closest('.alist'),r)});
 document.addEventListener('focusin',e=>{const r=e.target.closest&&e.target.closest('.al-row');if(!r)return;alOn(r.closest('.alist'),r)});
 
