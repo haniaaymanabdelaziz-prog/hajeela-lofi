@@ -2982,7 +2982,6 @@ const _MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','De
 TRIPS.forEach(t=>t.dates.forEach(x=>{x.s=x.d;if(t.dur>1){const p=x.s.split(' '),m=_MN.indexOf(p[2]),y=m>=10?2026:2027,e=new Date(y,m,+p[1]+t.dur-1,12);x.d=p[0]+' '+p[1]+(e.getMonth()===m?'':' '+p[2])+' to '+_DN[e.getDay()]+' '+e.getDate()+' '+_MN[e.getMonth()]}}));
 
 const byId=id=>TRIPS.find(x=>x.id===id)||(OLD_TRIPS[id]?(TRIPS.find(x=>x.w===OLD_TRIPS[id])||TRIPS[0]):undefined);
-DESTS.splice(0,DESTS.length,...DESTS.filter(d=>TRIPS.some(t=>t.dest===d.id)));
 const destOf=id=>DESTS.find(d=>d.id===id);
 
 const DEST={
