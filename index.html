@@ -2885,7 +2885,7 @@ const EXPS=[['diving','Diving'],['snorkelling','Snorkelling'],['boat','Boat days
 const KINDS=[['day','Day trips','Back in Cairo by night.'],['weekend','Weekends','Two or three days, leaving Thursday.'],['long','Longer trips','Four days or more.'],['abroad','Abroad','Coming soon.']];
 const LEVELS=['','Gentle','Easy going','Active','Challenging','Demanding'];
 const MET=['Effort','Early starts','Time in water','Comfort'];
-const TRATE={'new-year-fayoum':[3,3,3,1],'black-white-desert':[2,4,2,2],'marsa-alam-eid':[3,4,3,2],'lebanon-cedars':[2,3,3,1],'switzerland-alps':[3,4,4,2],'austria-tyrol':[3,4,4,2],'greece-islands':[1,2,4,1],'ras-mohamed':[2,3,3,1],'dahab':[2,3,3,1],'marsa-alam':[3,4,3,2],'hurghada':[1,2,4,1],'fayoum-day':[3,3,3,1],'white-desert':[2,4,2,2],'siwa':[2,4,3,1],'sinai-sunrise':[4,4,2,3],'st-catherine':[5,5,2,4],'old-cairo':[1,2,4,1],'dakhla-kharga':[3,3,3,2]};
+const TRATE={'fayoum-weekend':[3,3,3,1],'new-year-fayoum':[3,3,3,1],'black-white-desert':[2,4,2,2],'marsa-alam-eid':[3,4,3,2],'lebanon-cedars':[2,3,3,1],'switzerland-alps':[3,4,4,2],'austria-tyrol':[3,4,4,2],'greece-islands':[1,2,4,1],'ras-mohamed':[2,3,3,1],'dahab':[2,3,3,1],'marsa-alam':[3,4,3,2],'hurghada':[1,2,4,1],'fayoum-day':[3,3,3,1],'white-desert':[2,4,2,2],'siwa':[2,4,3,1],'sinai-sunrise':[4,4,2,3],'st-catherine':[5,5,2,4],'old-cairo':[1,2,4,1],'dakhla-kharga':[3,3,3,2]};
 const RLAB=['Physical effort','Adventure level','Comfort level','Experience required'];
 const RTAG=['','Beginner friendly','Beginner friendly','Some experience helps','For returning explorers','For seasoned explorers'];
 function expNeed(t){const e=TRATE[t.id][3],W=WORLDS[t.w].name,wb=n=>`<span class="bdg">${sym(t.w,18)}${n} ${W} trip${n>1?'s':''}</span>`,ab=`<span class="bdg"><i>▲</i>1 Adventure trip</span>`;
@@ -2907,7 +2907,7 @@ const D=(d,left)=>({d,left});
    Level, effort meters and badge are carried over from the earlier sample trip to the same place: to confirm. */
 const TRIPS=[
  {id:'new-year-fayoum',w:'sand',dest:'fayoum',b:'Classic',t:"New Year's in Fayoum",kind:'weekend',dur:2,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Thu 31 Dec',null)],mo:['Dec']},
- /* TRIP_2_SLOT: 8–9 Jan, destination to confirm */
+ {id:'fayoum-weekend',w:'sand',dest:'fayoum',b:'Classic',t:'Fayoum weekend',kind:'weekend',dur:2,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Fri 8 Jan',null)],mo:['Jan']},
  {id:'black-white-desert',w:'sand',dest:'white-desert',b:'Uncharted',t:'Black & White Desert',kind:'weekend',dur:3,lvl:3,m:[2,3,0,4],price:NaN,av:'request',dep:true,exps:['camping','stargazing'],dates:[D('Thu 28 Jan',null)],mo:['Jan']},
  {id:'marsa-alam-eid',w:'sea',dest:'marsa-alam',b:'Adventurer',t:'Marsa Alam for Eid',kind:'long',dur:6,lvl:3,m:[3,4,5,2],price:NaN,av:'request',dep:true,exps:['diving','boat'],dates:[D('Tue 9 Mar',null)],mo:['Mar']}
 ];
@@ -2915,6 +2915,8 @@ const OLD_TRIPS={'ras-mohamed':'sea','dahab':'sea','marsa-alam':'sea','hurghada'
 /* Per-trip page content. Anything not decided yet is a clear [placeholder]. Overrides the environment defaults in DEST. */
 const TC_=x=>[x,'[Plan to confirm]'],TBC=['[To confirm]'],TBC_POCKET=[['Pocket money',NaN]];
 const TCONTENT={
+ 'fayoum-weekend':{one:'Two days in Fayoum, 8 to 9 January. [Plan to confirm]',
+   exp:['Fri 8 Jan','Sat 9 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
  'new-year-fayoum':{one:"New Year's Eve in Fayoum, with your people. [Plan to confirm]",
    exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
  'black-white-desert':{one:'Three days in the Black and White Desert, 28 to 30 January. [Plan to confirm]',
@@ -3112,11 +3114,11 @@ function availLine(t){
   if(availOf(t)==='request')return '<span class="mono muted">Request to book · we confirm within 24 h</span>';
   const open=t.dates.filter(d=>d.left!==0);return open.length?`<span class="mono muted">Next: ${open[0].d}${open[0].left!=null&&open[0].left<=8?` · ${open[0].left} places left`:''}</span>`:'<span class="mono muted">Fully booked</span>';
 }
-const MOMENT={'new-year-fayoum':'Everyone falling off the sandboard, laughing','black-white-desert':'The whole camp lying back to watch the stars','marsa-alam-eid':'The first breath underwater','lebanon-cedars':'The first snowfall of the trip','switzerland-alps':'Fondue after the last run','austria-tyrol':'Hot chocolate at the top of the lift','greece-islands':'Swimming off the boat, anchor down','ras-mohamed':'Jumping off the top deck, all at once','dahab':'Tea on the shore after the last swim','marsa-alam':'The first breath underwater','hurghada':'Pizza on the boat between two islands','fayoum-day':'Everyone falling off the sandboard, laughing','white-desert':'The whole camp lying back to watch the stars','siwa':'Floating in the salt lake, not trying','sinai-sunrise':'The first light at the top, with new friends','st-catherine':'Bedouin tea halfway up','old-cairo':'Feteer at 11 pm on Al-Muizz','dakhla-kharga':'A hot spring at the end of a long road'};
+const MOMENT={'fayoum-weekend':'First light over Wadi El Rayan','new-year-fayoum':'Everyone falling off the sandboard, laughing','black-white-desert':'The whole camp lying back to watch the stars','marsa-alam-eid':'The first breath underwater','lebanon-cedars':'The first snowfall of the trip','switzerland-alps':'Fondue after the last run','austria-tyrol':'Hot chocolate at the top of the lift','greece-islands':'Swimming off the boat, anchor down','ras-mohamed':'Jumping off the top deck, all at once','dahab':'Tea on the shore after the last swim','marsa-alam':'The first breath underwater','hurghada':'Pizza on the boat between two islands','fayoum-day':'Everyone falling off the sandboard, laughing','white-desert':'The whole camp lying back to watch the stars','siwa':'Floating in the salt lake, not trying','sinai-sunrise':'The first light at the top, with new friends','st-catherine':'Bedouin tea halfway up','old-cairo':'Feteer at 11 pm on Al-Muizz','dakhla-kharga':'A hot spring at the end of a long road'};
 const KINDB={Adventurer:['▲','Adventure'],Uncharted:['✦','Uncharted'],'Snow chaser':['❄','Snow chaser'],Classic:null};
 function badgesOf(t){const out=[`<span class="bdg">${sym(t.w,18)}This trip's badge</span>`];(t.exps||[]).forEach(x=>{const e=EXPS.find(e=>e[0]===x);if(e)out.push(`<span class="bdg"><i>✓</i>${e[1]} badge</span>`)});return out.join('')}
 function departures(w){if(!departures.c){const out=[];TRIPS.forEach(t=>t.dates.forEach(x=>{const p=(x.s||x.d).split(' '),m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].indexOf(p[2]),y=m>=10?2026:2027;out.push({t,x,wd:p[0],day:+p[1],mon:p[2],k:y*10000+(m+1)*100+ +p[1]})}));departures.c=out.filter(d=>d.k>=20261113).sort((a,b)=>a.k-b.k)}return w?departures.c.filter(d=>d.t.w===w):departures.c}
-function depState(d){const l=d.x.left;const go=l===0||l==null?`data-go="trip-${d.t.id}"`:`data-book="${d.t.id}" data-bdep="${d.t.dates.indexOf(d.x)}"`;return l===0?['Full · join the waitlist','Waitlist',go]:l==null?['On request · we confirm in 24 h','Request',go]:[l<=8?`Only ${l} places left`:`${l} places left`,'Book',go]}
+function depState(d){const l=d.x.left;const go=l===0||l==null?`data-go="trip-${d.t.id}"`:`data-book="${d.t.id}" data-bdep="${d.t.dates.indexOf(d.x)}"`;return l===0?['Full · join the waitlist','Waitlist',go]:l==null?['Few seats left · we confirm in 24 h','Request',go]:[l<=8?`Only ${l} places left`:`${l} places left`,'Book',go]}
 function depRow(d){const t=d.t,st=depState(d);return `<button class="dep ${d.x.left===0?'full':''}" ${st[2]}><span class="dd"><small>${d.wd}</small><b>${d.day}</b><small>${d.mon}</small></span><span class="dph" aria-hidden="true"></span><span class="di"><b>${esc(t.t)}</b><span class="small muted">${sym(t.w,14)} ${destOf(t.dest).n} · ${t.dur===1?'1 day':t.dur+' days'} · from ${money(t.price)}</span><span class="mono ds">${st[0]}</span></span><span class="btn sm ${st[1]==='Book'?'solid':''}">${st[1]}</span></button>`}
 function nextBar(){const d=departures().find(x=>x.x.left);if(!d)return '';return `<button class="nextbar" ${depState(d)[2]}><span class="mono">Next trip out</span><b>${esc(d.t.t)}</b><span>${d.wd} ${d.day} ${d.mon} · ${d.x.left} places left</span><span class="nb-go">Book now</span></button>`}
 const ENVS={};ORDER.forEach(w=>{ENVS[w]={n:WORLDS[w].name,line:WORLDS[w].line,feel:HEAD_ENV[w],get dests(){return DESTS.filter(d=>d.w===w).map(d=>d.id)},get trips(){return TRIPS.filter(t=>t.w===w).map(t=>t.id)}}});
@@ -3125,7 +3127,7 @@ function lsCard(d){const t=d.t,st=depState(d);return `<article class="ls ${d.x.l
   <span class="tcard-moment">“${MOMENT[t.id]}”</span>
   <h3>${esc(t.t)}</h3>
   <div class="ls-meta"><span><small>Duration</small><b>${t.dur===1?'1 day':t.dur+' days'}</b></span><span><small>Level</small><b>${t.lvl} of 5 · ${LEVELS[t.lvl]}</b></span><span><small>From, per person</small><b>${money(t.price)}</b></span></div>
-  <span class="ls-av av-${d.x.left===0?'out':d.x.left==null?'req':d.x.left<=8?'few':'open'}"><i></i>${st[0]}</span>
+  <span class="ls-av av-${d.x.left===0?'out':d.x.left==null?'few':d.x.left<=8?'few':'open'}"><i></i>${st[0]}</span>
   <div class="ls-act"><button class="btn ghost sm" data-go="trip-${t.id}">View trip</button><button class="btn sm solid" ${st[2]}>${st[1]==='Book'?'Book':st[1]==='Request'?'Request':'Join waitlist'}</button></div></article>`}
 function tripRows(list,per,keep){per=per||4;let ds=list.map(t=>departures().find(d=>d.t.id===t.id)||{t,wd:'',day:'',mon:'',x:{left:0},k:0});if(!keep)ds=ds.sort((a,b)=>(a.k||9e9)-(b.k||9e9));const rows=[];for(let i=0;i<ds.length;i+=per)rows.push(ds.slice(i,i+per));return rows.map(r=>`<div class="lsgrid">${r.map(lsCard).join('')}</div>`).join('')}
 function pcard(o){return `<button class="tcard pcard ${o.cls||''}" ${o.go?`data-go="${o.go}"`:''} ${o.attrs||''} aria-label="${esc(o.title)}"><div class="tcard-img">${ph(o.img,260)}${o.tag?`<span class="tcard-tag">${o.tag}</span>`:''}${o.cta?`<span class="tc-cta">${/soon/i.test(o.cta)?o.cta:'See more <i aria-hidden="true">↗</i>'}</span>`:''}</div><div class="tc-row"><h3>${o.title}</h3>${o.pills&&o.pills.length?`<span class="tc-pills">${o.pills.map(x=>`<span>${x}</span>`).join('')}</span>`:''}</div>${o.desc?`<p class="muted small" style="margin:0">${o.desc}</p>`:''}</button>`}
@@ -3647,7 +3649,7 @@ V.trip=(id)=>{
   const tot=d.pocket.reduce((a,b)=>a+b[1],0);
   const next=t.dates.find(x=>x.left!==0)||t.dates[0];
   const SEC=[['overview','Overview'],['itinerary','Itinerary'],['included',"What's included"],['expect','What to expect'],['practical','The essentials'],['gallery','Gallery']];
-  const st=x=>av==='live'?(x.left===0?['Sold out','out']:x.left<=8?[x.left+' places left','few']:['Open','open']):['On request','req'];
+  const st=x=>av==='live'?(x.left===0?['Sold out','out']:x.left<=8?[x.left+' places left','few']:['Open','open']):['Few seats left','few'];
   const dur=t.dur===1?'1 day':t.dur+' days';
   const sh=state.share,shareSheet=sh?`<button class="sheet-bg" data-share="close" aria-label="Close"></button><div class="sheet reveal" role="dialog" aria-label="Share this trip">${N('H','Share: friends get the itinerary as a file plus a link')}
     <div class="row between"><div class="stack" style="gap:2px"><span class="eyebrow">Share with friends</span><h3>Bring your people.</h3></div><button class="round" style="width:40px;height:40px;font-size:1rem" data-share="close" aria-label="Close">✕</button></div>
@@ -3745,7 +3747,7 @@ V.book=(id)=>{
   const er=b.err||{};const fe=k=>er[k]?`<span class="ferr" id="${k}-e" role="alert">${er[k]}</span>`:'';
   const ai=k=>er[k]?`aria-invalid="true" aria-describedby="${k}-e"`:'';
   const fv=state.fv||{};const nm=i=>(i?fv['tn'+i]:fv.ln)||(i?'Traveller '+(i+1):'Lead traveller');
-  const dst=x=>live?(x.left===0?'Fully booked · join the waitlist':x.left<=8?x.left+' places left':'Places available'):'We confirm availability within 24 hours';
+  const dst=x=>live?(x.left===0?'Fully booked · join the waitlist':x.left<=8?x.left+' places left':'Places available'):'Few seats left · we confirm within 24 hours';
   const dietNames=i=>{const a=(b.diet||{})[i]||[];return a.length?a.join(', '):'None noted'};
   const ids=Object.values(b.ids||{});const idU=ids.filter(x=>x==='up').length,idL=ids.filter(x=>x==='link').length,idMiss=b.n-idU-idL;
   const sum=b.dep!=null?`<aside class="bk-sum" aria-label="Your trip"><span class="eyebrow">Your trip</span><h2 class="bk-st">${esc(t.t)}</h2><dl>
