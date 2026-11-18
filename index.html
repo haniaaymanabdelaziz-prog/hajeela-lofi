@@ -2791,19 +2791,23 @@ const ph=(t,h)=>`<div class="ph" style="min-height:${h||140}px"><span>${t}</span
 /* Real trip photos (Hania, 19 Nov). Slots: card, hero, p1, p2, m0-m3 (overview), d0.. (itinerary stops), g0-g6 (gallery). Missing slots keep the placeholder. */
 const TP_='img/trips/fayoum-getaway/';
 const TPH={
-/* New Year's in Fayoum: stand-in photos from the Fayoum getaway set until real ones arrive (Hania, 19 Nov) */
+/* New Year's in Fayoum: Hania's Fayoum photos (19 Nov), shared with Fayoum getaway */
 'new-year-fayoum':{
- card:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
- hero:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
- p1:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
- p2:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
- m2:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
- d0:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
- d1:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
- g1:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
- g2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
- g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
- g5:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%']},
+ card:['img/trips/fayoum/group-on-the-4x4.jpg','Friends on the roof of a 4x4 in the dunes','50% 40%'],
+ hero:['img/trips/fayoum/group-on-the-4x4.jpg','Friends on the roof of a 4x4 in the dunes','50% 40%'],
+ p1:['img/trips/fayoum/tunis-village-at-night.jpg','Tunis Village lit up at dusk','40% 60%'],
+ p2:['img/trips/fayoum/laughing-on-the-roof.jpg','Two friends laughing on a 4x4 roof','50% 40%'],
+ m1:['img/trips/fayoum/dune.jpg','A sand dune in Fayoum','50% 50%'],
+ m2:['img/trips/fayoum/at-the-wheel.jpg','A traveller shaping clay on a pottery wheel','50% 45%'],
+ m3:['img/trips/fayoum/stop-in-the-sand.jpg','The group sitting together on the sand','50% 65%'],
+ d0:['img/trips/fayoum/tunis-village-at-night.jpg','Tunis Village lit up at dusk','40% 60%'],
+ d1:['img/trips/fayoum/stop-in-the-sand.jpg','The group sitting together on the sand','50% 65%'],
+ g1:['img/trips/fayoum/group-above-the-lakes.jpg','The group above the Fayoum lakes','50% 60%'],
+ g2:['img/trips/fayoum/tea-by-the-fire.jpg','A host pouring tea by the fire at night','50% 40%'],
+ g3:['img/trips/fayoum/bucket-hat-by-the-lake.jpg','A traveller in a bucket hat by the lake','50% 40%'],
+ g4:['img/trips/fayoum/am-fares.jpg','Am Fares looking out over the dunes','50% 30%'],
+ g5:['img/trips/fayoum-getaway/pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
+ g6:['img/trips/fayoum/4x4s-and-drivers.jpg','Two 4x4s and their drivers in the desert','50% 60%']},
 /* Black & White Desert: Hania's White Desert sunset photo (19 Nov) */
 'black-white-desert':{
  card:['img/trips/black-white-desert/sunset-walk.jpg','Two friends walking across the White Desert at sunset','45% 55%'],
@@ -2817,15 +2821,22 @@ const TPH={
  hero:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
  p1:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
  p2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
- d4:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
- g1:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
- g2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
- g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
+ d4:['img/trips/fayoum/4x4s-and-drivers.jpg','Two 4x4s and their drivers in the desert','50% 60%'],
+ g1:['img/trips/fayoum/group-on-the-4x4.jpg','Friends on the roof of a 4x4 in the dunes','50% 40%'],
+ g2:['img/trips/fayoum/laughing-on-the-roof.jpg','Two friends laughing on a 4x4 roof','50% 40%'],
+ g3:['img/trips/fayoum-getaway/4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
  m2:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
- d2:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
+ d2:['img/trips/fayoum/my-first-pot.jpg','A traveller showing off his first clay pot','50% 40%'],
  d6:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
- g4:[TP_+'dinner-tent-tables.jpg','Long tables set for dinner outside a desert tent','50% 55%'],
- g5:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%']}};
+ g4:['img/trips/fayoum/am-fares.jpg','Am Fares looking out over the dunes','50% 30%'],
+ g5:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
+ m1:['img/trips/fayoum-getaway/sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
+ m3:['img/trips/fayoum/breakfast-table.jpg','Breakfast at a long table in Tunis Village','50% 50%'],
+ d1:['img/trips/fayoum/breakfast-table.jpg','Breakfast at a long table in Tunis Village','50% 50%'],
+ d3:['img/trips/fayoum/group-above-the-lakes.jpg','The group above the Fayoum lakes','50% 60%'],
+ d5:['img/trips/fayoum/dune.jpg','A sand dune in Fayoum','50% 50%'],
+ d7:['img/trips/fayoum/tea-by-the-fire.jpg','A host pouring tea by the fire at night','50% 40%'],
+ g6:['img/trips/fayoum/bucket-hat-by-the-lake.jpg','A traveller in a bucket hat by the lake','50% 40%']}};
 const tph=(t,slot,label,h)=>{const x=(TPH[t.id]||{})[slot];return x?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${x[0]}" alt="${x[1]}" loading="lazy" decoding="async" style="object-position:${x[2]||'50% 50%'}"></div>`:ph(label,h)};
 
 /* ---------- Booking rules (the four open decisions) ---------- */
@@ -2960,7 +2971,7 @@ const TCONTENT={
    transport:'From Tagamoa and Zayed, and back',pop:['Sandboarding and sunset','The pottery studios of Tunis Village','Breakfast in Tunis Village'],
    inc:[['Transportation','From Tagamoa and Zayed, and back'],['National Park Tickets',''],['4x4 Safari',''],['Camping Gear',''],['Sandboarding',''],['Dinner','']],
    exc:'Breakfast in Tunis Village and pottery',add:[],pocket:TBC_POCKET},
- 'new-year-fayoum':{one:'',exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
+ 'new-year-fayoum':{one:'',pop:['Fayoum dunes','The pottery studios of Tunis Village','A stop in the sand'],exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
  'black-white-desert':{one:'',pop:['The Black Desert','The chalk rocks of the White Desert','Camp after dark'],
    exp:['Thu 28 Jan','Fri 29 Jan','Sat 30 Jan'].map(TC_),stay:'[Stay to confirm]',learn:TBC,add:[],buy:TBC,pocket:TBC_POCKET},
  'marsa-alam-eid':{one:'',pop:['On the boat','Under the water','The Marsa Alam coast'],
@@ -3312,14 +3323,14 @@ ${worldPanel()}
     <p>Real moments, little films and memories made along the way by our travellers.</p>
     <button class="btn lg" data-go="trips">See the trips</button></div>
   ${/* Real photos (Hania, 19 Nov): [place, moment, trip, placeholder label, tile, image, hover line, alt, focus]. Labels written from what each photo shows. */
-  [['Red Sea','First dive','marsa-alam-eid','Photo','a','first-dive','The first breath underwater','A diver giving the OK sign underwater','50% 40%'],
-   ['Red Sea','Back on deck','marsa-alam-eid','Photo','b','back-on-deck','Everyone filming the swimmers','Friends sitting on the deck, filming the swimmers below','50% 55%'],
-   ['Red Sea','Floating break','marsa-alam-eid','Photo','c','floating-break','Nowhere to be but the water','A traveller smiling in a watermelon float','45% 70%'],
-   ['Red Sea','The whole boat','marsa-alam-eid','Photo','d','whole-boat','Gear on, one by one','The group on the back of the boat while divers get ready in the water','50% 55%'],
-   ['Red Sea','Back from the swim','marsa-alam-eid','Photo','e','sea-breeze','Back from the swim','A traveller in white laughing on the back of the boat','50% 60%'],
-   ['Red Sea','Last light','marsa-alam-eid','Photo','f','last-light','The boat goes quiet at sunset','Sunset over the sea from the boat','55% 45%'],
-   ['Red Sea','Our captain','marsa-alam-eid','Photo','g','our-captain','The captain, mid-story','The boat captain laughing on deck','55% 40%'],
-   ['Red Sea','Going up','marsa-alam-eid','Photo','h','going-up','Bubbles all the way up','A diver rising towards the surface','50% 40%']].map(x=>`<button class="mem m-${x[4]}" data-go="trip-${x[2]}" aria-label="${x[0]}, ${x[1]}. ${x[6]}. See the trip">${x[5]?`<div class="ph ph-photo" style="min-height:100px"><img src="img/memories/${x[5]}.jpg" alt="${x[7]}" loading="lazy" decoding="async" style="object-position:${x[8]}"></div>`:ph(x[3],100)}<span class="figc"><b>${x[0]}</b><span>${x[1]}</span></span><span class="mdesc" aria-hidden="true"><b>${x[1]}</b><i></i>${x[6]}</span></button>`).join('')}
+  [['Ras Mohammed','First dive','marsa-alam-eid','Photo','a','first-dive','The first breath underwater','A diver giving the OK sign underwater','50% 40%'],
+   ['Ras Mohammed','Back on deck','marsa-alam-eid','Photo','b','back-on-deck','Everyone filming the swimmers','Friends sitting on the deck, filming the swimmers below','50% 55%'],
+   ['Ras Mohammed','Floating break','marsa-alam-eid','Photo','c','floating-break','Nowhere to be but the water','A traveller smiling in a watermelon float','45% 70%'],
+   ['Ras Mohammed','The whole boat','marsa-alam-eid','Photo','d','whole-boat','Gear on, one by one','The group on the back of the boat while divers get ready in the water','50% 55%'],
+   ['Ras Mohammed','Back from the swim','marsa-alam-eid','Photo','e','sea-breeze','Back from the swim','A traveller in white laughing on the back of the boat','50% 60%'],
+   ['Ras Mohammed','Last light','marsa-alam-eid','Photo','f','last-light','The boat goes quiet at sunset','Sunset over the sea from the boat','55% 45%'],
+   ['Ras Mohammed','Our captain','marsa-alam-eid','Photo','g','our-captain','The captain, mid-story','The boat captain laughing on deck','55% 40%'],
+   ['Ras Mohammed','Going up','marsa-alam-eid','Photo','h','going-up','Bubbles all the way up','A diver rising towards the surface','50% 40%']].map(x=>`<button class="mem m-${x[4]}" data-go="trip-${x[2]}" aria-label="${x[0]}, ${x[1]}. ${x[6]}. See the trip">${x[5]?`<div class="ph ph-photo" style="min-height:100px"><img src="img/memories/${x[5]}.jpg" alt="${x[7]}" loading="lazy" decoding="async" style="object-position:${x[8]}"></div>`:ph(x[3],100)}<span class="figc"><b>${x[0]}</b><span>${x[1]}</span></span><span class="mdesc" aria-hidden="true"><b>${x[1]}</b><i></i>${x[6]}</span></button>`).join('')}
   <div class="mbadge mb1" aria-hidden="true">${sym('sea',44)}<span>Sea</span></div>
   <div class="mbadge mb2" aria-hidden="true">${sym('summit',44)}<span>Summit</span></div>
   ${[['sand',35.5,18.5],['snow',60,22],['sand',62.8,63.8],['snow',82,56],['sea',38.7,78.5],['summit',64.3,72.5]].map(x=>`<span class="mpin" style="left:${x[1]}%;top:${x[2]}%" aria-hidden="true">${sym(x[0],22)}</span>`).join('')}
@@ -4327,19 +4338,23 @@ V.weekends=()=>{const D_=calData(),mi=state.calM,m0=CALM[mi],y=m0.getFullYear(),
 const FAVX=[
  ['2018','Our very first trip was here. Eleven friends, one borrowed bus, and nobody had ever stood on a sandboard. We stayed until the light went.','Am Sayed','He has opened the gate for us at dawn since that first morning, and still refuses to let anyone leave without tea.'],
  ['2017','The first time we took a group under, half the boat was scared. On the second dive the same people would not come up. That is when we knew.','Captain Hany','Twenty years on this reef. He taught most of our team how to read the water before he let us bring anyone else.'],
- ['2018','The first night we were invited to sit, we did not understand half the words. We understood the welcome. Our name comes from that fire.','Sheikh Salem','He told us what a hajeela is: going out together for the joy of it. He still pours the first glass.'],
+ ['2018','The first night we were invited to sit, we did not understand half the words. We understood the welcome. Our name comes from that fire.','Am Fares','He told us what a hajeela is: going out together for the joy of it. He still pours the first glass.'],
  ['2018','Our first climb, we got the timing wrong and reached the top in the dark. We sat close and waited. Nobody has forgotten that hour.','Mousa','A Jebeliya guide who has walked this path since he was a boy. He sets the pace, and he has never left anyone behind.'],
  ['2019','The first time in Siwa, one of us lay back in the lake and went quiet for twenty minutes. We built the whole trip around that silence.','Youssef','Born in Shali. He showed us the lake that is not on the map, on the condition that we keep it slow.'],
  ['2018','The first pizza on board was a joke, made by a crew member with a small oven and a point to prove. It has been on every boat since.','Captain Mido','He still makes the first tray himself, and he still will not share the recipe.'],
  ['2018','On that first Fayoum trip we followed the smell to a clay oven and ate standing up. We have stopped there every single time since.','Om Hassan','She bakes from before sunrise. She counts our group by eye and always makes two extra.'],
  ['2018','Our first night here we forgot half the gear and did not care. Everyone slept outside the tents, just to keep looking up.','Hamada','Our camp host from the start. He taught us to switch the torches off and let our eyes adjust.']];
 FAVS.forEach((f,i)=>{f.x=FAVX[i]});
+/* Real fav photos (Hania, 19 Nov): img = the fav, limg = the local. Am Fares replaces Sheikh Salem as the Bedouin host. */
+FAVS[1].img=['img/memories/first-dive.jpg','A diver giving the OK sign underwater','50% 40%'];FAVS[1].limg=['img/memories/our-captain.jpg','The boat captain laughing on deck','55% 35%'];
+FAVS[2].img=['img/trips/fayoum/tea-by-the-fire.jpg','A host pouring tea by the fire at night','50% 40%'];FAVS[2].limg=['img/trips/fayoum/am-fares.jpg','Am Fares looking out over the dunes','50% 25%'];
+const fimg=(x,label,h)=>x?`<div class="ph ph-photo" style="min-height:${h}px"><img src="${x[0]}" alt="${x[1]}" loading="lazy" decoding="async" style="object-position:${x[2]}"></div>`:ph(label,h);
 V.favs=()=>{const k=state.favK;return `
 <section class="sec"><div class="stack">${N(4,'Hajeela favs')}<h1 class="pg">What we keep going back for.</h1><p class="muted favs-lede">Every fav has two things behind it: the first time we found it, and the local who made it what it is. That's why we keep going back, and why we want you there too.</p></div>
 <div class="dfil" role="group" aria-label="Kind of fav">${['All','Fav moment','Fav taste','Fav corner','Fav people'].map(x=>`<button class="${k===x?'on':''}" data-favk="${x}" aria-pressed="${k===x}">${x==='All'?'All':x==='Fav people'?x:x+'s'}</button>`).join('')}</div>
 <div class="favE-list">${FAVS.filter(f=>k==='All'||f.k===k).map(f=>`<article class="favE"><div class="favE-l"><span class="mono">${WORLDS[f.w].name} · ${f.k}</span></div>
   <div class="favE-r"><p class="favE-q">${f.t}</p>
-   <div class="favE-imgs"><div>${ph('Photo · '+f.t,380)}</div><div>${ph('Photo · '+f.x[2],380)}<p class="favE-cap"><b>${f.x[2]}.</b> ${f.x[3]}</p></div></div>
+   <div class="favE-imgs"><div>${fimg(f.img,'Photo · '+f.t,380)}</div><div>${fimg(f.limg,'Photo · '+f.x[2],380)}<p class="favE-cap"><b>${f.x[2]}.</b> ${f.x[3]}</p></div></div>
    <p class="favE-first"><span class="mono muted">First time · ${f.x[0]}</span><br>${f.x[1]}</p>
    <div class="row"><button class="btn sm" data-go="trip-${f.trip}">See the trip</button></div></div></article>`).join('')}</div>
 <div class="box" style="justify-items:start"><h3>Got a fav of your own?</h3><p class="muted">Share it with us after your trip. The ones that make us want to go back end up here, with your name on them.</p></div></section>`};
