@@ -2907,7 +2907,7 @@ const D=(d,left)=>({d,left});
    Level, effort meters and badge are carried over from the earlier sample trip to the same place: to confirm. */
 const TRIPS=[
  {id:'new-year-fayoum',w:'sand',dest:'fayoum',b:'Classic',t:"New Year's in Fayoum",kind:'weekend',dur:2,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Thu 31 Dec',null)],mo:['Dec']},
- {id:'fayoum-weekend',w:'sand',dest:'fayoum',b:'Classic',t:'Fayoum getaway',kind:'day',dur:1,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Fri 8 Jan',null)],mo:['Jan']},
+ {id:'fayoum-weekend',w:'sand',dest:'fayoum',b:'Classic',t:'Fayoum getaway',kind:'day',dur:1,lvl:2,m:[3,3,0,1],price:2850,av:'request',dep:true,exps:['sandboarding','culture','stargazing'],dates:[D('Fri 8 Jan',null)],mo:['Jan']},
  {id:'black-white-desert',w:'sand',dest:'white-desert',b:'Uncharted',t:'Black & White Desert',kind:'weekend',dur:3,lvl:3,m:[2,3,0,4],price:NaN,av:'request',dep:true,exps:['camping','stargazing'],dates:[D('Thu 28 Jan',null)],mo:['Jan']},
  {id:'marsa-alam-eid',w:'sea',dest:'marsa-alam',b:'Adventurer',t:'Eid in Marsa Alam',kind:'long',dur:6,lvl:3,m:[3,4,5,2],price:NaN,av:'request',dep:true,exps:['diving','boat'],dates:[D('Tue 9 Mar',null)],mo:['Mar']}
 ];
@@ -2915,8 +2915,11 @@ const OLD_TRIPS={'ras-mohamed':'sea','dahab':'sea','marsa-alam':'sea','hurghada'
 /* Per-trip page content. Anything not decided yet is a clear [placeholder]. Overrides the environment defaults in DEST. */
 const TC_=x=>[x,'[Plan to confirm]'],TBC=['[To confirm]'],TBC_POCKET=[['Pocket money',NaN]];
 const TCONTENT={
- 'fayoum-weekend':{one:'A day in Fayoum, Friday 8 January. Home by night. [Plan to confirm]',
-   exp:['Morning','Midday','Evening'].map(TC_),add:[],pocket:TBC_POCKET},
+ 'fayoum-weekend':{one:'A day in Fayoum, Friday 8 January: Tunis Village, the lakes, a 4x4 safari, sandboarding at sunset, and dinner by the desert under the stars.',
+   /* Hania, 18 Nov: plan, inclusions and exclusions word for word (typos fixed) */
+   exp:[['Leave Cairo','8 am'],['Breakfast in Tunis Village','11 am'],['Pottery','Optional'],['Discover Fayoum Lakes',''],['4x4 Safari by the Desert',''],['Sandboarding and Sunset',''],['Dinner by the Desert',''],['Bonfire and Marshmallows',''],['Stargazing','']],
+   inc:[['Transportation',''],['National Park Tickets',''],['4x4 Safari',''],['Camping Gear',''],['Sandboarding',''],['Dinner','']],
+   exc:'Breakfast in Tunis Village and pottery',add:[],pocket:TBC_POCKET},
  'new-year-fayoum':{one:"New Year's Eve in Fayoum, with your people. [Plan to confirm]",
    exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
  'black-white-desert':{one:'Three days in the Black and White Desert, 28 to 30 January. [Plan to confirm]',
@@ -3696,8 +3699,8 @@ V.trip=(id)=>{
   <p class="tx-ph small muted">Placeholder: exact times, meal by meal and room details per day come from operations and are not in this prototype yet.</p>
 </section>
 <section class="tx-s" id="t-included">${sh_(null,"What's included")}
-  <div class="tx-incl"><ul>${[['Transport','From Cairo and back'],['Stay',t.dur>1?d.stay.split('.')[0]:'Day trip, home by night'],['Meals','As listed on the plan'],['Host','With you the whole trip'],['Equipment','Everything for the activities'],['Your trip badge','In your collection in the app, once you\'ve completed the trip']].map(x=>`<li><i aria-hidden="true">✓</i><span><b>${x[0]}</b>${x[1]}</span></li>`).join('')}</ul>
-  <ul class="no"><li><i aria-hidden="true">–</i><span><b>Not included</b>Pocket money and add-ons</span></li></ul></div>
+  <div class="tx-incl"><ul>${(d.inc||[['Transport','From Cairo and back'],['Stay',t.dur>1?d.stay.split('.')[0]:'Day trip, home by night'],['Meals','As listed on the plan'],['Host','With you the whole trip'],['Equipment','Everything for the activities']]).concat([['Your trip badge','In your collection in the app, once you\'ve completed the trip']]).map(x=>`<li><i aria-hidden="true">✓</i><span><b>${x[0]}</b>${x[1]}</span></li>`).join('')}</ul>
+  <ul class="no"><li><i aria-hidden="true">–</i><span><b>Not included</b>${d.exc||'Pocket money and add-ons'}</span></li></ul></div>
 </section>
 <section class="tx-s" id="t-expect">${sh_(null,'What to expect')}
   <div class="tx-three">
