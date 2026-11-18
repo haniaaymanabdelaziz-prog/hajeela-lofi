@@ -2859,7 +2859,7 @@ const WORLDS={
 const DESTS=[
  {id:'fayoum',n:'Fayoum',w:'sand',l:'Dunes, a lake and a pottery village, two hours from Cairo.'},
  {id:'siwa',n:'Siwa',w:'sand',l:'Springs, salt lakes and an old mud-brick town on the edge of the Great Sand Sea.'},
- {id:'white-desert',n:'Black & White Desert',w:'sand',l:'Chalk rocks that turn silver at night, and a camp under the stars.'},
+ {id:'white-desert',n:'White Desert',w:'sand',l:'Chalk rocks that turn silver at night, and a camp under the stars.'},
  {id:'ras-mohammed',n:'Ras Mohammed',w:'sea',l:"One of the Red Sea's oldest protected reefs, seen from a boat."},
  {id:'dahab',n:'Dahab',w:'sea',l:'A slow bay town where the reef starts a few steps from the shore.'},
  {id:'hurghada',n:'Hurghada',w:'sea',l:'Island hopping and long days on the water.'},
@@ -3251,7 +3251,7 @@ function heroCopy(){
     <div class="row"><button class="btn solid" data-go="explore">Explore</button><button class="btn" data-go="create">Create</button></div>
     <button class="hero-film" data-scroll="memories"><span>See Hajeela through your eyes</span></button>`;
   const i=ORDER.indexOf(w)+1;
-  return `<h1>${HEAD[w][1]}</h1>
+  return `<h1>${w==='sand'?'Go where<br>it goes quiet.':HEAD[w][1]}</h1>
     <p class="lead">${WORLDS[w].line}</p>
     <div class="row"><button class="btn solid" data-go="trips-${w}">See ${WORLDS[w].name} trips</button><button class="btn" data-scroll="worldPanel">Play ${WORLDS[w].name} quiz</button></div>`;
 }
@@ -3405,7 +3405,7 @@ ${homeEnvs()}`
 V.destinations=()=>{const L=state.f.w?DESTS.filter(d=>d.w===state.f.w):mixWorlds(DESTS),v=state.destView||'list';
 return `<section class="sec"><div class="dhead dhead-row"><div class="stack"><h1 class="pg">Where do you want to go?</h1></div><div class="viewsw" role="group" aria-label="View"><button class="${v==='list'?'on':''}" data-dview="list" aria-pressed="${v==='list'}">List</button><button class="${v==='map'?'on':''}" data-dview="map" aria-pressed="${v==='map'}">Map</button></div></div>
 <div class="dbar"><div class="dfil" role="group" aria-label="Environment">${ORDER.map(w=>`<button class="${state.f.w===w?'on':''}" data-fw="${w}" aria-pressed="${state.f.w===w}">${WORLDS[w].name}</button>`).join('')}</div></div>
-${v==='map'?mapBlock(true):`<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${L.map(d=>`<div class="al-pane">${dph(d,420)}</div>`).join('')}</div><div class="al-rows">${L.map((d,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="dest-${d.id}"><span class="al-t">${d.n.replace(' & Mount Sinai','')}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.dest===d.id).length)} · ${WORLDS[d.w].name}</span></button>`).join('')}</div></div>`}</section>`};
+${v==='map'?mapBlock(true):`<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${L.map(d=>`<div class="al-pane">${dph(d,420)}</div>`).join('')}</div><div class="al-rows">${L.map((d,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="dest-${d.id}"><span class="al-t">${d.n.replace(' & Mount Sinai','')}</span><span class="al-c">${(n=>n?n+' trip'+(n===1?'':'s'):'No trips yet')(TRIPS.filter(t=>t.dest===d.id).length)} · ${WORLDS[d.w].name}</span></button>`).join('')}</div></div>`}</section>`};
 
 V.experiences=()=>{const XL=EXPS.filter(e=>TRIPS.some(t=>t.exps.includes(e[0])));return `<section class="sec"><div class="stack"><h1 class="pg">What do you want to do?</h1></div>
 <div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${XL.map(e=>`<div class="al-pane">${ph(e[1],420)}</div>`).join('')}</div><div class="al-rows">${XL.map((e,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="exp-${e[0]}"><span class="al-t">${e[1]}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.exps.includes(e[0])).length)}</span></button>`).join('')}</div></div></section>`}
