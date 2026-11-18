@@ -2788,7 +2788,7 @@ const DIMG={fayoum:['img/destinations/fayoum.jpg','50% 62%'],siwa:['img/destinat
 const dph=(d,h)=>DIMG[d.id]?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${DIMG[d.id][0]}" alt="" loading="lazy" decoding="async" style="object-position:${DIMG[d.id][1]}"></div>`:ph(d.n,h);
 const ph=(t,h)=>`<div class="ph" style="min-height:${h||140}px"><span>${t}</span></div>`;
 
-/* Real trip photos (Hania, 19 Nov). Slots: card, hero, p1, p2, d0.. (itinerary stops), g0-g6 (gallery). Missing slots keep the placeholder. */
+/* Real trip photos (Hania, 19 Nov). Slots: card, hero, p1, p2, m0-m3 (overview), d0.. (itinerary stops), g0-g6 (gallery). Missing slots keep the placeholder. */
 const TP_='img/trips/fayoum-getaway/';
 const TPH={'fayoum-weekend':{
  card:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
@@ -2798,7 +2798,12 @@ const TPH={'fayoum-weekend':{
  d4:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
  g1:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
  g2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
- g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%']}};
+ g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
+ m2:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
+ d2:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
+ d6:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
+ g4:[TP_+'dinner-tent-tables.jpg','Long tables set for dinner outside a desert tent','50% 55%'],
+ g5:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%']}};
 const tph=(t,slot,label,h)=>{const x=(TPH[t.id]||{})[slot];return x?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${x[0]}" alt="${x[1]}" loading="lazy" decoding="async" style="object-position:${x[2]||'50% 50%'}"></div>`:ph(label,h)};
 
 /* ---------- Booking rules (the four open decisions) ---------- */
@@ -3698,7 +3703,7 @@ V.trip=(id)=>{
 <main class="tx-main">
 <section class="tx-s" id="t-overview">${sh_(null,'Overview')}
   ${d.one?`<p class="tx-lede">${d.one}</p>`:''}
-  <div class="tx-mom">${[MOMENT[t.id],...d.pop].map((x,i)=>`<figure class="m m${i}">${ph((i===0?'Film · 8 sec loop · ':'Photo · ')+x,100)}<figcaption>${x}</figcaption></figure>`).join('')}</div>
+  <div class="tx-mom">${[MOMENT[t.id],...d.pop].map((x,i)=>`<figure class="m m${i}">${tph(t,'m'+i,(i===0?'Film · 8 sec loop · ':'Photo · ')+x,100)}<figcaption>${x}</figcaption></figure>`).join('')}</div>
   <div class="tx-glance"><div>${rateBlock(t)}</div>
     <div class="tx-meters"><span class="eyebrow">The detail</span>${t.m.map((v,i)=>`<div class="meter"><span>${MET[i]}</span><span class="bar"><i style="width:${v*20}%"></i></span><span class="mono">${v}/5</span></div>`).join('')}<p class="muted small">${TRATE[t.id][3]<=2?'A host stays with the group the whole time, and you can sit anything out.':"Doable if you're reasonably fit and fine with an early start. We'll send a short prep plan when you book."}</p></div></div>
 </section>
