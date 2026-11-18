@@ -2705,6 +2705,22 @@ html:not(.dev) .proto,html:not(.dev) .hero-lab,html:not(.dev) .tx-ph,html:not(.d
 .vcamp{position:absolute;top:2.2%;left:50%;translate:-50% 0;width:64px}
 .vcamp path{fill:none;stroke:#fff;stroke-width:3}
 .vflake{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;opacity:.85}
+
+/* ---------- Mobile pass, 18 Nov 2026 ---------- */
+@media (max-width:700px){
+ .memed-head{left:auto}                                   /* "Through your eyes" heading was pushed half off screen */
+ #heroSvg #sun{display:none}                              /* the sun stretched into an oval beside the buttons */
+}
+@media (max-width:640px){
+ .dfil:not(.ctr){flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .dfil:not(.ctr)::-webkit-scrollbar{display:none}
+ .dfil button{padding-inline:12px;white-space:nowrap;flex:none}
+ .bk-row>span.mono{grid-column:3;grid-row:1;white-space:nowrap}  /* price sits on the right of the date */
+ .bk-row>span:nth-of-type(1){grid-row:2}
+}
+@media (max-width:760px){.cp-hint{max-width:42ch}}
+.tx-stamps .stampc.sm{width:96px;height:96px;letter-spacing:.02em;padding:6px}
+@media (max-width:900px){.mo-links .mo-sub button{padding:9px 0;min-height:44px}}
 </style>
 </head>
 <body>
@@ -2792,7 +2808,7 @@ const WORLDS={
 const DESTS=[
  {id:'fayoum',n:'Fayoum',w:'sand',l:'Dunes, a lake and a pottery village, two hours from Cairo.'},
  {id:'siwa',n:'Siwa',w:'sand',l:'Springs, salt lakes and an old mud-brick town on the edge of the Great Sand Sea.'},
- {id:'white-desert',n:'White Desert',w:'sand',l:'Chalk rocks that turn silver at night, and a camp under the stars.'},
+ {id:'white-desert',n:'Black & White Desert',w:'sand',l:'Chalk rocks that turn silver at night, and a camp under the stars.'},
  {id:'ras-mohammed',n:'Ras Mohammed',w:'sea',l:"One of the Red Sea's oldest protected reefs, seen from a boat."},
  {id:'dahab',n:'Dahab',w:'sea',l:'A slow bay town where the reef starts a few steps from the shore.'},
  {id:'hurghada',n:'Hurghada',w:'sea',l:'Island hopping and long days on the water.'},
@@ -2869,7 +2885,7 @@ const EXPS=[['diving','Diving'],['snorkelling','Snorkelling'],['boat','Boat days
 const KINDS=[['day','Day trips','Back in Cairo by night.'],['weekend','Weekends','Two or three days, leaving Thursday.'],['long','Longer trips','Four days or more.'],['abroad','Abroad','Coming soon.']];
 const LEVELS=['','Gentle','Easy going','Active','Challenging','Demanding'];
 const MET=['Effort','Early starts','Time in water','Comfort'];
-const TRATE={'lebanon-cedars':[2,3,3,1],'switzerland-alps':[3,4,4,2],'austria-tyrol':[3,4,4,2],'greece-islands':[1,2,4,1],'ras-mohamed':[2,3,3,1],'dahab':[2,3,3,1],'marsa-alam':[3,4,3,2],'hurghada':[1,2,4,1],'fayoum-day':[3,3,3,1],'white-desert':[2,4,2,2],'siwa':[2,4,3,1],'sinai-sunrise':[4,4,2,3],'st-catherine':[5,5,2,4],'old-cairo':[1,2,4,1],'dakhla-kharga':[3,3,3,2]};
+const TRATE={'new-year-fayoum':[3,3,3,1],'black-white-desert':[2,4,2,2],'marsa-alam-eid':[3,4,3,2],'lebanon-cedars':[2,3,3,1],'switzerland-alps':[3,4,4,2],'austria-tyrol':[3,4,4,2],'greece-islands':[1,2,4,1],'ras-mohamed':[2,3,3,1],'dahab':[2,3,3,1],'marsa-alam':[3,4,3,2],'hurghada':[1,2,4,1],'fayoum-day':[3,3,3,1],'white-desert':[2,4,2,2],'siwa':[2,4,3,1],'sinai-sunrise':[4,4,2,3],'st-catherine':[5,5,2,4],'old-cairo':[1,2,4,1],'dakhla-kharga':[3,3,3,2]};
 const RLAB=['Physical effort','Adventure level','Comfort level','Experience required'];
 const RTAG=['','Beginner friendly','Beginner friendly','Some experience helps','For returning explorers','For seasoned explorers'];
 function expNeed(t){const e=TRATE[t.id][3],W=WORLDS[t.w].name,wb=n=>`<span class="bdg">${sym(t.w,18)}${n} ${W} trip${n>1?'s':''}</span>`,ab=`<span class="bdg"><i>▲</i>1 Adventure trip</span>`;
@@ -2887,26 +2903,33 @@ function rateBlock(t){const r=TRATE[t.id],x=expNeed(t),first=TRIPS.filter(o=>o.w
   ${x.need&&first?`<div><button class="btn sm" data-go="trip-${first.id}">${first.t}</button></div>`:''}</div>
   <span class="mono muted" style="font-size:.66rem">Illustrative scoring. Real ratings are set per trip against clear criteria.</span></div>`}
 const D=(d,left)=>({d,left});
+/* Real upcoming trips (Hania, 18 Nov 2026). price:NaN shows "[To confirm]" everywhere, totals included.
+   Level, effort meters and badge are carried over from the earlier sample trip to the same place: to confirm. */
 const TRIPS=[
- {id:'ras-mohamed',w:'sea',dest:'ras-mohammed',b:'Classic',t:'Ras Mohammed island hopping',kind:'weekend',dur:3,lvl:3,m:[2,3,5,2],price:7900,av:'live',dep:true,exps:['snorkelling','diving','boat'],dates:[D('Thu 3 Dec',6),D('Thu 17 Dec',0),D('Thu 7 Jan',11)],mo:['Dec','Jan']},
- {id:'dahab',w:'sea',dest:'dahab',b:'Classic',t:'Dahab reef & desert weekend',kind:'weekend',dur:3,lvl:2,m:[2,2,4,2],price:6900,av:'live',dep:true,exps:['snorkelling','diving','camping'],dates:[D('Thu 10 Dec',9),D('Thu 14 Jan',14)],mo:['Dec','Jan']},
- {id:'marsa-alam',w:'sea',dest:'marsa-alam',b:'Adventurer',t:'Marsa Alam first-dive weekend',kind:'weekend',dur:4,lvl:4,m:[3,4,5,2],price:9500,av:'request',dep:true,exps:['diving','boat'],dates:[D('Wed 9 Dec',null),D('Wed 13 Jan',null)],mo:['Dec','Jan']},
- {id:'hurghada',w:'sea',dest:'hurghada',b:'Classic',t:'Hurghada boat weekend',kind:'weekend',dur:3,lvl:2,m:[1,2,4,1],price:6400,av:'live',dep:false,exps:['boat','snorkelling'],dates:[D('Thu 10 Dec',4),D('Thu 28 Jan',16)],mo:['Dec','Jan']},
- {id:'fayoum-day',w:'sand',dest:'fayoum',b:'Classic',t:'Fayoum sandboarding & pottery',kind:'day',dur:1,lvl:2,m:[3,3,0,1],price:1800,av:'live',dep:false,exps:['sandboarding','culture'],dates:[D('Fri 27 Nov',12),D('Fri 4 Dec',0),D('Sat 12 Dec',20)],mo:['Nov','Dec']},
- {id:'white-desert',w:'sand',dest:'white-desert',b:'Uncharted',t:'White Desert camp night',kind:'weekend',dur:2,lvl:3,m:[2,3,0,4],price:4200,av:'request',dep:false,exps:['camping','stargazing'],dates:[D('Thu 3 Dec',null),D('Thu 7 Jan',null)],mo:['Dec','Jan']},
- {id:'siwa',w:'sand',dest:'siwa',b:'Uncharted',t:'Siwa, four slow days',kind:'long',dur:4,lvl:2,m:[2,2,2,2],price:8200,av:'request',dep:true,exps:['culture','camping'],dates:[D('Thu 28 Jan',null),D('Tue 9 Mar',null)],mo:['Jan','Mar']},
- {id:'sinai-sunrise',w:'summit',dest:'st-catherine',b:'Adventurer',t:'Mount Sinai sunrise climb',kind:'weekend',dur:3,lvl:4,m:[4,5,0,3],price:5600,av:'live',dep:true,exps:['hiking','stargazing'],dates:[D('Thu 10 Dec',7),D('Thu 22 Apr',18)],mo:['Dec','Apr']},
- {id:'st-catherine',w:'summit',dest:'st-catherine',b:'Adventurer',t:'St Catherine three-peak trek',kind:'long',dur:4,lvl:5,m:[5,5,0,4],price:8800,av:'request',dep:true,exps:['hiking','camping'],dates:[D('Thu 7 Jan',null),D('Fri 14 May',null)],mo:['Jan','May']},
- {id:'dakhla-kharga',w:'sand',dest:'dakhla-kharga',b:'Uncharted',t:'Dakhla & Kharga old towns',kind:'long',dur:5,lvl:3,m:[3,3,1,3],price:9900,av:'request',dep:true,exps:['culture','camping'],dates:[D('Thu 22 Apr',null)],mo:['Apr']},
- {id:'lebanon-cedars',w:'snow',dest:'lebanon',b:'Snow chaser',t:'Lebanon snow weekend',kind:'long',dur:3,lvl:2,m:[2,3,2,1],price:14500,av:'live',dep:true,exps:['snow','hiking'],dates:[D('Fri 15 Jan',12),D('Fri 5 Feb',20)],mo:['Jan','Feb']},
- {id:'switzerland-alps',w:'snow',dest:'switzerland',b:'Snow chaser',t:'The Swiss Alps',kind:'long',dur:7,lvl:3,m:[3,4,3,3],price:68000,av:'request',dep:true,exps:['snow','hiking'],dates:[D('Sat 6 Feb',null)],mo:['Feb']},
- {id:'austria-tyrol',w:'snow',dest:'austria',b:'Snow chaser',t:'Tyrol, Austria',kind:'long',dur:6,lvl:3,m:[3,4,3,3],price:59000,av:'request',dep:true,exps:['snow'],dates:[D('Sat 20 Feb',null)],mo:['Feb']},
- {id:'greece-islands',w:'sea',dest:'greece',b:'Classic',t:'Greek islands by boat',kind:'long',dur:6,lvl:1,m:[1,2,4,1],price:46000,av:'request',dep:true,exps:['boat','snorkelling'],dates:[D('Sat 16 May',null)],mo:['May']}
+ {id:'new-year-fayoum',w:'sand',dest:'fayoum',b:'Classic',t:"New Year's in Fayoum",kind:'weekend',dur:2,lvl:2,m:[3,3,0,1],price:NaN,av:'request',dep:true,exps:['sandboarding','culture'],dates:[D('Thu 31 Dec',null)],mo:['Dec']},
+ /* TRIP_2_SLOT: 8–9 Jan, destination to confirm */
+ {id:'black-white-desert',w:'sand',dest:'white-desert',b:'Uncharted',t:'Black & White Desert',kind:'weekend',dur:3,lvl:3,m:[2,3,0,4],price:NaN,av:'request',dep:true,exps:['camping','stargazing'],dates:[D('Thu 28 Jan',null)],mo:['Jan']},
+ {id:'marsa-alam-eid',w:'sea',dest:'marsa-alam',b:'Adventurer',t:'Marsa Alam for Eid',kind:'long',dur:6,lvl:3,m:[3,4,5,2],price:NaN,av:'request',dep:true,exps:['diving','boat'],dates:[D('Tue 9 Mar',null)],mo:['Mar']}
 ];
+const OLD_TRIPS={'ras-mohamed':'sea','dahab':'sea','marsa-alam':'sea','hurghada':'sea','fayoum-day':'sand','white-desert':'sand','siwa':'sand','sinai-sunrise':'summit','st-catherine':'summit','dakhla-kharga':'sand','lebanon-cedars':'snow','switzerland-alps':'snow','austria-tyrol':'snow','greece-islands':'sea'};
+/* Per-trip page content. Anything not decided yet is a clear [placeholder]. Overrides the environment defaults in DEST. */
+const TC_=x=>[x,'[Plan to confirm]'],TBC=['[To confirm]'],TBC_POCKET=[['Pocket money',NaN]];
+const TCONTENT={
+ 'new-year-fayoum':{one:"New Year's Eve in Fayoum, with your people. [Plan to confirm]",
+   exp:['Thu 31 Dec','Fri 1 Jan'].map(TC_),stay:'[Stay to confirm]',add:[],pocket:TBC_POCKET},
+ 'black-white-desert':{one:'Three days in the Black and White Desert, 28 to 30 January. [Plan to confirm]',
+   pop:['The Black Desert','The chalk rocks of the White Desert','Camp after dark'],
+   exp:['Thu 28 Jan','Fri 29 Jan','Sat 30 Jan'].map(TC_),stay:'[Stay to confirm]',learn:TBC,add:[],buy:TBC,pocket:TBC_POCKET},
+ 'marsa-alam-eid':{one:'Six days in Marsa Alam over Eid el-Fitr, 9 to 14 March. [Plan to confirm]',
+   pop:['On the boat','Under the water','The Marsa Alam coast'],
+   exp:['Tue 9 Mar','Wed 10 Mar','Thu 11 Mar','Fri 12 Mar','Sat 13 Mar','Sun 14 Mar'].map(TC_),stay:'[Stay to confirm]',learn:TBC,add:[],buy:TBC,pocket:TBC_POCKET}
+};
+
 const _MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],_DN=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 TRIPS.forEach(t=>t.dates.forEach(x=>{x.s=x.d;if(t.dur>1){const p=x.s.split(' '),m=_MN.indexOf(p[2]),y=m>=10?2026:2027,e=new Date(y,m,+p[1]+t.dur-1,12);x.d=p[0]+' '+p[1]+(e.getMonth()===m?'':' '+p[2])+' to '+_DN[e.getDay()]+' '+e.getDate()+' '+_MN[e.getMonth()]}}));
 
-const byId=id=>TRIPS.find(x=>x.id===id);
+const byId=id=>TRIPS.find(x=>x.id===id)||(OLD_TRIPS[id]?(TRIPS.find(x=>x.w===OLD_TRIPS[id])||TRIPS[0]):undefined);
+DESTS.splice(0,DESTS.length,...DESTS.filter(d=>TRIPS.some(t=>t.dest===d.id)));
 const destOf=id=>DESTS.find(d=>d.id===id);
 
 const DEST={
@@ -3059,6 +3082,7 @@ const OCCASIONS=['Bachelorette','Bachelors','Birthday','Senior trip','Graduation
 /* ---------- Pieces ---------- */
 const RATE={USD:1/48.5,EUR:1/52.5};
 function money(egp){
+  if(egp==null||!isFinite(egp))return '[To confirm]';
   const s=`${Math.round(egp).toLocaleString()} EGP`;
   if(state.rules.cur==='multi'&&state.cur!=='EGP'){const v=Math.round(egp*RATE[state.cur]);return `${state.cur==='USD'?'$':'€'}${v.toLocaleString()} <span class="muted small">(${s})</span>`}
   return s;
@@ -3088,7 +3112,7 @@ function availLine(t){
   if(availOf(t)==='request')return '<span class="mono muted">Request to book · we confirm within 24 h</span>';
   const open=t.dates.filter(d=>d.left!==0);return open.length?`<span class="mono muted">Next: ${open[0].d}${open[0].left!=null&&open[0].left<=8?` · ${open[0].left} places left`:''}</span>`:'<span class="mono muted">Fully booked</span>';
 }
-const MOMENT={'lebanon-cedars':'The first snowfall of the trip','switzerland-alps':'Fondue after the last run','austria-tyrol':'Hot chocolate at the top of the lift','greece-islands':'Swimming off the boat, anchor down','ras-mohamed':'Jumping off the top deck, all at once','dahab':'Tea on the shore after the last swim','marsa-alam':'The first breath underwater','hurghada':'Pizza on the boat between two islands','fayoum-day':'Everyone falling off the sandboard, laughing','white-desert':'The whole camp lying back to watch the stars','siwa':'Floating in the salt lake, not trying','sinai-sunrise':'The first light at the top, with new friends','st-catherine':'Bedouin tea halfway up','old-cairo':'Feteer at 11 pm on Al-Muizz','dakhla-kharga':'A hot spring at the end of a long road'};
+const MOMENT={'new-year-fayoum':'Everyone falling off the sandboard, laughing','black-white-desert':'The whole camp lying back to watch the stars','marsa-alam-eid':'The first breath underwater','lebanon-cedars':'The first snowfall of the trip','switzerland-alps':'Fondue after the last run','austria-tyrol':'Hot chocolate at the top of the lift','greece-islands':'Swimming off the boat, anchor down','ras-mohamed':'Jumping off the top deck, all at once','dahab':'Tea on the shore after the last swim','marsa-alam':'The first breath underwater','hurghada':'Pizza on the boat between two islands','fayoum-day':'Everyone falling off the sandboard, laughing','white-desert':'The whole camp lying back to watch the stars','siwa':'Floating in the salt lake, not trying','sinai-sunrise':'The first light at the top, with new friends','st-catherine':'Bedouin tea halfway up','old-cairo':'Feteer at 11 pm on Al-Muizz','dakhla-kharga':'A hot spring at the end of a long road'};
 const KINDB={Adventurer:['▲','Adventure'],Uncharted:['✦','Uncharted'],'Snow chaser':['❄','Snow chaser'],Classic:null};
 function badgesOf(t){const out=[`<span class="bdg">${sym(t.w,18)}This trip's badge</span>`];(t.exps||[]).forEach(x=>{const e=EXPS.find(e=>e[0]===x);if(e)out.push(`<span class="bdg"><i>✓</i>${e[1]} badge</span>`)});return out.join('')}
 function departures(w){if(!departures.c){const out=[];TRIPS.forEach(t=>t.dates.forEach(x=>{const p=(x.s||x.d).split(' '),m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].indexOf(p[2]),y=m>=10?2026:2027;out.push({t,x,wd:p[0],day:+p[1],mon:p[2],k:y*10000+(m+1)*100+ +p[1]})}));departures.c=out.filter(d=>d.k>=20261113).sort((a,b)=>a.k-b.k)}return w?departures.c.filter(d=>d.t.w===w):departures.c}
@@ -3149,7 +3173,7 @@ function drawHero(){
   svg.querySelector('#land').setAttribute('d',d);
   let d2=`M0 ${H} `;curY.forEach((y,i)=>{d2+=`L${(i/P*W).toFixed(1)} ${((y+.09+.01*Math.sin(i))*H).toFixed(1)} `});d2+=`L${W} ${H}Z`;
   svg.querySelector('#land2').setAttribute('d',d2);
-  const s=svg.querySelector('#sun');s.setAttribute('cx',curSun[0]*W);s.setAttribute('cy',curSun[1]*H);
+  const s=svg.querySelector('#sun');s.setAttribute('cx',curSun[0]*W);s.setAttribute('cy',curSun[1]*H);{const r=svg.getBoundingClientRect();if(r.width&&r.height)s.setAttribute('rx',(40*(r.height/H)/(r.width/W)).toFixed(1))}
 }
 function morphTo(w){
   heroW=w;const from=curY.slice(),to=horizon(w),fs=curSun.slice(),ts=SUN[w];
@@ -3197,7 +3221,7 @@ function homeFind(){return `<section class="sec" id="findway">
 </section>`}
 function homeEnvs(){const env=state.env,E=env&&ENVS[env];return `<section class="sec" id="envs">
   <div class="sec-head"><div class="stack">${N('E','Four environments, each with its own sign from the identity system')}<h2>Four places to start.</h2></div></div>
-  <div class="envgrid" role="tablist">${Object.keys(ENVS).map(k=>pcard({cls:env===k?'on':'',attrs:`role="tab" aria-selected="${env===k}" data-env="${k}"`,img:'Film or photo · '+ENVS[k].n,title:ENVS[k].n,pills:[ENVS[k].dests.length+' places',ENVS[k].trips.length+' trips'],desc:ENVS[k].line,cta:env===k?'Open':'See '+ENVS[k].n.toLowerCase()})).join('')}</div>
+  <div class="envgrid" role="tablist">${Object.keys(ENVS).map(k=>pcard({cls:env===k?'on':'',attrs:`role="tab" aria-selected="${env===k}" data-env="${k}"`,img:'Film or photo · '+ENVS[k].n,title:ENVS[k].n,pills:[ENVS[k].dests.length?(n=>n+' place'+(n===1?'':'s'))(ENVS[k].dests.length):'',ENVS[k].trips.length?(n=>n+' trip'+(n===1?'':'s'))(ENVS[k].trips.length):''].filter(Boolean),desc:ENVS[k].line,cta:env===k?'Open':'See '+ENVS[k].n.toLowerCase()})).join('')}</div>
   ${E?`<div class="envpanel reveal"><div class="row between"><div class="stack" style="gap:4px"><span class="eyebrow">${E.n}</span><h3 style="margin:0">${E.feel}</h3></div><button class="btn ghost sm" data-env="${env}">Close ✕</button></div>
     <div class="row"><span class="small muted">Places</span>${E.dests.map(id=>`<button class="chip" data-go="dest-${id}">${destOf(id).n.replace(' & Mount Sinai','')}</button>`).join('')}</div>
     <div class="depboard">${departures().filter(d=>E.trips.includes(d.t.id)).slice(0,4).map(depRow).join('')}</div></div>`:`<p class="small muted" style="margin:0">Pick an environment to see its places and the trips leaving next.</p>`}
@@ -3216,7 +3240,7 @@ V.home=()=>{const ls=[],seen={};departures(state.world).forEach(d=>{if(!seen[d.t
 <section class="hero">
   <div class="hero-art">
     <svg id="heroSvg" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-      <circle id="sun" r="40" fill="none" stroke="var(--ink-2)" stroke-width="2" opacity=".5"/>
+      <ellipse id="sun" rx="40" ry="40" fill="none" stroke="var(--ink-2)" stroke-width="2" opacity=".5"/>
       <path id="land" fill="var(--fill)" stroke="var(--ink-2)" stroke-width="1" vector-effect="non-scaling-stroke"/>
       <path id="land2" fill="var(--fill-2)" opacity=".7" stroke="none"/>
     </svg>
@@ -3303,7 +3327,7 @@ function playDoor(){
   ${n===EXPS.length?`<div class="notice reveal" style="justify-items:center;text-align:center"><b>All eight turned over.</b><span>Pick one to see where you can try it.</span></div>`:''}</div>`;
 }
 V.explore=()=>{const f=state.f,mode=state.xmode==='play'?'play':'map',g=glowSet();
-const DOORS=[['trips','Upcoming trips','Everything you can book now.'],['map','Destinations','Every place we go, on the map.'],['play','Experiences','Turn the cards and see what you\'d enjoy.']];const P=state.persona,rec=P?TRIPS.filter(t=>t.w===P.w).slice(0,3):['fayoum-day','ras-mohamed','white-desert'].map(byId);
+const DOORS=[['trips','Upcoming trips','Everything you can book now.'],['map','Destinations','Every place we go, on the map.'],['play','Experiences','Turn the cards and see what you\'d enjoy.']];const P=state.persona,rec=P?TRIPS.filter(t=>t.w===P.w).slice(0,3):TRIPS.slice(0,3);
 return `
 <section class="sec xmap-sec">
   <div class="stack" style="justify-items:center;text-align:center;gap:4px">${N('D','Explore: places on the map, activity cards, or straight to trips. One at a time.')}<h1 class="pg">Where to next?</h1></div>
@@ -3323,8 +3347,8 @@ return `<section class="sec"><div class="dhead dhead-row"><div class="stack"><h1
 <div class="dbar"><div class="dfil" role="group" aria-label="Environment">${ORDER.map(w=>`<button class="${state.f.w===w?'on':''}" data-fw="${w}" aria-pressed="${state.f.w===w}">${WORLDS[w].name}</button>`).join('')}</div></div>
 ${v==='map'?mapBlock(true):`<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${L.map(d=>`<div class="al-pane">${dph(d,420)}</div>`).join('')}</div><div class="al-rows">${L.map((d,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="dest-${d.id}"><span class="al-t">${d.n.replace(' & Mount Sinai','')}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.dest===d.id).length)} · ${WORLDS[d.w].name}</span></button>`).join('')}</div></div>`}</section>`};
 
-V.experiences=()=>`<section class="sec"><div class="stack"><h1 class="pg">What do you want to do?</h1></div>
-<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${EXPS.map(e=>`<div class="al-pane">${ph(e[1],420)}</div>`).join('')}</div><div class="al-rows">${EXPS.map((e,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="exp-${e[0]}"><span class="al-t">${e[1]}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.exps.includes(e[0])).length)}</span></button>`).join('')}</div></div></section>`;
+V.experiences=()=>{const XL=EXPS.filter(e=>TRIPS.some(t=>t.exps.includes(e[0])));return `<section class="sec"><div class="stack"><h1 class="pg">What do you want to do?</h1></div>
+<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${XL.map(e=>`<div class="al-pane">${ph(e[1],420)}</div>`).join('')}</div><div class="al-rows">${XL.map((e,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="exp-${e[0]}"><span class="al-t">${e[1]}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.exps.includes(e[0])).length)}</span></button>`).join('')}</div></div></section>`}
 
 V.kinds=()=>`<section class="sec"><div class="stack"><h1 class="pg">How do you want to travel?</h1></div>
 <div class="grid g4">${KINDS.map(k=>pcard({go:k[0]==='abroad'?'kinds':'trips-kind-'+k[0],img:k[1],title:k[1],desc:k[2],cta:k[0]==='abroad'?'Coming soon':'See trips'})).join('')}</div></section>`;
@@ -3399,7 +3423,7 @@ ${txNav(SEC,list.length?`<button class="btn solid sm" data-scroll="t-trips">View
 </section>
 </main></div>`};
 
-function matchTrips(){const f=state.f,q=(f.q||'').toLowerCase();return TRIPS.filter(t=>(!f.w||t.w===f.w)&&(!f.kind||t.kind===f.kind)&&(!f.dest||t.dest===f.dest)&&(!f.exp||t.exps.includes(f.exp))&&(!f.mo||t.mo.includes(f.mo))&&(!f.dur||(f.dur==='1'?t.dur===1:f.dur==='2-3'?t.dur>=2&&t.dur<=3:t.dur>=4))&&(t.price<=f.max)&&(!f.lvl||t.lvl===f.lvl)&&(!f.open||availOf(t)==='request'||t.dates.some(d=>d.left!==0))&&(!q||(t.t+' '+destOf(t.dest).n+' '+t.exps.join(' ')+' '+WORLDS[t.w].name).toLowerCase().includes(q)))}
+function matchTrips(){const f=state.f,q=(f.q||'').toLowerCase();return TRIPS.filter(t=>(!f.w||t.w===f.w)&&(!f.kind||t.kind===f.kind)&&(!f.dest||t.dest===f.dest)&&(!f.exp||t.exps.includes(f.exp))&&(!f.mo||t.mo.includes(f.mo))&&(!f.dur||(f.dur==='1'?t.dur===1:f.dur==='2-3'?t.dur>=2&&t.dur<=3:t.dur>=4))&&(!isFinite(t.price)||t.price<=f.max)&&(!f.lvl||t.lvl===f.lvl)&&(!f.open||availOf(t)==='request'||t.dates.some(d=>d.left!==0))&&(!q||(t.t+' '+destOf(t.dest).n+' '+t.exps.join(' ')+' '+WORLDS[t.w].name).toLowerCase().includes(q)))}
 const SLOTS={
  where:{any:'anywhere',opts:()=>ORDER.map(w=>['w',w,sym(w,14)+' '+WORLDS[w].name,WORLDS[w].name.toLowerCase()]).concat(DESTS.map(d=>['dest',d.id,d.n.replace(' & Mount Sinai',''),d.n.replace(' & Mount Sinai','')])),val:f=>f.dest?'to '+destOf(f.dest).n.replace(' & Mount Sinai',''):f.w?{sea:'to the sea',sand:'to the sand',summit:'up a summit',snow:'into the stories'}[f.w]:null},
  kind:{any:'any length of time',opts:()=>[['kind','day','a day','a day'],['kind','weekend','a weekend','a weekend'],['kind','long','four days or more','four days or more']],val:f=>f.kind?{day:'a day',weekend:'a weekend',long:'four days or more'}[f.kind]:null},
@@ -3619,7 +3643,7 @@ V.trips=(pre)=>{
 /* Trip detail */
 V.trip=(id)=>{
   const t=byId(id);if(!t)return V.trips();
-  const d=DEST[t.w],av=availOf(t);
+  const d={...DEST[t.w],...(TCONTENT[t.id]||{})},av=availOf(t);
   const tot=d.pocket.reduce((a,b)=>a+b[1],0);
   const next=t.dates.find(x=>x.left!==0)||t.dates[0];
   const SEC=[['overview','Overview'],['itinerary','Itinerary'],['included',"What's included"],['expect','What to expect'],['practical','The essentials'],['gallery','Gallery']];
@@ -3676,7 +3700,7 @@ V.trip=(id)=>{
 <section class="tx-s" id="t-expect">${sh_(null,'What to expect')}
   <div class="tx-three">
     <div><span class="eyebrow">You'll learn</span><ul class="tx-list">${d.learn.map(x=>`<li>${x}</li>`).join('')}</ul></div>
-    <div><span class="eyebrow">You can add</span><div class="tx-add">${d.add.map((x,i)=>`<button class="addon ${(state.addons||[]).includes(i)?'on':''}" data-addon="${i}" aria-pressed="${(state.addons||[]).includes(i)}"><span>${(state.addons||[]).includes(i)?'✓':'+'} ${x[0]}</span><span class="mono">${money(x[1])}</span></button>`).join('')}</div></div>
+    <div><span class="eyebrow">You can add</span><div class="tx-add">${d.add.length?'':'<p class="muted small">[Add-ons to confirm]</p>'}${d.add.map((x,i)=>`<button class="addon ${(state.addons||[]).includes(i)?'on':''}" data-addon="${i}" aria-pressed="${(state.addons||[]).includes(i)}"><span>${(state.addons||[]).includes(i)?'✓':'+'} ${x[0]}</span><span class="mono">${money(x[1])}</span></button>`).join('')}</div></div>
     <div><span class="eyebrow">Worth buying there</span><ul class="tx-list">${d.buy.map(x=>`<li>${x}</li>`).join('')}</ul></div>
   </div>
 </section>
@@ -4539,6 +4563,7 @@ function route(){
   if(h==='create-form')html=V.createForm();
   else if(h==='sent')html=V.sent();
   else if(base==='trips'){if(WORLDS[arg])setWorld(arg);html=V.trips(arg||null)}
+  else if((base==='trip'||base==='book')&&OLD_TRIPS[arg]&&byId(arg)){location.replace('#'+base+'-'+byId(arg).id);return}
   else if(base==='trip'){const t=byId(arg);if(state.lastTrip!==arg){state.tripTab='overview';state.addons=[];state.lastTrip=arg}if(t)setWorld(t.w);html=V.trip(arg)}
   else if(base==='book'){if(!state.bk||state.bk.id!==arg||!state.bk.step){const t=byId(arg)||TRIPS[0];state.bk={id:t.id,step:1,dep:null,n:1,mode:fullOK(t)?'full':'deposit',pm:'card',outcome:'ok',busy:false,wa:true}}html=V.book(arg)}
   else if(base==='play'){if(WORLDS[arg])setWorld(arg);html=V.play(arg)}
