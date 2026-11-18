@@ -169,6 +169,21 @@ function visit(n) {
       } }
     }
   }
+  if (n.kind === K.StringLiteral && inFunctionOrTextConst(n) && /<[a-z]/i.test(n.text) && />[^<>]*[A-Za-z]{2}[^<>]*</.test(n.text)) {
+    // an HTML snippet in a quoted string: turn it into a template with T() for each text run
+    let p = n.parent; const inN = p && ts.isCallExpression(p) && ts.isIdentifier(p.expression) && p.expression.text === 'N';
+    const tq = x => x.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+    if (!inN) {
+      const v = n.text; let outT = '', last = 0; const re = />([^<>]*[A-Za-z][^<>]*)</g; let m, any = false;
+      while ((m = re.exec(v))) {
+        const full = m[1], lead = full.match(/^\s*/)[0], trail = full.match(/\s*$/)[0], val = full.slice(lead.length, full.length - trail.length);
+        if (!/[A-Za-z]{2}/.test(val)) continue;
+        const s0 = m.index + 1 + lead.length; any = true;
+        outT += tq(v.slice(last, s0)) + '${T(' + JSON.stringify(addText(groupOf(n), val)).replace(/"/g, "'") + ')}'; last = s0 + val.length;
+      }
+      if (any) { outT += tq(v.slice(last)); edits.push({ start: n.getStart(), end: n.getEnd(), text: '`' + outT + '`' }); return; }
+    }
+  }
   if (n.kind === K.StringLiteral && inFunctionOrTextConst(n)) {
     if (stringIsCopy(n)) {
       let p = n.parent; const inN = p && ts.isCallExpression(p) && ts.isIdentifier(p.expression) && p.expression.text === 'N';
