@@ -2790,7 +2790,21 @@ const ph=(t,h)=>`<div class="ph" style="min-height:${h||140}px"><span>${t}</span
 
 /* Real trip photos (Hania, 19 Nov). Slots: card, hero, p1, p2, m0-m3 (overview), d0.. (itinerary stops), g0-g6 (gallery). Missing slots keep the placeholder. */
 const TP_='img/trips/fayoum-getaway/';
-const TPH={'fayoum-weekend':{
+const TPH={
+/* New Year's in Fayoum: stand-in photos from the Fayoum getaway set until real ones arrive (Hania, 19 Nov) */
+'new-year-fayoum':{
+ card:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
+ hero:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
+ p1:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
+ p2:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
+ m2:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%'],
+ d0:[TP_+'sunset-dinner-path.jpg','A rug path across the sand to dinner at sunset','50% 62%'],
+ d1:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
+ g1:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
+ g2:[TP_+'sea-of-dunes.jpg','Rows of dunes under a blue sky','50% 55%'],
+ g3:[TP_+'4x4-from-above.jpg','A 4x4 in the sand, seen from above','55% 50%'],
+ g5:[TP_+'pottery-wheel.jpg','Hands shaping a clay pot on a wheel','50% 45%']},
+'fayoum-weekend':{
  card:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
  hero:[TP_+'convoy-on-the-dunes.jpg','Friends sitting on the roof of a 4x4 on the dunes','50% 45%'],
  p1:[TP_+'dune-ridge-convoy.jpg','Three 4x4s on a long dune ridge','62% 60%'],
