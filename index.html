@@ -1862,6 +1862,7 @@ body .tcard:hover .tcard-img .ph span,body .tcard:focus-visible .tcard-img .ph s
 .al-img{position:sticky;top:96px;aspect-ratio:3/2;border-radius:var(--r-m);overflow:hidden}
 .al-pane{position:absolute;inset:0;opacity:0;transition:opacity .4s}
 .al-pane .ph{height:100%;min-height:0!important;border-radius:0}
+.ph-photo{padding:0}.ph-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .alist[data-a="0"] .al-pane:nth-child(1),.alist[data-a="1"] .al-pane:nth-child(2),.alist[data-a="2"] .al-pane:nth-child(3),.alist[data-a="3"] .al-pane:nth-child(4),.alist[data-a="4"] .al-pane:nth-child(5),.alist[data-a="5"] .al-pane:nth-child(6),.alist[data-a="6"] .al-pane:nth-child(7),.alist[data-a="7"] .al-pane:nth-child(8),.alist[data-a="8"] .al-pane:nth-child(9){opacity:1}
 .al-rows{display:grid}
 .al-row{display:flex;align-items:baseline;gap:var(--sp2);text-align:left;background:none;border:0;padding:6px 0;cursor:pointer;font:inherit;color:var(--ink);opacity:.28;transition:opacity .3s}
@@ -2767,6 +2768,8 @@ const view=$('#view'), frame=$('#frame');
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const N=(n,t)=>`<span class="n"><b>${n}</b>${t}</span>`;
 const NP=t=>`<p class="note-p">${t}</p>`;
+const DIMG={fayoum:['img/destinations/fayoum.jpg','50% 62%'],siwa:['img/destinations/siwa.jpg','60% 55%'],'white-desert':['img/destinations/white-desert.jpg','50% 50%'],'dakhla-kharga':['img/destinations/dakhla-kharga.jpg','60% 50%'],'st-catherine':['img/destinations/st-catherine.jpg','50% 60%'],lebanon:['img/destinations/lebanon.jpg','50% 88%'],austria:['img/destinations/austria.jpg','50% 58%'],switzerland:['img/destinations/switzerland.jpg','50% 56%'],dahab:['img/destinations/dahab.jpg','55% 50%'],hurghada:['img/destinations/hurghada.jpg','50% 66%'],'marsa-alam':['img/destinations/marsa-alam.jpg','50% 50%'],greece:['img/destinations/greece.jpg','50% 32%'],'ras-mohammed':['img/destinations/ras-mohammed.jpg','50% 55%']};
+const dph=(d,h)=>DIMG[d.id]?`<div class="ph ph-photo" style="min-height:${h||140}px"><img src="${DIMG[d.id][0]}" alt="" loading="lazy" decoding="async" style="object-position:${DIMG[d.id][1]}"></div>`:ph(d.n,h);
 const ph=(t,h)=>`<div class="ph" style="min-height:${h||140}px"><span>${t}</span></div>`;
 
 /* ---------- Booking rules (the four open decisions) ---------- */
@@ -2795,7 +2798,6 @@ const DESTS=[
  {id:'hurghada',n:'Hurghada',w:'sea',l:'Island hopping and long days on the water.'},
  {id:'marsa-alam',n:'Marsa Alam',w:'sea',l:'Quieter reefs further south, for your first proper dive.'},
  {id:'st-catherine',n:'St Catherine & Mount Sinai',w:'summit',l:"Egypt's highest peaks, climbed with Bedouin guides."},
- {id:'old-cairo',n:'Old Cairo',w:'sand',l:'Gates, workshops and food stops in the old city.'},
  {id:'dakhla-kharga',n:'Dakhla & Kharga',w:'sand',l:'Old towns, hot springs and a long desert road.'},
  {id:'lebanon',n:'Lebanon · Cedars & Faraya',w:'snow',l:'Snow under the cedars, an hour from the sea. Our nearest snow.'},
  {id:'switzerland',n:'Switzerland · The Alps',w:'snow',l:'Big peaks, villages and fondue. A trip we have run before.'},
@@ -2895,7 +2897,6 @@ const TRIPS=[
  {id:'siwa',w:'sand',dest:'siwa',b:'Uncharted',t:'Siwa, four slow days',kind:'long',dur:4,lvl:2,m:[2,2,2,2],price:8200,av:'request',dep:true,exps:['culture','camping'],dates:[D('Thu 28 Jan',null),D('Tue 9 Mar',null)],mo:['Jan','Mar']},
  {id:'sinai-sunrise',w:'summit',dest:'st-catherine',b:'Adventurer',t:'Mount Sinai sunrise climb',kind:'weekend',dur:3,lvl:4,m:[4,5,0,3],price:5600,av:'live',dep:true,exps:['hiking','stargazing'],dates:[D('Thu 10 Dec',7),D('Thu 22 Apr',18)],mo:['Dec','Apr']},
  {id:'st-catherine',w:'summit',dest:'st-catherine',b:'Adventurer',t:'St Catherine three-peak trek',kind:'long',dur:4,lvl:5,m:[5,5,0,4],price:8800,av:'request',dep:true,exps:['hiking','camping'],dates:[D('Thu 7 Jan',null),D('Fri 14 May',null)],mo:['Jan','May']},
- {id:'old-cairo',w:'sand',dest:'old-cairo',b:'Classic',t:'Old Cairo after dark',kind:'day',dur:1,lvl:1,m:[2,1,0,1],price:950,av:'live',dep:false,exps:['culture'],dates:[D('Thu 26 Nov',10),D('Thu 3 Dec',15)],mo:['Nov','Dec']},
  {id:'dakhla-kharga',w:'sand',dest:'dakhla-kharga',b:'Uncharted',t:'Dakhla & Kharga old towns',kind:'long',dur:5,lvl:3,m:[3,3,1,3],price:9900,av:'request',dep:true,exps:['culture','camping'],dates:[D('Thu 22 Apr',null)],mo:['Apr']},
  {id:'lebanon-cedars',w:'snow',dest:'lebanon',b:'Snow chaser',t:'Lebanon snow weekend',kind:'long',dur:3,lvl:2,m:[2,3,2,1],price:14500,av:'live',dep:true,exps:['snow','hiking'],dates:[D('Fri 15 Jan',12),D('Fri 5 Feb',20)],mo:['Jan','Feb']},
  {id:'switzerland-alps',w:'snow',dest:'switzerland',b:'Snow chaser',t:'The Swiss Alps',kind:'long',dur:7,lvl:3,m:[3,4,3,3],price:68000,av:'request',dep:true,exps:['snow','hiking'],dates:[D('Sat 6 Feb',null)],mo:['Feb']},
@@ -3244,7 +3245,7 @@ ${worldPanel()}
   <div class="memed-head">${N('F','Memories: real photos and films from real trips, shot by travellers')}<h2>This Is Hajeela<br><em>Through Your Eyes.</em></h2>
     <p>Real moments, little films and memories made along the way by our travellers.</p>
     <button class="btn lg" data-go="trips">See the trips</button></div>
-  ${[['Siwa','Oct 2026','siwa','Film · 12 sec','a'],['Mount Sinai','5:40 am','sinai-sunrise','Photo','b'],['Ras Mohammed','Sept 2026','ras-mohamed','Film · 8 sec','c'],['Fayoum','Last Friday','fayoum-day','Photo · the whole group','d'],['Old Cairo','11 pm','old-cairo','Photo','e'],['White Desert','New Year’s Eve','white-desert','Photo','f'],['Dahab','Aug 2026','dahab','Photo · portrait','g'],['Hurghada','July 2026','hurghada','Film · 6 sec','h']].map(x=>`<button class="mem m-${x[4]}" data-go="trip-${x[2]}" aria-label="${x[0]}, ${x[1]}. ${MOMENT[x[2]]||''}. See the trip">${ph(x[3],100)}<span class="figc"><b>${x[0]}</b><span>${x[1]}</span></span><span class="mdesc" aria-hidden="true"><b>${x[1]}</b><i></i>${MOMENT[x[2]]||x[0]}</span></button>`).join('')}
+  ${[['Siwa','Oct 2026','siwa','Film · 12 sec','a'],['Mount Sinai','5:40 am','sinai-sunrise','Photo','b'],['Ras Mohammed','Sept 2026','ras-mohamed','Film · 8 sec','c'],['Fayoum','Last Friday','fayoum-day','Photo · the whole group','d'],['Dakhla & Kharga','By 4x4','dakhla-kharga','Photo','e'],['White Desert','New Year’s Eve','white-desert','Photo','f'],['Dahab','Aug 2026','dahab','Photo · portrait','g'],['Hurghada','July 2026','hurghada','Film · 6 sec','h']].map(x=>`<button class="mem m-${x[4]}" data-go="trip-${x[2]}" aria-label="${x[0]}, ${x[1]}. ${MOMENT[x[2]]||''}. See the trip">${ph(x[3],100)}<span class="figc"><b>${x[0]}</b><span>${x[1]}</span></span><span class="mdesc" aria-hidden="true"><b>${x[1]}</b><i></i>${MOMENT[x[2]]||x[0]}</span></button>`).join('')}
   <div class="mbadge mb1" aria-hidden="true">${sym('sea',44)}<span>Sea</span></div>
   <div class="mbadge mb2" aria-hidden="true">${sym('summit',44)}<span>Summit</span></div>
   ${[['sand',35.5,18.5],['snow',60,22],['sand',62.8,63.8],['snow',82,56],['sea',38.7,78.5],['summit',64.3,72.5]].map(x=>`<span class="mpin" style="left:${x[1]}%;top:${x[2]}%" aria-hidden="true">${sym(x[0],22)}</span>`).join('')}
@@ -3302,7 +3303,7 @@ function playDoor(){
   ${n===EXPS.length?`<div class="notice reveal" style="justify-items:center;text-align:center"><b>All eight turned over.</b><span>Pick one to see where you can try it.</span></div>`:''}</div>`;
 }
 V.explore=()=>{const f=state.f,mode=state.xmode==='play'?'play':'map',g=glowSet();
-const DOORS=[['trips','Upcoming trips','Everything you can book now.'],['map','Destinations','Every place we go, on the map.'],['play','Experiences','Turn the cards and see what you\'d enjoy.']];const P=state.persona,rec=P?TRIPS.filter(t=>t.w===P.w).slice(0,3):['fayoum-day','ras-mohamed','old-cairo'].map(byId);
+const DOORS=[['trips','Upcoming trips','Everything you can book now.'],['map','Destinations','Every place we go, on the map.'],['play','Experiences','Turn the cards and see what you\'d enjoy.']];const P=state.persona,rec=P?TRIPS.filter(t=>t.w===P.w).slice(0,3):['fayoum-day','ras-mohamed','white-desert'].map(byId);
 return `
 <section class="sec xmap-sec">
   <div class="stack" style="justify-items:center;text-align:center;gap:4px">${N('D','Explore: places on the map, activity cards, or straight to trips. One at a time.')}<h1 class="pg">Where to next?</h1></div>
@@ -3320,7 +3321,7 @@ ${homeEnvs()}`
 V.destinations=()=>{const L=state.f.w?DESTS.filter(d=>d.w===state.f.w):mixWorlds(DESTS),v=state.destView||'list';
 return `<section class="sec"><div class="dhead dhead-row"><div class="stack"><h1 class="pg">Where do you want to go?</h1></div><div class="viewsw" role="group" aria-label="View"><button class="${v==='list'?'on':''}" data-dview="list" aria-pressed="${v==='list'}">List</button><button class="${v==='map'?'on':''}" data-dview="map" aria-pressed="${v==='map'}">Map</button></div></div>
 <div class="dbar"><div class="dfil" role="group" aria-label="Environment">${ORDER.map(w=>`<button class="${state.f.w===w?'on':''}" data-fw="${w}" aria-pressed="${state.f.w===w}">${WORLDS[w].name}</button>`).join('')}</div></div>
-${v==='map'?mapBlock(true):`<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${L.map(d=>`<div class="al-pane">${ph(d.n,420)}</div>`).join('')}</div><div class="al-rows">${L.map((d,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="dest-${d.id}"><span class="al-t">${d.n.replace(' & Mount Sinai','')}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.dest===d.id).length)} · ${WORLDS[d.w].name}</span></button>`).join('')}</div></div>`}</section>`};
+${v==='map'?mapBlock(true):`<div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${L.map(d=>`<div class="al-pane">${dph(d,420)}</div>`).join('')}</div><div class="al-rows">${L.map((d,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="dest-${d.id}"><span class="al-t">${d.n.replace(' & Mount Sinai','')}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.dest===d.id).length)} · ${WORLDS[d.w].name}</span></button>`).join('')}</div></div>`}</section>`};
 
 V.experiences=()=>`<section class="sec"><div class="stack"><h1 class="pg">What do you want to do?</h1></div>
 <div class="alist" data-a="0"><div class="al-img" aria-hidden="true">${EXPS.map(e=>`<div class="al-pane">${ph(e[1],420)}</div>`).join('')}</div><div class="al-rows">${EXPS.map((e,i)=>`<button class="al-row${i===0?' on':''}" data-i="${i}" data-go="exp-${e[0]}"><span class="al-t">${e[1]}</span><span class="al-c">${(n=>n+' trip'+(n===1?'':'s'))(TRIPS.filter(t=>t.exps.includes(e[0])).length)}</span></button>`).join('')}</div></div></section>`;
